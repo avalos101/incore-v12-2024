@@ -1,0 +1,242 @@
+# Translation of inCore Server.
+# This file contains the translation of the following modules:
+#	* wer_pos_quick_access
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: inCore Server 12.0+e-20190515\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-03 21:42+0000\n"
+"PO-Revision-Date: 2021-08-03 21:42+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: wer_pos_quick_access
+#: model:ir.model.fields,help:wer_pos_quick_access.field_pos_config__change_product_view
+msgid "=Help to View Products in List/Grid View"
+msgstr "=Ayuda para ver productos en la vista de lista / cuadrícula"
+
+#. module: wer_pos_quick_access
+#: model:ir.model.fields,help:wer_pos_quick_access.field_pos_config__clear_cart
+msgid "Allow User to Clear Products from Cart"
+msgstr "Permitir al usuario borrar productos del carrito"
+
+#. module: wer_pos_quick_access
+#: model:ir.model.fields,help:wer_pos_quick_access.field_pos_config__quick_partner
+msgid "Allow User to Create Customer from Product Screen"
+msgstr "Permitir al usuario crear un cliente desde la pantalla del producto"
+
+#. module: wer_pos_quick_access
+#: model:ir.model.fields,help:wer_pos_quick_access.field_pos_config__quick_product
+msgid "Allow User to Create Product from POS ScreenYou"
+msgstr "Permitir al usuario crear un producto desde la pantalla POS"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:96
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:131
+#, python-format
+msgid "Barcode"
+msgstr "Código de barras"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:73
+#, python-format
+msgid "City"
+msgstr "Ciudad"
+
+#. module: wer_pos_quick_access
+#: model:ir.model.fields,field_description:wer_pos_quick_access.field_pos_config__clear_cart
+msgid "Clear Cart"
+msgstr "Vaciar carrito"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/js/pos.js:35
+#, python-format
+msgid "Clear Cart?"
+msgstr "Vaciar carrito?"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:105
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:151
+#, python-format
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:143
+#, python-format
+msgid "Consumable"
+msgstr "Consumible"
+
+#. module: wer_pos_quick_access
+#: model:ir.model,name:wer_pos_quick_access.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:134
+#, python-format
+msgid "Cost Price"
+msgstr "Precio de coste"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:104
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:150
+#, python-format
+msgid "Create"
+msgstr "Crear"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:56
+#: model:ir.model.fields,field_description:wer_pos_quick_access.field_pos_config__quick_partner
+#, python-format
+msgid "Create Partner"
+msgstr "Crear cliente"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:115
+#: model:ir.model.fields,field_description:wer_pos_quick_access.field_pos_config__quick_product
+#, python-format
+msgid "Create Product"
+msgstr "Crear Producto"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:99
+#, python-format
+msgid "Email"
+msgstr "E-mail"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:46
+#, python-format
+msgid "Image"
+msgstr "Imagen"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:126
+#, python-format
+msgid "Internal ref"
+msgstr "Referencia interna"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:139
+#, python-format
+msgid "List Price"
+msgstr "Lista de precios"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:65
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:123
+#, python-format
+msgid "Name"
+msgstr "Nombre"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:91
+#, python-format
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:59
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:118
+#, python-format
+msgid "Picture"
+msgstr "Imagen"
+
+#. module: wer_pos_quick_access
+#: model:ir.model,name:wer_pos_quick_access.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Configuración del Punto de Venta"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:76
+#, python-format
+msgid "Postcode"
+msgstr "Código postal"
+
+#. module: wer_pos_quick_access
+#: model:ir.model,name:wer_pos_quick_access.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:47
+#, python-format
+msgid "Product Name"
+msgstr "Nombre del producto"
+
+#. module: wer_pos_quick_access
+#: model:ir.model.fields,field_description:wer_pos_quick_access.field_pos_config__change_product_view
+msgid "Product View"
+msgstr "Vista del producto"
+
+#. module: wer_pos_quick_access
+#: model_terms:ir.ui.view,arch_db:wer_pos_quick_access.wer_pos_quick_access
+msgid "Quick Access"
+msgstr "Acceso rapido"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:48
+#, python-format
+msgid "Sale Price"
+msgstr "Precio de venta"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:82
+#, python-format
+msgid "Select Country"
+msgstr "Seleccionar país"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:144
+#, python-format
+msgid "Service"
+msgstr "Servicio"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:145
+#, python-format
+msgid "Storable Product"
+msgstr "Producto almacenable"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/xml/pos.xml:68
+#, python-format
+msgid "Street"
+msgstr "Calle"
+
+#. module: wer_pos_quick_access
+#. incore-web
+#: code:addons/wer_pos_quick_access/static/src/js/pos.js:36
+#, python-format
+msgid "You want to clear cart?."
+msgstr "¿Quiere vaciar el carrito?"
+

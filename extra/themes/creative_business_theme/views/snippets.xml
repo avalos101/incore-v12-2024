@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <data>
+
+        <template id="creative_business_theme.home" name="Home">
+            <section class="home" id="home" data-stellar-background-ratio="0.4" style="background: url(/creative_business_theme/static/src/images/hero-img9.jpg) no-repeat">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="st-home-unit">
+                                <div class="hero-txt">
+                                    <p class="hero-work">Web Design - Web Development - UX Design</p>
+                                    <h2 class="hero-title">We are a creative</h2>
+                                    <a href="#" class="btn btn-main btn-lg">Learn More</a>               
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template id="creative_business_theme.about" name="About Us">
+            <section class="about" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-title st-center">
+                                <h3>WelCome</h3>
+                                <p>Who Are We</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 mt32 mb32">
+                            <h3>Our Amazing Features</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero. Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. </p>
+                        </div>
+                        <div class="col-md-6 mt64 mb32">
+                            <img class="img img-responsive center-block mb16 about_img" src="/creative_business_theme/static/src/photos/about.jpg"  alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="st-member">
+                                <div class="st-member-img">
+                                    <img src="/creative_business_theme/static/src/photos/member1.png" alt="" class="img-responsive"/>
+                                </div>
+                                <div class="st-member-info">
+                                    <strong class="st-member-name">John Deo</strong>
+                                    <p class="st-member-pos">CEO</p>
+                                    
+                                    <div class="st-member-social">
+                                        <ul>
+                                            <li><a href="#" class="facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#" class="twitter" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#" class="dribbble" data-toggle="tooltip" data-placement="top" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="st-member">
+                                <div class="st-member-img">
+                                    <img src="/creative_business_theme/static/src/photos/member2.png" alt="" class="img-responsive"/>
+                                </div>
+                                <div class="st-member-info">
+                                    <strong class="st-member-name">Sarah Smith</strong>
+                                    <p class="st-member-pos">Designer</p>
+                                    
+                                    <div class="st-member-social">
+                                        <ul>
+                                            <li><a href="#" class="facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#" class="twitter" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#" class="dribbble" data-toggle="tooltip" data-placement="top" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="st-member">
+                                <div class="st-member-img">
+                                    <img src="/creative_business_theme/static/src/photos/member3.png" alt="" class="img-responsive"/>
+                                </div>
+                                <div class="st-member-info">
+                                    <strong class="st-member-name">Stephen Doe</strong>
+                                    <p class="st-member-pos">Developer</p>
+                                    
+                                    <div class="st-member-social">
+                                        <ul>
+                                            <li><a href="#" class="facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#" class="twitter" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#" class="dribbble" data-toggle="tooltip" data-placement="top" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="st-member">
+                                <div class="st-member-img">
+                                    <img src="/creative_business_theme/static/src/photos/member4.png" alt="" class="img-responsive"/>
+                                </div>
+                                <div class="st-member-info">
+                                    <strong class="st-member-name">Mark Deo</strong>
+                                    <p class="st-member-pos">Developer</p>
+                                    
+                                    <div class="st-member-social">
+                                        <ul>
+                                            <li><a href="#" class="facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#" class="twitter" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#" class="dribbble" data-toggle="tooltip" data-placement="top" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </section>
+        </template>
+
+        <template id="creative_business_theme.funfacts" name="History">
+            <section class="funfacts" data-stellar-background-ratio="0.4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="funfact">
+                                <div class="st-funfact-icon"><i class="fa fa-briefcase"></i></div>
+                                <div class="st-funfact-counter" ><span class="st-ff-count" data-from="0" data-to="25964" data-runit="1">0</span>+</div>
+                                <strong class="funfact-title">Projects</strong>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="funfact">
+                                <div class="st-funfact-icon"><i class="fa fa-clock-o"></i></div>
+                                <div class="st-funfact-counter" ><span class="st-ff-count" data-from="0" data-to="35469" data-runit="1">0</span>+</div>
+                                <strong class="funfact-title">Hours Work</strong>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="funfact">
+                                <div class="st-funfact-icon"><i class="fa fa-send"></i></div>
+                                <div class="st-funfact-counter" ><span class="st-ff-count" data-from="0" data-to="86214" data-runit="1">0</span>+</div>
+                                <strong class="funfact-title">E-mail</strong>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="funfact">
+                                <div class="st-funfact-icon"><i class="fa fa-star"></i></div>
+                                <div class="st-funfact-counter" ><span class="st-ff-count" data-from="0" data-to="3647" data-runit="1">0</span>+</div>
+                                <strong class="funfact-title">Completed</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template id="creative_business_theme.service" name="Service">
+            <section class="service" id="service">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-title st-center">
+                                <h3>What we do</h3>
+                                <p>Our Awesome Services</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row block">
+                            <div class="col-md-3">
+                                <div class="st-feature">
+                                    <div class="st-feature-icon"><i class="fa fa-cog"></i></div>
+                                    <strong class="st-feature-title">Fully Responsive</strong>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="st-feature">
+                                    <div class="st-feature-icon"><i class="fa fa-university"></i></div>
+                                    <strong class="st-feature-title">Simple and Clean</strong>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="st-feature">
+                                    <div class="st-feature-icon"><i class="fa fa-comments-o"></i></div>
+                                    <strong class="st-feature-title">Easy to Customize</strong>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="st-feature">
+                                    <div class="st-feature-icon"><i class="fa fa-life-ring"></i></div>
+                                    <strong class="st-feature-title">Creative Design</strong>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template id="creative_business_theme.features-desc" name="Features-desc">
+            <section class="features-desc">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-title st-center">
+                                <br></br>
+                                <p>Our Amazing Features</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="/creative_business_theme/static/src/photos/feature.jpg" alt="" class="img-responsive about_img" width="570" height="452"/><br></br>
+                        </div>
+                        <div class="col-md-7">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero. Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa.</p>
+                            <a href="#" class="btn btn-main btn-lg">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template id="creative_business_theme.call-2-acction" name="Call-2-acction">
+            <section class="call-2-acction" data-stellar-background-ratio="0.4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="c2a">
+                                <h2>Like Our Design?</h2>
+                                <p>Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero.</p>
+                                <a href="#" class="btn btn-main btn-lg">Purchase Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template id="creative_business_theme.portfolio" name="Portfolio">
+            <section class="portfolio" id="portfolio">
+                <div class="container-fluid ">
+                    <div class="row">
+                        <div class="col-md-12 no-padding ">
+                            <div class="section-title st-center">
+                                <h3>What we have done</h3>
+                                <p>Avocent deditum long</p>
+                            </div>
+                            <div class="filter mb40">
+                                <form id="filter">
+                                    <fieldset class="group">
+                                        <label class="btn btn-default btn-main"><input type="radio" name="filter" value="all" checked="checked"/>All</label>
+                                        <label class="btn btn-default"><input type="radio" name="filter" value="photography"/>Photography</label>
+                                        <label class="btn btn-default"><input type="radio" name="filter" value="design"/>Design</label>
+                                        <label class="btn btn-default"><input type="radio" name="filter" value="codding"/>Codding</label>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="grid">
+                            <figure class="portfolio-item" data-groups='["photography"]'>
+                                <img src="/creative_business_theme/static/src/photos/portfolio.jpg" alt="" width="480" height="255"/>
+                                <figcaption>
+                                    <h2>Nice <span>Lily</span></h2>
+                                    <p>Lily likes to play with crayons and pencils</p>
+                                    <a href="#" class="btn btn-main"> View more</a>
+                                </figcaption>
+                          </figure>
+                            <figure class="portfolio-item" data-groups='["design"]'>
+                                <img src="/creative_business_theme/static/src/photos/portfolio2.jpg" alt="" width="480" height="255"/>
+                                <figcaption>
+                                    <h2>Nice <span>Lily</span></h2>
+                                    <p>Lily likes to play with crayons and pencils</p>
+                                    <a href="#" class="btn btn-main"> View more</a>                             
+                                </figcaption>
+                          </figure>
+                            <figure class="portfolio-item" data-groups='["photography"]'>
+                                <img src="/creative_business_theme/static/src/photos/portfolio3.jpg" alt="" width="480" height="255"/>
+                                <figcaption>
+                                    <h2>Nice <span>Lily</span></h2>
+                                    <p>Lily likes to play with crayons and pencils</p>
+                                    <a href="#" class="btn btn-main"> View more</a>
+                                </figcaption>
+                          </figure>
+                            <figure class="portfolio-item" data-groups='["design"]'>
+                                <img src="/creative_business_theme/static/src/photos/portfolio4.jpg" alt="" width="480" height="255"/>
+                                <figcaption>
+                                    <h2>Nice <span>Lily</span></h2>
+                                    <p>Lily likes to play with crayons and pencils</p>
+                                    <a href="#" class="btn btn-main"> View more</a>          
+                                </figcaption>
+                          </figure>
+                            <figure class="portfolio-item" data-groups='["design"]'>
+                                <img src="/creative_business_theme/static/src/photos/portfolio5.jpg" alt="" width="480" height="255"/>
+                                <figcaption>
+                                    <h2>Nice <span>Lily</span></h2>
+                                    <p>Lily likes to play with crayons and pencils</p>
+                                    <a href="#" class="btn btn-main"> View more</a>         
+                                </figcaption>
+                          </figure>
+                            <figure class="portfolio-item" data-groups='["photography"]'>
+                                <img src="/creative_business_theme/static/src/photos/portfolio6.jpg" alt="" width="480" height="255"/>
+                                <figcaption>
+                                    <h2>Nice <span>Lily</span></h2>
+                                    <p>Lily likes to play with crayons and pencils</p>
+                                    <a href="#" class="btn btn-main"> View more</a>           
+                                </figcaption>
+                          </figure>
+                            <figure class="portfolio-item" data-groups='["codding"]'>
+                                <img src="/creative_business_theme/static/src/photos/portfolio7.jpg" alt="" width="480" height="255"/>
+                                <figcaption>
+                                    <h2>Nice <span>Lily</span></h2>
+                                    <p>Lily likes to play with crayons and pencils</p>
+                                    <a href="#" class="btn btn-main"> View more</a>           
+                                </figcaption>
+                          </figure>
+                            <figure class="portfolio-item" data-groups='["photography"]'>
+                                <img src="/creative_business_theme/static/src/photos/portfolio8.jpg" alt="" width="480" height="255"/>
+                                <figcaption>
+                                    <h2>Nice <span>Lily</span></h2>
+                                    <p>Lily likes to play with crayons and pencils</p>
+                                    <a href="#" class="btn btn-main"> View more</a>           
+                                </figcaption>
+                          </figure>
+                            <figure class="portfolio-item" data-groups='["codding"]'>
+                                <img src="/creative_business_theme/static/src/photos/portfolio9.jpg" alt="" width="480" height="255"/>
+                                <figcaption>
+                                    <h2>Nice <span>Lily</span></h2>
+                                    <p>Lily likes to play with crayons and pencils</p>
+                                    <a href="#" class="btn btn-main"> View more</a>
+                                </figcaption>
+                          </figure>
+                            <figure class="portfolio-item" data-groups='["codding"]'>
+                                <img src="/creative_business_theme/static/src/photos/portfolio10.jpg" alt="" width="480" height="255"/>
+                                <figcaption>
+                                    <h2>Nice <span>Lily</span></h2>
+                                    <p>Lily likes to play with crayons and pencils</p>
+                                    <a href="#" class="btn btn-main"> View more</a>
+                                </figcaption>
+                          </figure>
+                            <figure class="portfolio-item" data-groups='["design"]'>
+                                <img src="/creative_business_theme/static/src/photos/portfolio11.jpg" alt="" width="480" height="255"/>
+                                <figcaption>
+                                    <h2>Nice <span>Lily</span></h2>
+                                    <p>Lily likes to play with crayons and pencils</p>
+                                    <a href="#" class="btn btn-main"> View more</a>
+                                </figcaption>
+                          </figure>
+                            <figure class="portfolio-item" data-groups='["design"]'> 
+                                <img src="/creative_business_theme/static/src/photos/portfolio12.jpg" alt="" width="480" height="255"/>
+                                <figcaption>
+                                    <h2>Nice <span>Lily</span></h2>
+                                    <p>Lily likes to play with crayons and pencils</p>
+                                    <a href="#" class="btn btn-main"> View more</a>
+                                </figcaption>
+                          </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template id="creative_business_theme.clients" name="Clients">
+            <section class="clients" id="clients">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-title st-center">
+                                <h3>Some Of our clients</h3>
+                                <p>Avocent deditum long</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 clients-carousel">
+                                <img src="/creative_business_theme/static/src/photos/client.png" class="img-responsive" alt=""/>
+                                <img src="/creative_business_theme/static/src/photos/client2.png" class="img-responsive" alt=""/>
+                                <img src="/creative_business_theme/static/src/photos/client3.png" class="img-responsive" alt=""/>
+                                <img src="/creative_business_theme/static/src/photos/client4.png" class="img-responsive" alt=""/>
+                                <img src="/creative_business_theme/static/src/photos/client5.png" class="img-responsive" alt=""/>
+                                <img src="/creative_business_theme/static/src/photos/client6.png" class="img-responsive" alt=""/>
+                                <img src="/creative_business_theme/static/src/photos/client7.png" class="img-responsive" alt=""/>
+                                <img src="/creative_business_theme/static/src/photos/client8.png" class="img-responsive" alt=""/>
+                                <img src="/creative_business_theme/static/src/photos/client9.png" class="img-responsive" alt=""/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template id="creative_business_theme.testimonials" name="Testimonials">
+            <section class="testimonials" id="testimonials">
+                <div id="myCarousel" class="s_carousel s_carousel_default carousel slide" data-interval="10000">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"/>
+                        <li data-target="#myCarousel" data-slide-to="1"/>
+                        <li data-target="#myCarousel" data-slide-to="2"/>
+                    </ol>
+                    <!-- Content -->
+                    <div class="carousel-inner">
+                        <!-- #01 -->
+                        <div class="carousel-item active oe_custom_bg oe_img_bg pt152 pb152" data-name="Slide">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="testimonial-img">
+                                        <img src="/creative_business_theme/static/src/photos/client.jpg" alt="" height="150" width="150"/>
+                                    </div>
+                                    <blockquote>
+                                        <p class="testimonial_p">Tueri tantis inter variis deterritum facta caret pleniorem, efficiat affert quiete, commodis comparat facio ponti, adolescens recta iucundius mundi nostrum viris quae utilitatibus.</p>
+                                        <h5> - Joseph Thompson, <cite title="Source Title">Example Inc.</cite></h5>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- #02 -->
+                        <div class="carousel-item oe_custom_bg oe_img_bg pt152 pb152" data-name="Slide">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="testimonial-img">
+                                        <img src="/creative_business_theme/static/src/photos/client2.jpg" alt=""/>
+                                    </div>
+                                    <blockquote>
+                                        <p class="testimonial_p">Contrariis labore vetuit scaevola, contra percurri adamare efficeret quibus. Nostram consulatu mediocritatem maiorem, cyrenaicisque, quandam accedit veniat cognitioque, animadvertat accusantibus temporibus maximeque litterae.</p>
+                                        <h5> - Nancy Ford, <cite title="Source Title">Example Inc.</cite></h5>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- #03 -->
+                        <div class="carousel-item oe_custom_bg oe_img_bg pt152 pb152" data-name="Slide">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="testimonial-img">
+                                        <img src="/creative_business_theme/static/src/photos/client3.jpg" alt=""/>
+                                    </div>
+                                    <blockquote>
+                                        <p class="testimonial_p">Illas, volumus prosperum. Nostras eoque statua cuius corrumpit praetor aliter quaeso propter ei, quam inducitur ruant doctiores sanguinem atomum molestiae, antiqua inculta dicent.</p>
+                                        <h5> - Arthur Fernandez, <cite title="Source Title">Example Inc.</cite></h5>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="carousel-control-prev" data-target="#myCarousel" data-slide="prev" role="img" aria-label="Previous" title="Previous">
+                        <span class="carousel-control-prev-icon"/>
+                        <span class="sr-only">Previous</span>
+                    </div>
+                    <div class="carousel-control-next" data-target="#myCarousel" data-slide="next" role="img" aria-label="Next" title="Next">
+                        <span class="carousel-control-next-icon"/>
+                        <span class="sr-only">Next</span>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template id="creative_business_theme.pricing" name="Pricing">
+            <section class="pricing" id="pricing">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-title st-center">
+                                <h3>Our Packages</h3>
+                                <p>Choose download package</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="pricing-table">
+                                <div class="pricing-header">
+                                    <div class="pt-price">$9.99<small>/m</small></div>
+                                    <div class="pt-name">Standard</div>
+                                </div>
+                                <div class="pricing-body">
+                                    <ul>
+                                        <li><i class="fa fa-check"></i> 2GB Space</li>
+                                        <li><i class="fa fa-check"></i> 10GB Bandwidth</li>
+                                        <li><i class="fa fa-check"></i> Free Domain</li>
+                                        <li><i class="fa fa-times"></i> Free Email</li>
+                                        <li><i class="fa fa-times"></i> Free cPanel</li>
+                                        <li><i class="fa fa-times"></i> Free FTP</li>
+                                        <li><i class="fa fa-times"></i> Free Support</li>
+                                    </ul>
+                                </div>
+                                <div class="pricing-footer">
+                                    <a href="#" class="btn btn-default">Purchase</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="pricing-table">
+                                <div class="pricing-header">
+                                    <div class="pt-price">$19.99<small>/m</small></div>
+                                    <div class="pt-name">Premium</div>
+                                </div>
+                                <div class="pricing-body">
+                                    <ul>
+                                        <li><i class="fa fa-check"></i> 5GB Space</li>
+                                        <li><i class="fa fa-check"></i> 50GB Bandwidth</li>
+                                        <li><i class="fa fa-check"></i> Free Domain</li>
+                                        <li><i class="fa fa-check"></i> Free Email</li>
+                                        <li><i class="fa fa-times"></i> Free cPanel</li>
+                                        <li><i class="fa fa-times"></i> Free FTP</li>
+                                        <li><i class="fa fa-times"></i> Free Support</li>
+                                    </ul>
+                                </div>
+                                <div class="pricing-footer">
+                                    <a href="#" class="btn btn-default">Purchase</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="pricing-table featured">
+                                <div class="pricing-header">
+                                    <div class="pt-price">$49.99<small>/m</small></div>
+                                    <div class="pt-name">Developer</div>
+                                    <div class="featured-text">Best Value</div>
+                                </div>
+                                <div class="pricing-body">
+                                    <ul>
+                                        <li><i class="fa fa-check"></i> 20GB Space</li>
+                                        <li><i class="fa fa-check"></i> 1TB Bandwidth</li>
+                                        <li><i class="fa fa-check"></i> Free Domain</li>
+                                        <li><i class="fa fa-check"></i> Free Email</li>
+                                        <li><i class="fa fa-check"></i> Free cPanel</li>
+                                        <li><i class="fa fa-check"></i> Free FTP</li>
+                                        <li><i class="fa fa-times"></i> Free Support</li>
+                                    </ul>
+                                </div>
+                                <div class="pricing-footer">
+                                    <a href="#" class="btn btn-main">Purchase</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="pricing-table">
+                                <div class="pricing-header">
+                                    <div class="pt-price">$99.99<small>/m</small></div>
+                                    <div class="pt-name">Enterprise</div>
+                                </div>
+                                <div class="pricing-body">
+                                    <ul>
+                                        <li><i class="fa fa-check"></i> Unlimited Space</li>
+                                        <li><i class="fa fa-check"></i> Unlimited Bandwidth</li>
+                                        <li><i class="fa fa-check"></i> Free Domain</li>
+                                        <li><i class="fa fa-check"></i> Free Email</li>
+                                        <li><i class="fa fa-check"></i> Free cPanel</li>
+                                        <li><i class="fa fa-check"></i> Free FTP</li>
+                                        <li><i class="fa fa-check"></i> Free Support</li>
+                                    </ul>
+                                </div>
+                                <div class="pricing-footer">
+                                    <a href="#" class="btn btn-default">Purchase</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template id="creative_business_theme.faq" name="FAQ">
+            <section class="faq" id="faq">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-title st-center">
+                                <h3>Some questions</h3>
+                                <p>frequently asked questions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block row">
+                        <div class="col-md-6">
+                            <div class="faq">
+                                <h3><i class="fa fa-question-circle"></i> Minime paulo beatus stare?</h3>
+                                <p>Praesidium quaerat doloribus turpis fruuntur vocant postremo optimus utraque, veserim vitae appellant fructuosam, mediocris consistat impetu illae coniunctione modi consequentis nosque, vis qui deorum, poenis fuisse timorem ferae fastidium.</p>
+                            </div>
+                            <div class="faq">
+                                <h3><i class="fa fa-question-circle"></i> Ferentur interrogari diceret?</h3>
+                                <p>Pertinerent non importari, populo faciendi civium vetuit. Gravitate numquam praesentium fabulas. Abest ponatur ineruditus restat consoletur causam, ordiamur temperantiam repellat desistemus conquirendae molestia aiunt discenda monet.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="faq">
+                                <h3><i class="fa fa-question-circle"></i> Dicent erigimur secutus fortunae?</h3>
+                                <p>Quarum difficilius aegritudo epularum municipem alias. Vidisse litteris, rationibus eadem, mandaremus maluisset, delectus terrore angusta deduceret numquam fidelissimae mens gravissimo propter, tradit, fastidium facta facerem qua quippiam vacuitate cupiditatum admirer navigandi.</p>
+                            </div>
+                            <div class="faq">
+                                <h3><i class="fa fa-question-circle"></i> Molestiae dedocere effluere?</h3>
+                                <p>Habeo mala nocet perpetiuntur legendos dicemus levitatibus abducat futura, occultarum probant vitae evertunt laudantium docendi difficilem, offendit concederetur tuo hortensio deserere, molita gaudemus titillaret difficilius, parum timeret unum molestiam omnis vitae.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template id="creative_business_theme.call-us" name="Call-us">
+            <section class="call-us">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>If you like to work with us</h3>
+                            <a href="#" class="btn btn-default-o btn-lg">Call Us Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template id="creative_business_theme.subscribe" name="Subscribe">
+            <section class="subscribe" id="subscription">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="subscribe-title">Subscribe Newsletter</h3>
+                            <form action="/subscribe_action" id="subsForm" class="subscribe-form">
+                                <div class="input-group">
+                                    <input type="email" name="subsemail"  class="form-control" id="subsemail" placeholder="Enter E-mail..."/>
+                                    <span class="input-group-btn subscribe_email_btn">
+                                        <button id="subscribe" class="btn btn-main btn-lg" type="button">Subscribe!</button>
+                                    </span>
+                                </div>
+                            </form>
+                            <div id='contact_message' style="text-align: center;color: green; margin-top:10px;"></div>
+                            <div class="subscribe-result"></div>
+                            <p class="subscribe-or">or</p>
+                            <ul class="subscribe-social">
+                                <li><a href="#" class="social twitter"><i class="fa fa-twitter"></i> Follow</a></li>
+                                <li><a href="#" class="social facebook"><i class="fa fa-facebook"></i> Like</a></li>
+                                <li><a href="#" class="social rss"><i class="fa fa-rss"></i> RSS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template id="creative_business_theme.blog" name="Blog">
+            <section class="blog" id="blog">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-title st-center">
+                                <h3>Recent News</h3>
+                                <p>News from Blog</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block row">
+                        <div class="col-md-8">
+                            <div class="blog-post">
+                                <div class="post-meta">
+                                    <span class="author"><a href="#"><img src="/creative_business_theme/static/src/photos/author.jpg" alt=""/> John Doe</a></span>,
+                                    <span>Posted in <a href="#">WordPress</a></span>,
+                                    <span>At <strong>10 January, 2015</strong></span>
+                                </div>
+                                <h2 class="post-title"><a href="#">A example blog post with image</a></h2>
+                                <div class="post-thumb"><a href="#"><img src="/creative_business_theme/static/src/photos/post-thumb.jpg" alt="" class="img-responsive"/></a></div>
+                                <div class="post-content">
+                                    <p>Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque. Invenire probes contereret maior opinor iucundo inciderint depravate, concupiscunt, deorum didicerimus, solitudo ingeniis confectum attento illustribus. Quanta suam, quieti usu necessarius. Sapienter existimo fruenda contentiones deduceret dolere minuti animi scientia, inbecilloque servire evertunt. Exeduntur vivi laudatum dicitur omnia verterem fuerit inanitate efficiatur <a href="#" class="more-link">Continue reading <span class="meta-nav"></span></a></p>
+                                </div>
+                            </div>
+                            <div class="blog-post">
+                                <div class="post-meta">
+                                    <span class="author"><a href="#"><img src="/creative_business_theme/static/src/photos/author.jpg" alt=""/> John Doe</a></span>,
+                                    <span>Posted in <a href="#">WordPress</a></span>,
+                                    <span>At <strong>10 January, 2015</strong></span>
+                                </div>
+                                <h2 class="post-title"><a href="#">A example blog post with image</a></h2>
+                                <div class="post-thumb"><a href="#"><img src="/creative_business_theme/static/src/photos/post-thumb.jpg" alt="" class="img-responsive"/></a></div>
+                                <div class="post-content">
+                                    <p>Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque. Invenire probes contereret maior opinor iucundo inciderint depravate, concupiscunt, deorum didicerimus, solitudo ingeniis confectum attento illustribus. Quanta suam, quieti usu necessarius. Sapienter existimo fruenda contentiones deduceret dolere minuti animi scientia, inbecilloque servire evertunt. Exeduntur vivi laudatum dicitur omnia verterem fuerit inanitate efficiatur <a href="#" class="more-link">Continue reading <span class="meta-nav"></span></a></p>
+                                </div>
+                            </div>
+                            <div class="blog-post">
+                                <div class="post-meta">
+                                    <span class="author"><a href="#"><img src="/creative_business_theme/static/src/photos/author.jpg" alt=""/> John Doe</a></span>,
+                                    <span>Posted in <a href="#">WordPress</a></span>,
+                                    <span>At <strong>10 January, 2015</strong></span>
+                                </div>
+                                <h2 class="post-title"><a href="#">A example blog post without image</a></h2>
+                                <div class="post-content">
+                                    <p>Torquatos nihil utuntur liberamur benivole epularum evertunt accommodare, democrito didicerimus occulta egregios, praeclaram familiaritatem novi accusamus delectus opinemur mutae expetenda perpauca eas, concederetur fecerit ignorare delectari industria patientiamque. Invenire probes contereret maior opinor iucundo inciderint depravate, concupiscunt, deorum didicerimus, solitudo ingeniis confectum attento illustribus. Quanta suam, quieti usu necessarius. Sapienter existimo fruenda contentiones deduceret dolere minuti animi scientia, inbecilloque servire evertunt. Exeduntur vivi laudatum dicitur omnia verterem fuerit inanitate efficiatur <a href="#" class="more-link">Continue reading <span class="meta-nav"></span></a></p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="widgets">
+                                <div class="widget">
+                                    <h2 class="widget-title">Categories</h2>
+                                    <ul>
+                                        <li><a href="#">Video <span class="badge pull-right">5</span></a></li>
+                                        <li><a href="#">Flyer <span class="badge pull-right">7</span></a></li>
+                                        <li><a href="#">PSD <span class="badge pull-right">2</span></a></li>
+                                        <li><a href="#">Theme <span class="badge pull-right">6</span></a></li>
+                                        <li><a href="#">Music <span class="badge pull-right">8</span></a></li>
+                                        <li><a href="#">Bootstrap <span class="badge pull-right">2</span></a></li>
+                                        <li><a href="#">WordPress <span class="badge pull-right">9</span></a></li>
+                                        <li><a href="#">Framework <span class="badge pull-right">7</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="widget">
+                                    <h2 class="widget-title">Recent Post</h2>
+                                    <ul>
+                                        <li>
+                                            <div class="recent-post clearfix">
+                                                <a href="#" class="post-thumb"><img src="/creative_business_theme/static/src/photos/post-thumb-sm.jpg" alt="blog post"/></a>
+                                                <h2 class="post-title">
+                                                    <a href="#">A example blog post with image</a>
+                                                </h2>
+                                                <div class="post-meta">
+                                                    <span>Posted in <a href="#">WordPress</a></span>
+                                                </div>
+                                                
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="recent-post clearfix">
+                                                <a href="#" class="post-thumb"><img src="/creative_business_theme/static/src/photos/post-thumb-sm.jpg" alt="blog post"/></a>
+                                                <h2 class="post-title">
+                                                    <a href="#">A example blog post with image</a>
+                                                </h2>
+                                                <div class="post-meta">
+                                                    <span>Posted in <a href="#">WordPress</a></span>
+                                                </div>
+                                                
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="recent-post clearfix">
+                                                <a href="#" class="post-thumb"><img src="/creative_business_theme/static/src/photos/post-thumb-sm.jpg" alt="blog post"/></a>
+                                                <h2 class="post-title">
+                                                    <a href="#">A example blog post with image</a>
+                                                </h2>
+                                                <div class="post-meta">
+                                                    <span>Posted in <a href="#">WordPress</a></span>
+                                                </div>
+                                                
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="recent-post clearfix">
+                                                <a href="#" class="post-thumb"><img src="/creative_business_theme/static/src/photos/post-thumb-sm.jpg" alt="blog post"/></a>
+                                                <h2 class="post-title">
+                                                    <a href="#">A example blog post with image</a>
+                                                </h2>
+                                                <div class="post-meta">
+                                                    <span>Posted in <a href="#">WordPress</a></span>
+                                                </div>
+                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template id="creative_business_theme.contact" name="Contact">
+            <section class="contact" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-title st-center">
+                                <h3>Contact Us</h3>
+                                <p>Get in Touch with Us</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="row">
+                        <div class="col-md-6">
+                            <form action="/contact_us_lead" id="contact_form" class="contact-form" >
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Full Name" data-validation-required-message="Please enter your name."/>
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Your E-mail" data-validation-required-message="Please enter your email address."/>
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Your Phone" data-validation-required-message="Please enter your phone."/>
+                                <textarea id="message" name="message" placeholder="Your Message" class="form-control" rows="10" data-validation-required-message="Please enter a message."></textarea>
+                                <button class="btn btn-main btn-lg" type="button" id="submit_contact"> Send</button>
+                            </form>
+                            <div id="result-message" role="alert"></div>
+                            <div id='contact_us_message' style="text-align: center;color: green; margin-top:10px;"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero. Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa.
+
+                            Read more
+                            </p>
+                            <address>
+                                <t t-call="website.company_description"/>
+                            </address>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+
+        <template id="creative_business_theme.snippets_inherit" inherit_id="website.snippets" name="Snippets" >
+            <xpath expr="//div[@id='snippet_structure']" position="before">
+                <div id="snippet_custom" class="o_panel">
+                    <div class="o_panel_header">
+                        <span class="fa-stack">
+                            <i class="fa fa-mercury fa-stack-1x"></i>
+                        </span> Advance
+                    </div>
+                    <div class="o_panel_body">
+                        <t t-snippet="creative_business_theme.home" t-thumbnail="/creative_business_theme/static/src/photos/home.png" height="79" width="100"/>
+                        <t t-snippet="creative_business_theme.about" t-thumbnail="/creative_business_theme/static/src/photos/about.png" height="79" width="100" />
+                        <t t-snippet="creative_business_theme.funfacts" t-thumbnail="/creative_business_theme/static/src/photos/his.png" height="79" width="100"/>
+                        <t t-snippet="creative_business_theme.service" t-thumbnail="/creative_business_theme/static/src/photos/text.png" height="79" width="100"/>
+                        <t t-snippet="creative_business_theme.features-desc" t-thumbnail="/creative_business_theme/static/src/photos/features.png" height="79" width="100"/>
+                        <t t-snippet="creative_business_theme.call-2-acction" t-thumbnail="/creative_business_theme/static/src/photos/calltoaction.png" height="79" width="100"/>
+                        <t t-snippet="creative_business_theme.portfolio" t-thumbnail="/creative_business_theme/static/src/photos/potfolio.png" height="79" width="100"/>
+                        <t t-snippet="creative_business_theme.clients" t-thumbnail="/creative_business_theme/static/src/photos/client_menu.png" height="79" width="100"/>
+                        <t t-snippet="creative_business_theme.testimonials" t-thumbnail="/creative_business_theme/static/src/photos/testimonial.png" height="79" width="100"/>
+                        <t t-snippet="creative_business_theme.pricing" t-thumbnail="/creative_business_theme/static/src/photos/pricing.png" height="79" width="100"/>
+                        <t t-snippet="creative_business_theme.blog" t-thumbnail="/creative_business_theme/static/src/photos/blog1.png" height="79" width="100"/>
+                        <t t-snippet="creative_business_theme.faq" t-thumbnail="/creative_business_theme/static/src/photos/text.png" height="79" width="100"/>
+                        <t t-snippet="creative_business_theme.call-us" t-thumbnail="/creative_business_theme/static/src/photos/call-us.png" height="79" width="100"/>
+                        <t t-snippet="creative_business_theme.subscribe" t-thumbnail="/creative_business_theme/static/src/photos/subscribe.png" height="79" width="100"/>
+                        <t t-snippet="creative_business_theme.contact" t-thumbnail="/creative_business_theme/static/src/photos/contact.png" height="79" width="100"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+
+    </data>
+</incore>

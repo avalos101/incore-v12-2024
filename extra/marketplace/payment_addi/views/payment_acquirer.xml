@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <data>
+        <record id="acquirer_form_addi" model="ir.ui.view">
+            <field name="name">acquirer.form.addi</field>
+            <field name="model">payment.acquirer</field>
+            <field name="inherit_id" ref="payment.acquirer_form"/>
+            <field name="arch" type="xml">
+              <xpath expr='//group[@name="acquirer"]' position='after'>
+                <group attrs="{'invisible': [('provider', '!=', 'addi')]}">
+                  <field name="addi_api_key"/>
+                  <field name="addi_private_key" password="True">
+                </group>
+                <group attrs="{'invisible': [('provider', '!=', 'addi')]}">
+                    <a colspan="2" href="https://co.addi.com/unete-a-addi#forma" target="_blank">How to configure your ADDI account?</a>
+                </group>
+              </xpath>
+            </field>
+        </record>
+    </data>
+</incore>

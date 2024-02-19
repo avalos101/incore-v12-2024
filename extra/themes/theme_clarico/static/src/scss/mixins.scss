@@ -1,0 +1,63 @@
+/* -------------------------- Scss Mixins ------------------------*/
+@mixin width($width,$max-width)
+{
+  width:$width;
+  max-width:$max-width;
+}
+@mixin container
+{
+  display:block;
+  margin:0px auto;
+}
+@mixin text-ellipsis
+{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	display: inline-block;
+}
+/* ------------ Mixin for Text Styling ---------*/
+@mixin style($size,$color,$family:null,$height:null,$transform:null) 
+{ 
+  font-size:nth($f_sizes,$size); 
+  color:nth($f_color,$color); 
+  font-family:$family;
+  line-height:$height; 
+  text-transform:$transform;
+}
+@mixin spacing($l-spacing:null,$w-spacing:null)
+{
+  letter-spacing:$l-spacing;
+  word-spacing:$w-spacing;
+}
+@mixin border($border-width,$border-color,$border-style) 
+{ 
+  border-width:$border-width;
+  border-color:nth($f_color,$border-color);
+  border-style:$border-style;
+}
+@mixin position($position,$top:null,$right:null,$bottom:null,$left:null) {
+  position:$position;
+  top:$top;
+  right:$right;
+  bottom:$bottom;
+  left:$left;
+}
+/* ------------- Common style for p tag  ---------*/
+p {
+  @include container;
+  @include style(1,1,inherit,$common_style...);
+}
+@media (max-width:767.98px)
+{
+	p
+	{
+		font-size:nth($f_sizes,3)
+	}
+}
+.btn
+{
+	text-transform:uppercase;
+}
+/*------BUTTON FADE-IN------*/
+@keyframes fadeIn{from{opacity: 0; transform: translate3d(0, -30%, 0);}to{opacity: 1; transform: translate3d(0, 0, 0);}}

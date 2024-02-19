@@ -1,0 +1,33 @@
+<incore>
+  <data>  
+  <!-- groups="base.group_no_one" -->
+
+    <record id="hfoc_interest_view" model="ir.ui.view">
+        <field name="name">HFOC Interest</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+      
+            <xpath expr="//page[@name='other_info']" position="after">
+                <page string="Cronograma" name="hfoc_interest">
+                  
+                <field name="cronograma" readonly="1" force_save="1"/> 
+               
+               
+                   
+                </page>
+            </xpath>
+
+            <xpath expr="//field[@name='invoice_line_ids']" position="after">
+                <group class="oe_left">
+                  <field name="inicial_estimada" attrs="{'readonly':[('state', 'not in', ('draft'))]}"  style=" width: 75px; "/>
+                  <field name="date_financing"/>
+                  <button name="calcular_linea_interes" attrs="{'invisible':[('state', 'not in', ('draft'))]}"  class="btn btn-success" string="Calcular financiacion" type="object"/> 
+                </group>
+            </xpath>
+        </field>
+    </record>
+   
+
+  </data>
+</incore>

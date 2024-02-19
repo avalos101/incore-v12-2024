@@ -1,0 +1,84 @@
+.pos .quotationlist-screen .window,
+.pos .quotationlist-screen .full-content .subwindow{
+    display: block;
+}
+.pos .quotationlist-screen .full-content .subwindow-container{
+    display: block;
+    height: 100%;
+}
+.pos .quotationlist-screen .full-content .subwindow.collapsed,
+.pos .quotationlist-screen .full-content .subwindow-container.collapsed{
+    height: auto;
+}
+.pos .quotationlist-screen .quotation-list{
+    font-size: 16px;
+    width: 100%;
+    line-height: 40px;
+}
+.pos .quotationlist-screen .quotation-list th,
+.pos .quotationlist-screen .quotation-list td {
+    padding: 0px 8px;
+}
+.pos .quotationlist-screen .quotation-list tr{
+    transition: all 150ms linear;
+    background: rgb(230,230,230);
+}
+.pos .quotationlist-screen .quotation-list thead > tr,
+.pos .quotationlist-screen .quotation-list tr:nth-child(even) {
+    background: rgb(247,247,247);
+}
+.pos .quotationlist-screen .quotation-list tr.highlight{
+    transition: all 150ms linear;
+    background: rgb(110,200,155) !important;
+    color: white;
+}
+.pos .quotationlist-screen .quotation-list tr.lowlight{
+    transition: all 150ms linear;
+    background: rgb(216, 238, 227);
+}
+.pos .quotationlist-screen .quotation-list tr.lowlight:nth-child(even){
+    transition: all 150ms linear;
+    background: rgb(227, 246, 237);
+}
+.pos .quotationlist-screen .searchbox{
+    right: auto;
+    margin-left: -90px;
+    margin-top:8px;
+    left: 50%;
+}
+.pos .quotationlist-screen .searchbox input{
+    width: 120px;
+}
+.pos .quotationlist-screen .button.new-customer {
+    left: 50%;
+    margin-left: 120px;
+}
+.pos .quotationlist-screen .custom_searchbox {
+    position: absolute;
+	right: auto;
+	margin-left: -90px;
+	margin-top: 8px;
+	left: 50%;
+}
+.pos .custom_searchbox input {
+	width: 130px;
+	border: 1px solid #cecbcb;
+	padding: 10px 20px;
+	/*padding-left: 38px;*/
+	margin: 6px;
+	background: url("/point_of_sale/static/src/css/../img/search.png") no-repeat top 12px right 15px;
+	background-color: white;
+	border-radius: 20px;
+	font-family: "Lato","Lucida Grande", Helvetica, Verdana, Arial;
+	font-size: 13px;
+
+}
+.pos .custom_searchbox .search-clear {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 11px;
+	right: 12px;
+	cursor: pointer;
+	left: unset;
+}

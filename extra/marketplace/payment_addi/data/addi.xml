@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <function model="ir.model.fields" name="formbuilder_whitelist">
+        <value>res.partner</value>
+        <value eval="['last_name']"/>
+    </function>
+
+    <data noupdate="0">
+
+        <record id="payment_acquirer_addi" model="payment.acquirer">
+            <field name="name">Paga a cuotas con ADDI</field>
+            <field name="image" type="base64" file="payment_addi/static/img/addi.png"/>
+            <field name="provider">addi</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="addi_acquirer_button"/>
+            <field name="environment">test</field>
+            <field name="pre_msg"><![CDATA[
+<p><b>Finaliza tu compra con ADDI<b/><br/>   
+Es simple, rápido y seguro:
+<ul>
+    <li>Paga a cuotas con ADDI *sujeto a aprobación</li>
+    <li>Sin tarjeta de crédito y en minutos.</li>
+    <li>Paga tu primera cuota un mes después después de la compra.</li>
+    <li>Proceso 100% online. Sin papeleo ni costos ocultos.</li>
+</ul>
+Solo necesitas tu cédula y Whatsapp para aplicar!</p>]]></field>
+        </record>
+
+    </data>
+</incore>

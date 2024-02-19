@@ -1,0 +1,40 @@
+.btn-theme {
+	@include border(2px,19,solid)
+	@include style(2,19,inherit)
+	border-radius: 0 !important;
+    display: inline-block;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    background-color:transparent;
+    z-index:1;
+    &:after {
+	    content: '';
+		@include position(absolute,0,unset,unset,0)
+		z-index: -1;
+		width: 100%;
+	    height: 0;
+	    background:theme-color('primary');
+	    -webkit-transition: all 0.3s;
+	    -moz-transition: all 0.3s;
+	    transition: all 0.3s;
+    }
+    &:hover {
+		@include border(2px,19,solid)
+	    background-color:unset;
+	    color:#fff;
+	    &:after {
+		    height: 100%;
+    	}
+    }
+}
+@media (max-width:500px)
+{
+	.btn-theme
+	{
+		padding: 0.475rem 0.7rem;
+		font-size:nth($f_sizes,3);
+	}
+}

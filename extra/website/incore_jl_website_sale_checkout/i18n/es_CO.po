@@ -1,0 +1,157 @@
+# Translation of inCore Server.
+# This file contains the translation of the following modules:
+#	* incore_jl_website_sale_checkout
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: inCore Server 12.0+e-20190515\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-29 05:32+0000\n"
+"PO-Revision-Date: 2020-02-29 05:32+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "<br/>\n"
+"		<span>Quiero que mi pedido sea envuelto en papel de regalo.</span>"
+msgstr ""
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "<br/>\n"
+"		<span>Si lo desea puede dejarnos un mensaje.</span>"
+msgstr ""
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "<strong>Regalo</strong>"
+msgstr ""
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "Acepto los terminos y condiciones"
+msgstr ""
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.view_order_form
+msgid "Additional info"
+msgstr "Información Adicional"
+
+#. module: incore_jl_website_sale_checkout
+#: model:ir.model.fields,help:incore_jl_website_sale_checkout.field_sale_order__website_checkout_comments
+msgid "Additional message of customer on checout on ecommerce"
+msgstr "Mensje adicional del cliente en el checkout en el ecommerce."
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "Comentarios"
+msgstr ""
+
+#. module: incore_jl_website_sale_checkout
+#: model:ir.model,name:incore_jl_website_sale_checkout.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "Deje aqui el mensaje que desea para su regalo."
+msgstr ""
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "Documento"
+msgstr ""
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "Documento..."
+msgstr ""
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "Fecha de Nacimiento"
+msgstr ""
+
+#. module: incore_jl_website_sale_checkout
+#: model:ir.model.fields,field_description:incore_jl_website_sale_checkout.field_sale_order__website_checkout_gift
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "Gift"
+msgstr "Regalo"
+
+#. module: incore_jl_website_sale_checkout
+#: code:addons/incore_jl_website_sale_checkout/controllers/main.py:108
+#, python-format
+msgid "Invalid document! This document already exists for other customer/contact."
+msgstr "Documento no valido! Este documento ya existe para otro contacto."
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "Los campos con asterisco (*) son requeridos."
+msgstr ""
+
+#. module: incore_jl_website_sale_checkout
+#: model:ir.model.fields,field_description:incore_jl_website_sale_checkout.field_sale_order__website_checkout_gift_msg
+msgid "Message for gift"
+msgstr "Mensaje a incluir en el regalo."
+
+#. module: incore_jl_website_sale_checkout
+#: model:ir.model.fields,field_description:incore_jl_website_sale_checkout.field_sale_order__website_checkout_comments
+msgid "Message of customer"
+msgstr "Mensaje del cliente"
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "NIT"
+msgstr ""
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "Primer Apellido"
+msgstr ""
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "Primer Nombre"
+msgstr ""
+
+#. module: incore_jl_website_sale_checkout
+#: model:ir.model,name:incore_jl_website_sale_checkout.model_sale_order
+msgid "Sale Order"
+msgstr "Pedido de venta"
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "Segundo Apellido"
+msgstr ""
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "Segundo Nombre"
+msgstr ""
+
+#. module: incore_jl_website_sale_checkout
+#: model:ir.model.fields,field_description:incore_jl_website_sale_checkout.field_sale_order__website_checkout_tandc
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "Terms and Conditions"
+msgstr "Términos y condiciones"
+
+#. module: incore_jl_website_sale_checkout
+#: model:ir.model.fields,help:incore_jl_website_sale_checkout.field_sale_order__website_checkout_gift
+msgid "The customer wants its order in a gift."
+msgstr "El cliente quiere su pedido envuelto en papel de regalo."
+
+#. module: incore_jl_website_sale_checkout
+#: model:ir.model.fields,help:incore_jl_website_sale_checkout.field_sale_order__website_checkout_tandc
+msgid "This indicates if the user accepted the terms and conditions."
+msgstr "Indica si el cliente acepto los términos y condiciones."
+
+#. module: incore_jl_website_sale_checkout
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_sale_checkout.address
+msgid "Tipo de Documento"
+msgstr ""
+

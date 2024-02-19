@@ -1,0 +1,43 @@
+.btn-theme:before
+{
+	content: '';
+	@include position(absolute,0,null,null,0);
+	width: 150%;
+	height: 100%;
+	background: #000000;
+	z-index: -1;
+	-webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+	transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+	-webkit-transform-origin: 0% 100%;
+	transform-origin: 0% 100%;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
+	transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+.btn-theme
+{
+	overflow: hidden;
+	@include position(relative,null,null,null,null);
+	z-index: 1;
+	border: 1px solid transparent;
+	-webkit-transition: border-color 0.3s, color 0.3s;
+	transition: border-color 0.3s, color 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	box-sizing: border-box
+}
+.btn-theme:hover:before{
+
+	opacity: 1;
+	-webkit-transform: rotate3d(0, 0, 1, 0deg);
+	transform: rotate3d(0, 0, 1, 0deg);
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+@media (max-width:500px)
+{
+	.btn-theme
+	{
+		padding: 0.475rem 0.7rem;
+		font-size:nth($f_sizes,3);
+	}
+}

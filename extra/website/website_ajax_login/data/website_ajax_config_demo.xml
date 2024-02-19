@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <data noupdate="1">
+
+        <record model="website" id="website.default_website">
+            <field name="auth_signup_uninvited">b2c</field>
+            <field name="website_incore_login" eval="True"/>
+            <field name="website_facebook_login" eval="False"/>
+            <field name="website_gmail_login" eval="False"/>
+        </record>
+
+    </data>
+</incore>

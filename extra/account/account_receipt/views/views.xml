@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <record id="view_account_journal_form" model="ir.ui.view">
+        <field name="name">account.journal.form</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="other" string="Otra informacion">
+                    <group>
+                        <group>
+                            <field name="report_header"/>
+                        </group>
+                        <group>
+                            <field name="report_footer"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="invoice_form" model="ir.ui.view">
+        <field name="name">account.invoice.form</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form" />
+        <field name="arch" type="xml">
+            <button name="preview_invoice" position="after">
+                <button name="print_new_receipt" type="object" string="Imprimir Ticket"/>
+            </button>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="account_print_receipt_form">
+            <field name="name">account.print.receipt.form</field>
+            <field name="model">account.print.receipt</field>
+            <field name="arch" type="xml">
+                <form string="Account Invoice Receipt">
+                    <script>
+                        $(document).ready(function(){
+                            $(".print").click(function(){
+                              var newWin=window.open('','Print-Window');
+                              newWin.document.open();
+                              newWin.document.write($(".receipt_content").html());
+                              newWin.document.close();
+                              setTimeout(function(){newWin.close();},10);
+                            });
+                        });
+                    </script>
+                        <div class="button print">
+                                <i class="fa fa-print"></i> Print Receipt
+                        </div>
+                        <div class="receipt_content receipt_style">
+                            <html><body onload='window.print()' style="background-color: white;">
+                                            <style>
+                        .o_readonly{
+                            text-align: center;
+                        }
+                        .print {
+                            line-height: 40px;
+                            padding: 3px 13px;
+                            font-size: 19px;
+                            text-align: center;
+                            background: rgb(230, 230, 230);
+                            margin: 16px;
+                            margin-bottom: 0px;
+                            border-radius: 3px;
+                            border: solid 1px rgb(209, 209, 209);
+                            cursor: pointer;
+                        }
+
+                        .pos-right-align {
+                            text-align: right;
+                        }
+                        .pos-sale-ticket {
+                           text-align: left;
+                            width: 365px;
+                            background-color: white;
+                            margin: 20px;
+                            padding: 15px;
+                            font-size: 14px;
+                            padding-bottom: 30px;
+                            display: inline-block;
+                            font-family: "Inconsolata";
+                            border: solid 1px rgb(220,220,220);
+                            border-radius: 3px;
+                            overflow: hidden;
+                        }
+                        .pos-sale-ticket table {
+                            width: 100%;
+                            border: 0;
+                            table-layout: fixed;
+                        }
+                    </style>
+                            <field name="name" nolabel="1" readonly="1"  widget="html"/>
+                        </body>
+                    </html>
+                        </div>
+                    <footer>
+                        <!-- <button name="print_labels" string="Print" type="object" class="btn-primary"/> -->
+                        <button special="cancel" string="Cancel" class="btn-default"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+</incore>

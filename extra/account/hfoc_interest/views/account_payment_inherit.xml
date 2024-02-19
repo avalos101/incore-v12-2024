@@ -1,0 +1,18 @@
+<incore>
+  <data>  
+  <!-- groups="base.group_no_one" -->
+
+    <record id="hfoc_inicial_view" model="ir.ui.view">
+        <field name="name">HFOC Inicial</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_invoice_form"/>
+        <field name="arch" type="xml">    
+            <xpath expr="//label[@for='amount']" position="before">
+                <field name="hfoc_inicial"  /> 
+            </xpath>
+        </field>
+    </record>
+   
+
+  </data>
+</incore>

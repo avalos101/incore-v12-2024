@@ -1,0 +1,34 @@
+#!/bin/sh
+
+set -e
+
+INCORE_CONFIGURATION_FILE=/etc/incore/incore.conf
+INCORE_GROUP="incore"
+INCORE_DATA_DIR=/var/lib/incore
+INCORE_LOG_DIR=/var/log/incore
+INCORE_USER="incore"
+
+case "${1}" in
+    configure)
+        if ! getent passwd | grep -q "^incore:"; then
+            adduser --system --home $INCORE_DATA_DIR --quiet --group $INCORE_USER
+        fi
+        # Register "$INCORE_USER" as a postgres user with "Create DB" role attribute
+        su - postgres -c "createuser -d -R -S $INCORE_USER" 2> /dev/null || true
+        # Configuration file
+        chown $INCORE_USER:$INCORE_GROUP $INCORE_CONFIGURATION_FILE
+        chmod 0640 $INCORE_CONFIGURATION_FILE
+        # Log
+        mkdir -p $INCORE_LOG_DIR
+        chown $INCORE_USER:$INCORE_GROUP $INCORE_LOG_DIR
+        chmod 0750 $INCORE_LOG_DIR
+        # Data dir
+        chown $INCORE_USER:$INCORE_GROUP $INCORE_DATA_DIR
+        ;;
+    *)
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0

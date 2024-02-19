@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <template id="portal_my_details" inherit_id="portal.portal_my_details">
+
+	<xpath expr="//div[contains(@t-attf-class, 'name')]" position="attributes">
+	    <attribute name="style">display:none;</attribute>
+	</xpath>
+
+	<xpath expr="//div[contains(@t-attf-class, 'company_name')]" position="attributes">
+	    <attribute name="style">display:none;</attribute>
+	</xpath>
+
+	<xpath expr="//div[contains(@t-attf-class, 'vat')]" position="attributes">
+	    <attribute name="style">display:none;</attribute>
+	</xpath>
+
+	<xpath expr="//div[contains(@t-attf-class, 'email')]" position="before">
+	    <div t-attf-class="form-group #{error.get('x_name1') and 'o_has_error' or ''} col-lg-6 div_x_name1 o_website_form_required_custom">
+                <label class="col-form-label" for="x_name1">Primer Nombre</label>
+                <input type="text" name="x_name1" t-attf-class="form-control #{error.get('x_name1') and 'is-invalid' or ''}" t-att-value="x_name1 or partner.x_name1" />
+            </div>
+
+	    <div t-attf-class="form-group #{error.get('x_name2') and 'o_has_error' or ''} col-lg-6 div_x_name2">
+                <label class="col-form-label label-optional" for="x_name2">Segundo Nombre</label>
+                <input type="text" name="x_name2" t-attf-class="form-control #{error.get('x_name2') and 'is-invalid' or ''}" t-att-value="x_name2 or partner.x_name2" />
+            </div>
+
+	    <div t-attf-class="form-group #{error.get('x_lastname1') and 'o_has_error' or ''} col-lg-6 div_x_lastname1 o_website_form_required_custom">
+                <label class="col-form-label" for="x_lastname1">Primer Apellido</label>
+                <input type="text" name="x_lastname1" t-attf-class="form-control #{error.get('x_lastname1') and 'is-invalid' or ''}" t-att-value="x_lastname1 or partner.x_lastname1" />
+            </div>
+
+	    <div t-attf-class="form-group #{error.get('x_lastname2') and 'o_has_error' or ''} col-lg-6 div_x_lastname2">
+                <label class="col-form-label label-optional" for="x_lastname2">Segundo Apellido</label>
+                <input type="text" name="x_lastname2" t-attf-class="form-control #{error.get('x_lastname2') and 'is-invalid' or ''}" t-att-value="x_lastname2 or partner.x_lastname2" />
+            </div>
+
+	    <div t-attf-class="form-group #{error.get('doctype') and 'o_has_error' or ''} col-lg-6 div_document_type o_website_form_required_custom">
+		<label class="col-form-label" for="doctype">Tipo de Documento</label>
+		<select id="doctype" name="doctype" t-attf-class="form-control #{error.get('doctype') and 'is-invalid' or ''}" required="">
+	  	    <option value="">Documento...</option>
+	  	    <t t-foreach="document_types.keys()" t-as="dt_val">
+	  		<option t-if="dt_val not in [1, 43]" t-att-value="dt_val" t-att-selected="dt_val == (document_type or -1)">
+	  		    <t t-esc="document_types[dt_val]" />
+	  		</option>
+	  	    </t>
+		</select>
+	    </div>
+
+	    <div t-attf-class="form-group #{error.get('xidentification') and 'o_has_error' or ''} col-lg-6 div_xidentification o_website_form_required_custom">
+		<label class="col-form-label" for="xidentification">Documento</label>
+		<input type="text" name="xidentification" id="xidentification" t-attf-class="form-control #{error.get('xidentification') and 'is-invalid' or ''}" t-att-value="xidentification or partner.xidentification" />
+	    </div>
+
+	    <div t-attf-class="form-group #{error.get('formatedNit') and 'o_has_error' or ''} col-lg-6" t-att-style="'display:block' if formatedNit or partner.formatedNit else 'display:none'">
+		<label class="col-form-label" for="formatedNit">NIT</label>
+		<input id="formatedNit" type="text" name="formatedNit" t-att-value="formatedNit or partner.formatedNit" readonly="1" />
+	    </div>
+	</xpath>
+
+    </template>
+</incore>

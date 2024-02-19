@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incore>
+    <template id="s_brand_multi_with_header" inherit_id="website.snippets" name="Multi Tab Brand Slider">
+        <xpath expr="//div[@id='snippet_structure']//div[hasclass('o_panel_body')]" position="inside">
+            <div>
+                <div class="oe_snippet_thumbnail">
+                    <img class="oe_snippet_thumbnail_img" src="/incore_customize/static/src/icon/slider-collection.jpg"/>
+                    <span class="oe_snippet_thumbnail_title">Brand Collection Slider</span>
+                </div>
+                <section class="oe_snippet_body js_brand_multi_collection">
+                    <div class="container" contenteditable="false">
+                        <div class="product_slide">
+                            <div class="seaction-head">
+                                <div class="h1">Brand Slider</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+    <template id="s_brands_slider_options" inherit_id="website.snippet_options" name="Brand collection Slider Snippet Options">
+        <xpath expr="." position="inside">
+            <div data-js="s_brand_multi_with_header" data-selector=".js_brand_multi_collection">
+                <li class="dropdown-item " data-no-preview="true" data-select_collection="" href="#" tabindex="-1">
+                    <a>Modify</a>
+                </li>
+            </div>
+        </xpath>
+    </template>
+    <template id="incore_customize.s_brand_collection_configure" name="Brand Collection coursol">
+        <div class="container" t-if="obj">
+            <div class="seaction-head" t-if="obj and obj.label_active">
+                <span class="h1" t-field="obj.name"/>
+            </div>
+            <t t-if="obj and obj.brand_ids">
+                <div class="owl-carousel" id="as_our_brand">
+                    <t t-as="brand" t-foreach="obj.brand_ids">
+                        <t t-if="brand.brand_id.website_id.id in ( website.id , False)">
+                            <t t-if="obj.brand_link_active">
+                                <div class="brand-img">
+                                    <a t-att-href="'/shop/brand/%s' % slug(brand.brand_id)">
+                                        <span class="brand_img_span">
+                                            <img t-att-alt="brand.brand_id.name" t-att-src="website.image_url(brand.brand_id,'logo','300x300')" t-att-title="brand.brand_id.name"/>
+                                        </span>
+                                    </a>
+                                    <t t-if="obj.brand_name_active">
+                                        <a t-att-href="'/shop/brand/%s' % slug(brand.brand_id)">
+                                            <div class="text-center" t-esc="brand.brand_id.name"/>
+                                        </a>
+                                    </t>
+                                </div>
+                            </t>
+                            <t t-else="">
+                                <div class="brand-img">
+                                    <span class="brand_img_span">
+                                        <img t-att-alt="brand.brand_id.name" t-att-src="website.image_url(brand.brand_id,'logo','300x300')" t-att-title="brand.brand_id.name"/>
+                                    </span>
+                                    <t t-if="obj.brand_name_active">
+                                        <div class="text-center" t-esc="brand.brand_id.name"/>
+                                    </t>
+                                </div>
+                            </t>
+                        </t>
+                    </t>
+                </div>
+            </t>
+        </div>
+    </template>
+</incore>

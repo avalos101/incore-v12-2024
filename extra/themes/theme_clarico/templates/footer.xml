@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+	<!-- Footer Style-1 -->
+	<template id="customize_footer_style_1" inherit_id="website.footer_custom"
+		active="False">
+		<xpath expr="//section[hasclass('s_text_block')]" position="replace">
+		</xpath>
+		<xpath expr="//div[@id='footer']" position="before">
+			<section class="s_text_block py-5">
+				<div class="container">
+					<div class="row">
+						<div class="footer_add_tel_email col-lg-3">
+							<div class="d-block mb16">
+								<a href="/" class="footer_logo">
+									<span t-field="res_company.logo" class="footer_logo_img"
+										t-options="{'widget': 'image'}" role="img"
+										t-att-aria-label="'Logo of %s' % res_company.name"
+										t-att-title="res_company.name" />
+								</a>
+							</div>
+							<ul class="footer_info_text">
+								<li
+									t-if="res_company.street or res_company.street2 or res_company.city or res_company.state_id or res_company.zip or res_company.country_id">
+									<span class="footer_add_tel_email_text_ept">add</span>
+									:
+									<span class="ftr_text_style">
+										<span t-field="res_company.street" />
+										<span t-field="res_company.street2" />
+										<span t-field="res_company.city" />
+										<span t-field="res_company.state_id" />
+										<span t-field="res_company.zip" />
+										<span t-field="res_company.country_id" />
+									</span>
+								</li>
+								<li t-if="res_company.phone">
+									<span class="footer_add_tel_email_text_ept">tel</span>
+									:
+									<span t-field="res_company.phone" class="ftr_text_style" />
+								</li>
+								<li t-if="res_company.email">
+									<span class="footer_add_tel_email_text_ept">email</span>
+									:
+									<span t-field="res_company.email" class="ftr_text_style" />
+								</li>
+							</ul>
+							<div class="footer_social_icon">
+								<a t-if="website.social_facebook" t-att-href="website.social_facebook"
+									class="btn btn-sm btn-link">
+									<i class="fa fa-facebook" />
+								</a>
+								<a t-if="website.social_twitter" t-att-href="website.social_twitter"
+									class="btn btn-sm btn-link">
+									<i class="fa fa-twitter" />
+								</a>
+								<a t-if="website.social_linkedin" t-att-href="website.social_linkedin"
+									class="btn btn-sm btn-link">
+									<i class="fa fa-linkedin" />
+								</a>
+								<a t-if="website.social_youtube" t-att-href="website.social_youtube"
+									class="btn btn-sm btn-link">
+									<i class="fa fa-youtube-play" />
+								</a>
+								<a t-if="website.social_googleplus" t-att-href="website.social_googleplus"
+									rel="publisher" class="btn btn-sm btn-link">
+									<i class="fa fa-google-plus-square" />
+								</a>
+								<a t-if="website.social_github" t-att-href="website.social_github"
+									class="btn btn-sm btn-link">
+									<i class="fa fa-github" />
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-4">
+							<ul class="footer_info_ept">
+								<section>
+									<li>
+										<a href="#">Help</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a href="#">Gift Cards</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a href="#">Order Status</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a href="#">Free Shipping</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a href="#">Returns Exchanges</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a href="#">International</a>
+									</li>
+								</section>
+							</ul>
+						</div>
+						<div class="col-lg-2 col-md-4">
+							<ul class="footer_info_ept">
+								<section>
+									<li>
+										<a href="#">About us</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a href="#">Jobs</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a href="#">Affiliates</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a href="#">Meet the maker</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a href="#">Contact</a>
+									</li>
+								</section>
+							</ul>
+						</div>
+						<div class="col-lg-2 col-md-4">
+							<ul class="footer_info_ept">
+								<section>
+									<li>
+										<a href="#">Security</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a href="#">Privacy</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a href="#">Text messaging</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a href="#">Legal</a>
+									</li>
+								</section>
+								<section>
+									<li>
+										<a href="#">Supply chain</a>
+									</li>
+								</section>
+							</ul>
+						</div>
+						<div class="col-lg-3">
+							<section class="footer_text_img">
+							<section><h2>Payment Methods</h2></section>
+							<section>
+							<img
+								src="/theme_clarico/static/src/img/customise_option/payment2.png"></img>
+							</section>			
+							</section>
+							<t t-call="website.language_selector"></t>
+						</div>
+					</div>
+				</div>
+			</section>
+		</xpath>
+		<xpath expr="//div[@id='footer']" position="after">
+			<div class="t_body_bg">
+				<div class="container">
+					<ul class="footer_inline_menu_t">
+						<li>
+							<a href="#">About Us</a>
+						</li>
+						<li>
+							<a href="#">Contact Us</a>
+						</li>
+						<li>
+							<a href="#">Customer Service</a>
+						</li>
+						<li>
+							<a href="#">Privacy Policy</a>
+						</li>
+						<li>
+							<a href="#">Accessibility</a>
+						</li>
+						<li>
+							<a href="#">Store Directory</a>
+						</li>
+					</ul>
+					<div class="copyright_add_language">
+						<span>Copyright &amp;copy;</span>
+						<span t-field="res_company.name" itemprop="name">Company name</span>
+					</div>
+				</div>
+			</div>
+			<div class="scrollup-div text-center">
+				<a href="#" class="scrollup-a">
+					<i class="fa fa-angle-up scrollup-i text-center"></i>
+				</a>
+			</div>
+		</xpath>
+	</template>
+	<template id="footer_poweredby_text" inherit_id="website.brand_promotion">
+		<xpath expr="//div[hasclass('o_brand_promotion')]" position="replace">
+		</xpath>
+	</template>
+	<template id="layout_footer_copyright_ept" inherit_id="website.layout_footer_copyright">
+		<xpath expr="//div[hasclass('o_footer_copyright')]" position="replace">
+		</xpath>
+	</template>
+	<!-- Footer Style-2 -->
+	<template id="customize_footer_style_2" inherit_id="website.footer_custom"
+		active="False">
+		<xpath expr="//section[hasclass('s_text_block')]" position="replace">
+		</xpath>
+		<xpath expr="//div[@id='footer']" position="before">
+			<section class="s_text_block pt16 pb8">
+				<div class="container">
+					<div class="row">
+						<div class="company_info_section">
+							<div class="company_detail">
+								<span>
+									<i class="fa fa-map-marker ftr_info_icon"></i>
+								</span>
+								<p
+									t-if="res_company.street or res_company.street2 or res_company.city or res_company.state_id or res_company.zip or res_company.country_id"
+									class="ftr_add_ept">
+									<span t-field="res_company.street" />
+									<span t-field="res_company.street2" />
+									<span t-field="res_company.city" />
+									<span t-field="res_company.state_id" />
+									<span t-field="res_company.zip" />
+									<span t-field="res_company.country_id" />
+								</p>
+							</div>
+							<div class="company_detail">
+								<span class="ftr_add_tel_email_ept" t-if="res_company.phone">
+									<i class="fa fa-phone ftr_info_icon"></i>
+								</span>
+								<p class="ftr_add_ept" t-field="res_company.phone" />
+							</div>
+							<div class="company_detail">
+								<span class="ftr_add_tel_email_ept" t-if="res_company.email">
+									<i class="fa fa-envelope ftr_info_icon"></i>
+								</span>
+								<p class="ftr_add_ept" t-field="res_company.email" />
+							</div>
+						</div>
+						<div class="footer_language_title_style_2 w-100">
+
+						</div>
+						<div class="footer_menu_social_icon">
+							<span t-field="res_company.logo" t-options="{'widget': 'image'}"
+								role="img" t-att-aria-label="'Logo of %s' % res_company.name"
+								t-att-title="res_company.name" class="footer_logo_img" />
+							<div class="footer_inline_menu">
+								<ul>
+									<li>
+										<a href="#">About Us</a>
+									</li>
+									<li>
+										<a href="#">Contact Us</a>
+									</li>
+									<li>
+										<a href="#">Customer Service</a>
+									</li>
+									<li>
+										<a href="#">Privacy Policy</a>
+									</li>
+									<li>
+										<a href="#">Accessibility</a>
+									</li>
+									<li>
+										<a href="#">Store Directory</a>
+									</li>
+								</ul>
+							</div>
+							<div class="t_f2_lang_social pt8">
+								<div class="t_footer_lang">
+									<t t-call="website.language_selector" />
+								</div>
+								<div class="footer_social_icon">
+									<a t-if="website.social_facebook" t-att-href="website.social_facebook"
+										class="btn-sm btn-link">
+										<i class="fa fa-facebook fa-facebook-square" />
+									</a>
+									<a t-if="website.social_twitter" t-att-href="website.social_twitter"
+										class="btn-sm btn-link">
+										<i class="fa fa-twitter fa-twitter-square" />
+									</a>
+									<a t-if="website.social_linkedin" t-att-href="website.social_linkedin"
+										class="btn-sm btn-link">
+										<i class="fa fa-linkedin fa-linkedin-square" />
+									</a>
+									<a t-if="website.social_youtube" t-att-href="website.social_youtube"
+										class="btn-sm btn-link">
+										<i class="fa fa-youtube-play fa-youtube-square" />
+									</a>
+									<a t-if="website.social_googleplus" t-att-href="website.social_googleplus"
+										class="btn-sm btn-link" rel="publisher">
+										<i class="fa fa-google-plus-square" />
+									</a>
+									<a t-if="website.social_github" t-att-href="website.social_github"
+										class="btn-sm btn-link">
+										<i class="fa fa-github" />
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="scrollup-div text-center">
+							<a href="#" class="scrollup-a">
+								<i class="fa fa-angle-up scrollup-i text-center"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</xpath>
+		<xpath expr="//div[@id='footer']" position="after">
+			<div class="footer_copyright_text container">
+				<div class="row">
+					<div class="copyright_add_language">
+						<span>Copyright &amp;copy;</span>
+						<span t-field="res_company.name" itemprop="name">Company name</span>
+					</div>
+					<section class="footer_payment_img">
+						<img class="img-fluid"
+							src="/theme_clarico/static/src/img/customise_option/payment2.png" />
+					</section>
+				</div>
+			</div>
+		</xpath>
+	</template>
+	<template id="layout_footer_copyright_ept" inherit_id="website.layout_footer_copyright">
+		<xpath expr="//div[hasclass('o_footer_copyright')]" position="replace">
+		</xpath>
+	</template>
+	<!-- Footer_style_3 -->
+	<template id="customize_footer_style_3" inherit_id="website.footer_custom"
+		active="False">
+		<xpath expr="//section[hasclass('s_text_block')]" position="replace">
+		</xpath>
+		<xpath expr="//div[@id='footer']" position="before">
+			<section class="s_text_block pb8">
+				<div class="container">
+					<div class="row">
+						<div class="footer_logo_title_socialicon col-lg-4 col-md-12 py-4 px-4">
+							<a href="/" class="footer_logo col-lg-3">
+								<span t-field="res_company.logo" t-options="{'widget': 'image'}"
+									role="img" t-att-aria-label="'Logo of %s' % res_company.name"
+									t-att-title="res_company.name" />
+							</a>
+							<div class="footer_language">
+								<span>
+									<t t-call="website.language_selector" />
+								</span>
+							</div>
+							<div class="footer_social_icon">
+								<a t-if="website.social_facebook" t-att-href="website.social_facebook"
+									class="btn btn-sm btn-link">
+									<i class="fa fa-facebook" />
+								</a>
+								<a t-if="website.social_twitter" t-att-href="website.social_twitter"
+									class="btn btn-sm btn-link">
+									<i class="fa fa-twitter" />
+								</a>
+								<a t-if="website.social_linkedin" t-att-href="website.social_linkedin"
+									class="btn btn-sm btn-link">
+									<i class="fa fa-linkedin" />
+								</a>
+								<a t-if="website.social_youtube" t-att-href="website.social_youtube"
+									class="btn btn-sm btn-link">
+									<i class="fa fa-youtube-play" />
+								</a>
+								<a t-if="website.social_googleplus" t-att-href="website.social_googleplus"
+									rel="publisher" class="btn btn-sm btn-link">
+									<i class="fa fa-google-plus-square" />
+								</a>
+								<a t-if="website.social_github" t-att-href="website.social_github"
+									class="btn btn-sm btn-link">
+									<i class="fa fa-github" />
+								</a>
+							</div>
+						</div>
+
+						<div class="col-lg-5 col-md-6 py-4 px-4">
+							<div>
+								<h4 class="footer_menu_info">Informations</h4>
+							</div>
+							<div class="row">
+								<div class="col-lg-6 col-md-6">
+									<ul class="footer_info_ept">
+										<li>
+											<a href="#">Help</a>
+										</li>
+										<li>
+											<a href="#">Gift Cards</a>
+										</li>
+										<li>
+											<a href="#">Order Status</a>
+										</li>
+										<li>
+											<a href="#">Free Shipping</a>
+										</li>
+										<li>
+											<a href="#">Returns Exchanges</a>
+										</li>
+										<li>
+											<a href="#">International</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<ul class="footer_info_ept">
+										<li>
+											<a href="#">security</a>
+										</li>
+										<li>
+											<a href="#">privacy</a>
+										</li>
+										<li>
+											<a href="#">text messaging</a>
+										</li>
+										<li>
+											<a href="#">legal</a>
+										</li>
+										<li>
+											<a href="#">supply chain</a>
+										</li>
+										<li>
+											<a href="#">contact</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 py-4 px-4">
+							<div>
+								<h4 class="footer_menu_info">Contact Info</h4>
+							</div>
+							<div>
+								<ul class="footer_info_text">
+									<li
+										t-if="res_company.street or res_company.street2 or res_company.city or res_company.state_id or res_company.zip or res_company.country_id"
+										class="ftr_add_info">
+										<span class="footer_add_tel_email_text_ept">
+											<i class="fa fa-map-marker"></i>
+										</span>
+										<span class="ftr_text_style">
+											<span t-field="res_company.street" />
+											<span t-field="res_company.street2" />
+											<span t-field="res_company.city" />
+											<span t-field="res_company.state_id" />
+											<span t-field="res_company.zip" />
+											<span t-field="res_company.country_id" />
+										</span>
+									</li>
+									<li t-if="res_company.phone" class="ftr_add_info">
+										<span class="footer_add_tel_email_text_ept">
+											<i class="fa fa-phone"></i>
+										</span>
+										<span t-field="res_company.phone" class="ftr_text_style" />
+									</li>
+									<li t-if="res_company.email" class="ftr_add_info">
+										<span class="footer_add_tel_email_text_ept">
+											<i class="fa fa-envelope"></i>
+										</span>
+										<span t-field="res_company.email" class="ftr_text_style" />
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="scrollup-div text-center">
+							<a href="#" class="scrollup-a">
+								<i class="fa fa-angle-up scrollup-i text-center"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</xpath>
+		<xpath expr="//div[@id='footer']" position="after">
+			<div class="container pb-3">
+				<div class="copyright_add_language">
+					<span>Copyright &amp;copy;</span>
+					<span t-field="res_company.name" itemprop="name">Company name</span>
+				</div>
+				<section class="footer_payment_img">
+					<img class="img-fluid"
+						src="/theme_clarico/static/src/img/customise_option/payment2.png" />
+				</section>
+			</div>
+		</xpath>
+	</template>
+</incore>

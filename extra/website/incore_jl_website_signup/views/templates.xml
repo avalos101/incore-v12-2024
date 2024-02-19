@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+
+    <template id="assets_frontend" inherit_id="web.assets_frontend" name="Auth Assets">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/incore_jl_website_signup/static/src/js/incore_jl_website_signup.js"></script>
+        </xpath>
+    </template>
+
+    <template id="signup_fields" inherit_id="auth_signup.fields" name="Auth Signup/ResetPassword additional form fields">
+
+	<xpath expr="//div[hasclass('field-login')]" position="before">
+	    <div class="form-group field-social-title" t-if="not only_passwords">
+		<label for="title">Social Title:</label>
+		<label class="radio-inline">
+		    <input type="radio" name="titleOptions" value="1" t-att-checked="1" aria-label="Sr." title="Sr."/>
+		    <strong>Sr.</strong>
+		</label>
+		<label class="radio-inline ml-2">
+		    <input type="radio" name="titleOptions" value="0" aria-label="Sra." title="Sra."/>
+		    <strong>Sra.</strong>
+		</label>
+	    </div>
+	</xpath>
+
+	<xpath expr="//div[hasclass('field-name')]" position="replace">
+
+	    <div class="form-group field-first-name" t-if="not only_passwords">
+		<label for="name">First Name<span style="color:red;">*</span></label>
+		<input type="text" name="first_name" t-att-value="first_name" id="first_name" class="form-control form-control-sm" placeholder="e.g. John"
+		       required="required" t-att-readonly="'readonly' if only_passwords else None"
+		       t-att-autofocus="'autofocus' if login and not only_passwords else None" />
+	    </div>
+
+	    <div class="form-group field-second-name" t-if="not only_passwords">
+		<label for="name">Second Name</label>
+		<input type="text" name="second_name" t-att-value="second_name" id="second_name" class="form-control form-control-sm" placeholder="e.g. Doe"
+		       t-att-readonly="'readonly' if only_passwords else None"/>
+	    </div>
+
+	    <div class="form-group field-surname" t-if="not only_passwords">
+		<label for="name">Surname<span style="color:red;">*</span></label>
+		<input type="text" name="surname" t-att-value="surname" id="surname" class="form-control form-control-sm" placeholder="e.g. Perez"
+		       required="required" t-att-readonly="'readonly' if only_passwords else None"/>
+	    </div>
+
+	    <div class="form-group field-second-surname" t-if="not only_passwords">
+		<label for="name">Second Surname</label>
+		<input type="text" name="second_surname" t-att-value="second_surname" id="second_surname" class="form-control form-control-sm" placeholder="e.g. Fonseca"
+		       t-att-readonly="'readonly' if only_passwords else None"/>
+	    </div>
+
+	    <div class="form-group field-document-type" t-if="not only_passwords">
+		<label class="col-form-label" for="doctype">Document Type<span style="color:red;">*</span></label>
+		<select id="doctype" name="doctype" t-attf-class="form-control" required="required">
+		    <option value="">Document...</option>
+		    <t t-foreach="document_types.keys()" t-as="dt_val">
+	  		<option t-if="dt_val not in [1, 43]" t-att-value="dt_val">
+	  		    <t t-esc="document_types[dt_val]" />
+	  		</option>
+		    </t>
+		</select>
+	    </div>
+
+	    <div class="form-group field-xidentification" t-if="not only_passwords">
+		<label class="col-form-label" for="xidentification">Document Identification<span style="color:red;">*</span></label>
+		<input type="text" name="xidentification" id="xidentification" t-attf-class="form-control" t-att-value="xidentification" required="required"/>
+	    </div>
+
+	    <div class="form-group field-formatted-nit" t-if="not only_passwords">
+		<label class="col-form-label" for="formatedNit" style="display:none;">NIT</label>
+		<input id="formatedNit" type="text" name="formatedNit" t-att-value="formatedNit" readonly="1" style="display:none;"/>
+	    </div>
+	</xpath>
+
+	<xpath expr="//label[@for='login']" position="inside">
+	    <span style="color:red;">*</span>
+	</xpath>
+
+	<xpath expr="//label[@for='password']" position="inside">
+	    <span style="color:red;">*</span>
+	</xpath>
+
+	<xpath expr="//label[@for='confirm_password']" position="inside">
+	    <span style="color:red;">*</span>
+	</xpath>
+
+	<xpath expr="//div[hasclass('field-confirm_password')]" position="after">
+	    <div class="form-group field-data-protection" t-if="not only_passwords">
+		<label class="radio-inline">
+		    <input type="radio" name="data-protection" value="1" aria-label="Data Protection" title="Data Protection" required="required"/>
+		    Autorizo el correcto tratamiento de mis datos
+		    <span style="color:red;">*</span>
+		</label>
+		<label for="data-protection" style="font-size: 10px;">La protección de sus datos es fundamental para nosotros
+		Conforme a la Ley 1581 de 2012 y al Decreto 1377 de 2013, JOYERÍA LONDRES S.A.S., considerada como Responsable y/o Encargada del tratamiento de datos personales que almacena y recolecta de sus clientes en desarrollo de sus actividades comerciales, de ventas de sus productos en su red de almacenes o en los canales en línea, o en eventos promocionáles, entre otros, requiere obtener su autorización para continuar con el tratamiento de sus datos personales conforme a la política de privacidad para el tratamiento de sus datos personales las cuales están disponibles en nuestra <a href="https://joyerialondres.com/politicas-de-privacidad" target="_blank">Pagina de Política de Uso y Privacidad</a></label>
+	    </div>
+	</xpath>
+
+    </template>
+
+    <template id="reset_password" inherit_id="auth_signup.reset_password" name="Reset password | Remember email with document">
+	<xpath expr="//div[hasclass('oe_login_buttons')]/div[hasclass('align-items-center')]" position="after">
+	    <div class="d-flex justify-content-between align-items-center">
+		<a t-attf-href="/web/remember_email?{{ keep_query() }}">¿No recuerda su email?</a>
+	    </div>
+	</xpath>
+
+	<xpath expr="//div[hasclass('field-login')]/label[@for='login']" position="attributes">
+	    <attribute name="t-if">remember_email==0</attribute>
+	</xpath>
+
+	<xpath expr="//div[hasclass('field-login')]/input[@name='login']" position="attributes">
+	    <attribute name="t-if">remember_email==0</attribute>
+	</xpath>
+
+	<xpath expr="//div[hasclass('field-login')]" position="inside">
+	    <t t-if="remember_email==1">
+		<label class="col-form-label" for="doctype">Tipo de Documento<span style="color:red;">*</span></label>
+		<select id="doctype" name="doctype" t-attf-class="form-control" required="required">
+		    <option value="">Documento...</option>
+		    <t t-foreach="document_types.keys()" t-as="dt_val">
+	  		<option t-if="dt_val not in [1, 43]" t-att-value="dt_val">
+	  		    <t t-esc="document_types[dt_val]" />
+	  		</option>
+		    </t>
+		</select>
+
+		<label for="login" class="col-form-label">Documento<span style="color:red;">*</span></label>
+		<input type="text" name="xidentification" t-att-value="xidentification" id="xidentification" class="form-control"
+                       required="required" autocapitalize="off"/>
+	    </t>
+	</xpath>
+
+	<form position="before">
+	    <div t-if="message_remember_email">
+                <p class="alert alert-success" t-if="message_remember_email" role="status">
+                    <t t-esc="message_remember_email"/>
+                </p>
+            </div>
+	</form>
+
+    </template>
+
+</incore>

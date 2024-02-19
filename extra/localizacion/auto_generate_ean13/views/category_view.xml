@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incore>
+    <data>
+        <record id="view_category_ean_form" model="ir.ui.view">
+            <field name="name">product.category.ean.form</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='parent_id']" position="after">
+                  <field name="on_product_creation"/>
+                  <field name="use_prefix"/>
+                  <field name="prefix" attrs="{'invisible': [('use_prefix','!=', True)],'required': [('use_prefix','=', True)]}"/>
+                  <field name="generate_method"/>
+                  <field name="module_width"/>
+                  <field name="module_height"/>
+                  <field name="quiet_zone"/>
+                  <field name="background" placeholder="Add Color Code like #FFFFFF or color name like white"/>
+                  <field name="foreground" placeholder="Add Color Code like #000000 or color name like black"/>
+                  <field name="write_text"/>
+                  <field name="font_size" attrs="{'invisible': [('write_text','!=', True)]}"/>
+                  <field name="text_distance" attrs="{'invisible': [('write_text','!=', True)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</incore>

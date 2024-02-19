@@ -1,0 +1,619 @@
+<?xml version="1.0" ?>
+<DebitNote xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:sts="dian:gov:co:facturaelectronica:Structures-2-1" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" xmlns:xades141="http://uri.etsi.org/01903/v1.4.1#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2     http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd">
+   
+       
+   <ext:UBLExtensions>
+      
+        
+      <ext:UBLExtension>
+         
+            
+         <ext:ExtensionContent>
+            
+                
+            <sts:DianExtensions>
+               
+                    
+               <sts:InvoiceControl>
+                  
+                        
+                  <sts:InvoiceAuthorization>18760000001</sts:InvoiceAuthorization>
+                  
+                        
+                  <sts:AuthorizationPeriod>
+                     
+                            
+                     <cbc:StartDate>2019-01-19</cbc:StartDate>
+                     
+                            
+                     <cbc:EndDate>2030-01-19</cbc:EndDate>
+                     
+                        
+                  </sts:AuthorizationPeriod>
+                  
+                        
+                  <sts:AuthorizedInvoices>
+                     
+                            
+                     <sts:Prefix>SETP</sts:Prefix>
+                     
+                            
+                     <sts:From>990000000</sts:From>
+                     
+                            
+                     <sts:To>995000000</sts:To>
+                     
+                        
+                  </sts:AuthorizedInvoices>
+                  
+                    
+               </sts:InvoiceControl>
+               
+                    
+               <sts:InvoiceSource>
+                  
+                        
+                  <cbc:IdentificationCode listAgencyID="6" listAgencyName="United Nations Economic Commission for Europe" listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.1">CO</cbc:IdentificationCode>
+                  
+                    
+               </sts:InvoiceSource>
+               
+                    
+               <sts:SoftwareProvider>
+                  
+                        
+                  <sts:ProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="9" schemeName="31">1112768143</sts:ProviderID>
+                  
+                        
+                  <sts:SoftwareID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">93fb06a1-3dd7-442c-ae70-594c3d006a57</sts:SoftwareID>
+                  
+                    
+               </sts:SoftwareProvider>
+               
+                    
+               <sts:SoftwareSecurityCode schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">8dd1591222efbeaeb470b91e0bea4cd7a5b5c3638c93b948d4bb508f4b2482c9877467beddc2162987f202aad5c6d7b6</sts:SoftwareSecurityCode>
+               
+                    
+               <sts:AuthorizationProvider>
+                  
+                        
+                  <sts:AuthorizationProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="4" schemeName="31">800197268</sts:AuthorizationProviderID>
+                  
+                    
+               </sts:AuthorizationProvider>
+               
+                    
+               <sts:QRCode>https://catalogo-vpfe-hab.dian.gov.co/document/searchqr?documentkey=8f6cbc313d0fd74d7656220f795acc06821dcc4415234e26bb9b021ac1eefb4fe425af43ceb109677636637eacc2627f</sts:QRCode>
+               
+                
+            </sts:DianExtensions>
+            
+            
+         </ext:ExtensionContent>
+         
+        
+      </ext:UBLExtension>
+      
+        
+      <ext:UBLExtension>
+         
+            
+         <ext:ExtensionContent/>
+         
+        
+      </ext:UBLExtension>
+      
+    
+   </ext:UBLExtensions>
+   
+    
+   <cbc:UBLVersionID>UBL 2.1</cbc:UBLVersionID>
+   
+    
+   <cbc:CustomizationID>04</cbc:CustomizationID>
+   
+    
+   <cbc:ProfileID>DIAN 2.1</cbc:ProfileID>
+   
+    
+   <cbc:ProfileExecutionID>2</cbc:ProfileExecutionID>
+   
+    
+   <cbc:ID>SETP099000011</cbc:ID>
+   
+    
+   <cbc:UUID schemeID="2" schemeName="CUDE-SHA384">8f6cbc313d0fd74d7656220f795acc06821dcc4415234e26bb9b021ac1eefb4fe425af43ceb109677636637eacc2627f</cbc:UUID>
+   
+    
+   <cbc:IssueDate>2019-12-01</cbc:IssueDate>
+   
+    
+   <cbc:IssueTime>17:16:08-05:00</cbc:IssueTime>
+   
+    
+   <cbc:DueDate>2019-12-01</cbc:DueDate>
+   
+    
+   <cbc:DebitNoteTypeCode>92</cbc:DebitNoteTypeCode>
+   
+    
+   <cbc:Note>
+Nota Débito:  DOSCIENTOS
+
+
+CUDE: ***************
+NumFac : SETP099000011
+FecFac : 2019-12-01
+HorFac : 17:16:08-05:00
+ValFac : 200.00
+CodImp1 : 01
+ValImp1 : 0.00
+CodImp2 : 04
+ValImp2 : 0.00
+CodImp3 : 03
+ValImp3 : 0.00
+ValTotFac : 200.00
+NitOFE : 1112768143
+NumAdq : PER20573858124
+SoftwarePIN : 19891
+TipAmbiente : 2
+
+CUDE cadena: SETP0990000112019-12-0117:16:08-05:00200.00010.00040.00030.00200.001112768143PER20573858124198912
+CUDE sha384: 8f6cbc313d0fd74d7656220f795acc06821dcc4415234e26bb9b021ac1eefb4fe425af43ceb109677636637eacc2627f
+</cbc:Note>
+   
+    
+   <cbc:DocumentCurrencyCode listAgencyName="United Nations Economic Commission for Europe" listID="ISO 4217 Alpha" listName="Currency">EUR</cbc:DocumentCurrencyCode>
+   
+    
+   <cbc:LineCountNumeric>1</cbc:LineCountNumeric>
+   
+    
+   <cac:DiscrepancyResponse>
+      
+      
+      <cbc:ReferenceID>SETP990000062</cbc:ReferenceID>
+      
+      
+      <cbc:ResponseCode>2</cbc:ResponseCode>
+      
+      
+      <cbc:Description>Acuerdo mutuo</cbc:Description>
+      
+   
+   </cac:DiscrepancyResponse>
+   
+    
+   <cac:BillingReference>
+      
+      
+      <cac:InvoiceDocumentReference>
+         
+         
+         <cbc:ID>SETP990000062</cbc:ID>
+         
+         
+         <cbc:UUID schemeName="CUFE-SHA384">318827e4283f887f915f486c1c9173d5177363177684fd045b052b274368ddf06f413255a8f31b33e9ce3040fb585f92</cbc:UUID>
+         
+         
+         <cbc:IssueDate>2019-12-01</cbc:IssueDate>
+         
+      
+      </cac:InvoiceDocumentReference>
+      
+   
+   </cac:BillingReference>
+   
+    
+   <cac:AccountingSupplierParty>
+      
+        
+      <cbc:AdditionalAccountID>2</cbc:AdditionalAccountID>
+      
+        
+      <cac:Party>
+         
+            
+         <cbc:IndustryClassificationCode>6201</cbc:IndustryClassificationCode>
+         
+            
+         <cac:PartyName>
+            
+                
+            <cbc:Name>Grisales Rivera Jhon Alexander</cbc:Name>
+            
+            
+         </cac:PartyName>
+         
+            
+         <cac:PhysicalLocation>
+            
+                
+            <cac:Address>
+               
+                    
+               <cbc:ID>63001</cbc:ID>
+               
+                    
+               <cbc:CityName>Armenia (QUI)</cbc:CityName>
+               
+                    
+               <cbc:PostalZone>63001</cbc:PostalZone>
+               
+                    
+               <cbc:CountrySubentity>Quindio</cbc:CountrySubentity>
+               
+                    
+               <cbc:CountrySubentityCode>63</cbc:CountrySubentityCode>
+               
+                    
+               <cac:AddressLine>
+                  
+                        
+                  <cbc:Line>CR 14 18 NORTE 119 AP 304 A CONJ TORRES DE ALTAMIRA</cbc:Line>
+                  
+                    
+               </cac:AddressLine>
+               
+                    
+               <cac:Country>
+                  
+                        
+                  <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+                  
+                        
+                  <cbc:Name languageID="es">Colombia</cbc:Name>
+                  
+                    
+               </cac:Country>
+               
+                
+            </cac:Address>
+            
+            
+         </cac:PhysicalLocation>
+         
+            
+         <cac:PartyTaxScheme>
+            
+                
+            <cbc:RegistrationName>Grisales Rivera Jhon Alexander</cbc:RegistrationName>
+            
+                
+            <cbc:CompanyID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="9" schemeName="31">1112768143</cbc:CompanyID>
+            
+                
+            <cbc:TaxLevelCode listName="48">O-12</cbc:TaxLevelCode>
+            
+                
+            <cac:RegistrationAddress>
+               
+                    
+               <cbc:ID>63001</cbc:ID>
+               
+                    
+               <cbc:CityName>Armenia (QUI)</cbc:CityName>
+               
+                    
+               <cbc:PostalZone>63001</cbc:PostalZone>
+               
+                    
+               <cbc:CountrySubentity>Quindio</cbc:CountrySubentity>
+               
+                    
+               <cbc:CountrySubentityCode>63</cbc:CountrySubentityCode>
+               
+                    
+               <cac:AddressLine>
+                  
+                        
+                  <cbc:Line>CR 14 18 NORTE 119 AP 304 A CONJ TORRES DE ALTAMIRA</cbc:Line>
+                  
+                    
+               </cac:AddressLine>
+               
+                    
+               <cac:Country>
+                  
+                        
+                  <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+                  
+                        
+                  <cbc:Name languageID="es">Colombia</cbc:Name>
+                  
+                    
+               </cac:Country>
+               
+                
+            </cac:RegistrationAddress>
+            
+                
+            <cac:TaxScheme>
+               
+                    
+               <cbc:ID>01</cbc:ID>
+               
+                    
+               <cbc:Name>IVA</cbc:Name>
+               
+                
+            </cac:TaxScheme>
+            
+            
+         </cac:PartyTaxScheme>
+         
+            
+         <cac:PartyLegalEntity>
+            
+                
+            <cbc:RegistrationName>Grisales Rivera Jhon Alexander</cbc:RegistrationName>
+            
+                
+            <cbc:CompanyID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="9" schemeName="31">1112768143</cbc:CompanyID>
+            
+                
+            <cac:CorporateRegistrationScheme>
+               
+                    
+               <cbc:ID>SETP</cbc:ID>
+               
+                    
+               <cbc:Name>235019</cbc:Name>
+               
+                
+            </cac:CorporateRegistrationScheme>
+            
+            
+         </cac:PartyLegalEntity>
+         
+            
+         <cac:Contact>
+            
+                
+            <cbc:Telephone>3128097090</cbc:Telephone>
+            
+                
+            <cbc:ElectronicMail>rockscripts@gmail.com</cbc:ElectronicMail>
+            
+            
+         </cac:Contact>
+         
+        
+      </cac:Party>
+      
+    
+   </cac:AccountingSupplierParty>
+   
+    
+   <cac:AccountingCustomerParty>
+      
+        
+      <cbc:AdditionalAccountID>2</cbc:AdditionalAccountID>
+      
+        
+      <cac:Party>
+         
+            
+         <cac:PartyIdentification>
+            
+                
+            <cbc:ID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="" schemeName="50">PER20573858124</cbc:ID>
+            
+            
+         </cac:PartyIdentification>
+         
+            
+         <cac:PartyName>
+            
+                
+            <cbc:Name>Ivan Espinoza</cbc:Name>
+            
+            
+         </cac:PartyName>
+         
+            
+         <cac:PhysicalLocation>
+            
+                
+            <cac:Address>
+               
+                    
+               <cbc:ID>140101</cbc:ID>
+               
+                    
+               <cbc:CityName>Lima (LI)</cbc:CityName>
+               
+                    
+               <cbc:PostalZone>140101</cbc:PostalZone>
+               
+                    
+               <cbc:CountrySubentity>Lima</cbc:CountrySubentity>
+               
+                    
+               <cbc:CountrySubentityCode>14</cbc:CountrySubentityCode>
+               
+                    
+               <cac:AddressLine>
+                  
+                        
+                  <cbc:Line>Carrera 89 85 Sur #45</cbc:Line>
+                  
+                    
+               </cac:AddressLine>
+               
+                    
+               <cac:Country>
+                  
+                        
+                  <cbc:IdentificationCode>PE</cbc:IdentificationCode>
+                  
+                        
+                  <cbc:Name languageID="es">Perú</cbc:Name>
+                  
+                    
+               </cac:Country>
+               
+                
+            </cac:Address>
+            
+            
+         </cac:PhysicalLocation>
+         
+            
+         <cac:PartyTaxScheme>
+            
+                
+            <cbc:RegistrationName>Ivan Espinoza</cbc:RegistrationName>
+            
+                
+            <cbc:CompanyID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeName="50">PER20573858124</cbc:CompanyID>
+            
+                
+            <cbc:TaxLevelCode listName="49">O-49</cbc:TaxLevelCode>
+            
+                
+            <cac:TaxScheme>
+               
+                    
+               <cbc:ID>01</cbc:ID>
+               
+                    
+               <cbc:Name>IVA</cbc:Name>
+               
+                
+            </cac:TaxScheme>
+            
+            
+         </cac:PartyTaxScheme>
+         
+            
+         <cac:PartyLegalEntity>
+            
+                
+            <cbc:RegistrationName>Ivan Espinoza</cbc:RegistrationName>
+            
+                
+            <cbc:CompanyID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeName="50">PER20573858124</cbc:CompanyID>
+            
+            
+         </cac:PartyLegalEntity>
+         
+            
+         <cac:Contact>
+            
+                
+            <cbc:Telephone>45878854</cbc:Telephone>
+            
+                
+            <cbc:ElectronicMail>info@yourcompany.com</cbc:ElectronicMail>
+            
+            
+         </cac:Contact>
+         
+        
+      </cac:Party>
+      
+    
+   </cac:AccountingCustomerParty>
+   
+    
+   <cac:PaymentMeans>
+      
+        
+      <cbc:ID>1</cbc:ID>
+      
+        
+      <cbc:PaymentMeansCode>10</cbc:PaymentMeansCode>
+      
+        
+      <cbc:PaymentDueDate>2019-12-01</cbc:PaymentDueDate>
+      
+        
+      <cbc:PaymentID>EFECT-GIRO-87</cbc:PaymentID>
+      
+    
+   </cac:PaymentMeans>
+   
+
+   <cac:PaymentExchangeRate>
+      <cbc:SourceCurrencyCode>EUR</cbc:SourceCurrencyCode>
+      <cbc:SourceCurrencyBaseRate>1.00</cbc:SourceCurrencyBaseRate>
+      <cbc:TargetCurrencyCode>COP</cbc:TargetCurrencyCode>
+      <cbc:TargetCurrencyBaseRate>1.00</cbc:TargetCurrencyBaseRate>
+      <cbc:CalculationRate>3870.00000</cbc:CalculationRate>
+      <cbc:Date>2019-12-01</cbc:Date>
+   </cac:PaymentExchangeRate>
+   <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="EUR">0.00</cbc:TaxAmount>
+      <cac:TaxSubtotal>
+         <cbc:TaxableAmount currencyID="EUR">200.00</cbc:TaxableAmount>
+         <cbc:TaxAmount currencyID="EUR">0.00</cbc:TaxAmount>
+         <cac:TaxCategory>
+            <cbc:Percent>0.0</cbc:Percent>
+            <cac:TaxScheme>
+               <cbc:ID>01</cbc:ID>
+            </cac:TaxScheme>
+         </cac:TaxCategory>
+      </cac:TaxSubtotal>
+   </cac:TaxTotal>
+   <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="EUR">0.00</cbc:TaxAmount>
+      <cac:TaxSubtotal>
+         <cbc:TaxableAmount currencyID="EUR">0.00</cbc:TaxableAmount>
+         <cbc:TaxAmount currencyID="EUR">0.00</cbc:TaxAmount>
+         <cac:TaxCategory>
+            <cbc:Percent>0.0</cbc:Percent>
+            <cac:TaxScheme>
+               <cbc:ID>04</cbc:ID>
+            </cac:TaxScheme>
+         </cac:TaxCategory>
+      </cac:TaxSubtotal>
+   </cac:TaxTotal>
+   <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="EUR">0.00</cbc:TaxAmount>
+      <cac:TaxSubtotal>
+         <cbc:TaxableAmount currencyID="EUR">0.00</cbc:TaxableAmount>
+         <cbc:TaxAmount currencyID="EUR">0.00</cbc:TaxAmount>
+         <cac:TaxCategory>
+            <cbc:Percent>0.0</cbc:Percent>
+            <cac:TaxScheme>
+               <cbc:ID>03</cbc:ID>
+            </cac:TaxScheme>
+         </cac:TaxCategory>
+      </cac:TaxSubtotal>
+   </cac:TaxTotal>
+   <cac:RequestedMonetaryTotal>
+      <cbc:LineExtensionAmount currencyID="EUR">200.00</cbc:LineExtensionAmount>
+      <cbc:TaxExclusiveAmount currencyID="EUR">200.00</cbc:TaxExclusiveAmount>
+      <cbc:TaxInclusiveAmount currencyID="EUR">200.00</cbc:TaxInclusiveAmount>
+      <cbc:AllowanceTotalAmount currencyID="EUR">0.00</cbc:AllowanceTotalAmount>
+      <cbc:ChargeTotalAmount currencyID="EUR">0.00</cbc:ChargeTotalAmount>
+      <cbc:PayableAmount currencyID="EUR">200.00</cbc:PayableAmount>
+   </cac:RequestedMonetaryTotal>
+   <cac:DebitNoteLine>
+      <cbc:ID>1</cbc:ID>
+      <cbc:DebitedQuantity>1.0</cbc:DebitedQuantity>
+      <cbc:LineExtensionAmount currencyID="EUR">200.00</cbc:LineExtensionAmount>
+      <cac:TaxTotal>
+         <cbc:TaxAmount currencyID="EUR">0.00</cbc:TaxAmount>
+         <cac:TaxSubtotal>
+            <cbc:TaxableAmount currencyID="EUR">200.00</cbc:TaxableAmount>
+            <cbc:TaxAmount currencyID="EUR">0.00</cbc:TaxAmount>
+            <cac:TaxCategory>
+               <cbc:Percent>0.0</cbc:Percent>
+               <cac:TaxScheme>
+                  <cbc:ID>01</cbc:ID>
+               </cac:TaxScheme>
+            </cac:TaxCategory>
+         </cac:TaxSubtotal>
+      </cac:TaxTotal>
+      <cac:Item>
+         <cbc:Description>Edición de addon para sistema de facturación</cbc:Description>
+         <cbc:BrandName>rockscripts</cbc:BrandName>
+         <cbc:ModelName>RS-48444100-3</cbc:ModelName>
+      </cac:Item>
+      <cac:Price>
+         <cbc:PriceAmount currencyID="EUR">200.00</cbc:PriceAmount>
+      </cac:Price>
+   </cac:DebitNoteLine>
+</DebitNote>

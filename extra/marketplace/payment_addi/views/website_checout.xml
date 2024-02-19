@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+
+    <template id="address" inherit_id="website_sale.address" name="Additional fields in Address Management">
+		<xpath expr="//div[contains(@t-attf-class, 'div_name')]" position="after">
+            <div t-attf-class="form-group #{error.get('last_name') and 'o_has_error' or ''} col-lg-12 div_last_name">
+                <label class="col-form-label" for="last_name">Apellido</label>
+                <input type="text" required="required" name="last_name" t-attf-class="form-control #{error.get('last_name') and 'is-invalid' or ''}" t-att-value="'last_name' in checkout and checkout['last_name']" />
+            </div>
+		</xpath>
+        <xpath expr="//input[@name='field_required']" position="attributes">
+            <attribute name="t-att-value">'phone,name,last_name'</attribute>
+        </xpath>
+    </template>
+
+    <template id="address_b2b" inherit_id="website_sale.address_b2b" name="Show b2b fields" customize_show="True" active="True">
+		<xpath expr="//div[contains(@t-attf-class, 'div_vat')]/label[@for='vat']" position="replace">
+	    	<label class="col-form-label" for="vat">Cédula</label>
+		</xpath>
+    </template>
+
+</incore>

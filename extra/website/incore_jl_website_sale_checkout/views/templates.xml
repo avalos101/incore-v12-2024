@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+
+    <template id="assets_frontend" inherit_id="website.assets_frontend">
+    	<xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/incore_jl_website_sale_checkout/static/src/js/incore_jl_website_sale_checkout.js"></script>
+    	</xpath>
+    </template>
+
+    <template id="address" inherit_id="website_sale.address" name="Additional fields in Address Management">
+
+	<xpath expr="//div[@role='alert']" position="inside">
+	    <p>
+		Los campos con asterisco (*) son requeridos.
+	    </p>
+	</xpath>
+
+	<xpath expr="//div[contains(@t-attf-class, 'div_name')]" position="replace">
+	    <div t-attf-class="form-group #{error.get('x_name1') and 'o_has_error' or ''} col-lg-6 div_x_name1 o_website_form_required_custom">
+                <label class="col-form-label" for="x_name1">Primer Nombre</label>
+                <input type="text" name="x_name1" t-attf-class="form-control #{error.get('x_name1') and 'is-invalid' or ''}" t-att-value="'x_name1' in checkout and checkout['x_name1']" />
+            </div>
+
+	    <div t-attf-class="form-group #{error.get('x_name2') and 'o_has_error' or ''} col-lg-6 div_x_name2">
+                <label class="col-form-label label-optional" for="x_name2">Segundo Nombre</label>
+                <input type="text" name="x_name2" t-attf-class="form-control #{error.get('x_name2') and 'is-invalid' or ''}" t-att-value="'x_name2' in checkout and checkout['x_name2']" />
+            </div>
+
+	    <div t-attf-class="form-group #{error.get('x_lastname1') and 'o_has_error' or ''} col-lg-6 div_x_lastname1 o_website_form_required_custom">
+                <label class="col-form-label" for="x_lastname1">Primer Apellido</label>
+                <input type="text" name="x_lastname1" t-attf-class="form-control #{error.get('x_lastname1') and 'is-invalid' or ''}" t-att-value="'x_lastname1' in checkout and checkout['x_lastname1']" />
+            </div>
+
+	    <div t-attf-class="form-group #{error.get('x_lastname2') and 'o_has_error' or ''} col-lg-6 div_x_lastname2">
+                <label class="col-form-label label-optional" for="x_lastname2">Segundo Apellido</label>
+                <input type="text" name="x_lastname2" t-attf-class="form-control #{error.get('x_lastname2') and 'is-invalid' or ''}" t-att-value="'x_lastname2' in checkout and checkout['x_lastname2']" />
+            </div>
+
+	    <div t-attf-class="form-group #{error.get('doctype') and 'o_has_error' or ''} col-lg-6 div_document_type o_website_form_required_custom">
+		<label class="col-form-label" for="doctype">Tipo de Documento</label>
+		<select id="doctype" name="doctype" t-attf-class="form-control #{error.get('doctype') and 'is-invalid' or ''}" required="">
+	  	    <option value="">Documento...</option>
+	  	    <t t-foreach="document_types.keys()" t-as="dt_val">
+	  		<option t-if="dt_val not in [1, 43]" t-att-value="dt_val" t-att-selected="dt_val == (document_type or -1)">
+	  		    <t t-esc="document_types[dt_val]" />
+	  		</option>
+	  	    </t>
+		</select>
+	    </div>
+
+	    <div t-attf-class="form-group #{error.get('xidentification') and 'o_has_error' or ''} col-lg-6 div_xidentification o_website_form_required_custom">
+		<label class="col-form-label" for="xidentification">Documento</label>
+		<input type="text" name="xidentification" id="xidentification" t-attf-class="form-control #{error.get('xidentification') and 'is-invalid' or ''}" t-att-value="'xidentification' in checkout and checkout['xidentification']" t-att-readonly="'1' if 'identification' in checkout and checkout['xidentification'] and not can_edit_vat else None" t-att-title="'Changing VAT number is not allowed once document(s) have been issued for your account. Please contact us directly for this operation.' if 'xidentification' in checkout and checkout['xidentification'] and not can_edit_vat else None" />
+	    </div>
+
+	    <div t-attf-class="form-group #{error.get('formatedNit') and 'o_has_error' or ''} col-lg-6">
+		<label class="col-form-label" for="formatedNit" t-att-style="'display:block' if 'formatedNit' in checkout and checkout['formatedNit'] else 'display:none'">NIT</label>
+		<input id="formatedNit" type="text" name="formatedNit" t-att-value="'formatedNit' in checkout and checkout['formatedNit']" readonly="1" t-att-style="'display:block' if 'formatedNit' in checkout and checkout['formatedNit'] else 'display:none'" />
+	    </div>
+	</xpath>
+
+	<xpath expr="//div[hasclass('form-row')]" position="inside">
+	    <div class="w-100"/>
+
+	    <div class="form-group col-lg-6 o_website_form_required_custom">
+		<label for="name" class="col-form-label">Fecha de Nacimiento</label>
+		<input id="xbirthday" type="date" name="xbirthday" class="form-control o_website_form_input o_website_form_date" required="" t-att-value="'xbirthday' in checkout and checkout['xbirthday']"/>
+	    </div>
+
+	    <div class="form-group col-lg-12">
+		<label class="col-form-label" for="website_checkout_comments">Comentarios</label>
+		<br/>
+		<span>Si lo desea puede dejarnos un mensaje.</span>
+		<textarea name="website_checkout_comments" class="form-control"><t t-esc="website_sale_order.website_checkout_comments"/></textarea>
+	    </div>
+
+	    <div class="form-group col-lg-12">
+		<label class="checkbox-inline">
+	  	    <input type="checkbox" name="website_checkout_gift" value="1" aria-label="Gift" title="Gift" t-att-checked="'1' if 'website_checkout_gift' in website_sale_order and website_sale_order['website_checkout_gift'] else None" class="js-order-gift"/>
+	  	    <strong>Regalo</strong>
+		</label>
+		<br/>
+		<span>Quiero que mi pedido sea envuelto en papel de regalo.</span>
+		<textarea name="website_checkout_gift_msg" class="form-control js-order-gift-msg" t-att-style="'display:block' if 'website_checkout_gift' in website_sale_order and website_sale_order['website_checkout_gift'] else 'display:none'"><t t-if="website_sale_order.website_checkout_gift_msg"><t t-esc="website_sale_order.website_checkout_gift_msg"/></t><t t-else="">Deje aqui el mensaje que desea para su regalo.</t></textarea>
+	    </div>
+
+	    <div class="form-group col-lg-12">
+		<label class="checkbox-inline font-weight-normal">
+	  	    <input type="checkbox" name="website_checkout_tandc" value="1" aria-label="Terms and Conditions" title="Terms and Conditions" t-att-checked="'1' if 'website_checkout_tandc' in website_sale_order and website_sale_order['website_checkout_tandc'] else None"/>
+	  	    <a href="https://joyerialondres.com/terminos-de-compra" target="_blank">Acepto los terminos y condiciones</a>
+		</label>
+	    </div>
+
+	</xpath>
+
+	<xpath expr="//div[contains(@t-attf-class, 'div_street')]" position="attributes">
+	    <attribute name="t-attf-class">form-group #{error.get('street') and 'o_has_error' or ''} col-lg-12 div_street o_website_form_required_custom</attribute>
+	</xpath>
+	    
+    </template>
+
+    <template id="address_b2b" inherit_id="website_sale.address_b2b" name="Show b2b fields" customize_show="True" active="True">
+	<xpath expr="//div[contains(@t-attf-class, 'company_name')][1]" position="attributes">
+	    <attribute name="t-attf-class">form-group #{error.get('company_name') and 'o_has_error' or ''} col-lg-12</attribute>
+	</xpath>
+
+	<xpath expr="//div[contains(@t-attf-class, 'div_vat')]" position="attributes">
+	    <attribute name="style">display:none;</attribute>
+	</xpath>
+    </template>
+
+</incore>

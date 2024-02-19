@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+	<menuitem id="menu_please_root" name="Please" parent="point_of_sale.menu_point_root"/>
+	<menuitem id="menu_please_order" action="action_please_order_api" parent="menu_please_root" sequence="10"/>
+	<menuitem id="menu_please_detail" action="action_please_order_detail" parent="menu_please_root" sequence="20"/>
+	<menuitem id="menu_please_status" action="action_please_order_status" parent="menu_please_root" sequence="30"/>
+	<menuitem id="menu_please_api" action="action_please_api" parent="menu_please_root" sequence="99"/>
+</incore>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="LoadQuotationButton">
+        <div class='control-button set-quotation'>
+                      <t t-esc="widget.get_quotation()" />          
+        </div>
+    </t> 
+    <t t-name="QuotationListScreenWidget">
+        <div class="quotationlist-screen screen">
+            <div class="screen-content">
+                <section class="top-content">
+                    <span class='button back'>
+                        <i class='fa fa-angle-double-left'></i>
+                        Cancel
+                    </span>
+                    <span class='custom_searchbox'>
+                        <input placeholder='Search Quotation' />
+                        <span class="search-clear"></span>
+                    </span>
+                    <span class='button next highlight load_quotation'>
+                        Load Quotation
+                        <i class='fa fa-angle-double-right'></i>
+                    </span>
+                </section>
+                <section class="full-content">
+                    <div class='window'>
+                        <section class='subwindow'>
+                            <div class='subwindow-container'>
+                                <div class='subwindow-container-fix touch-scrollable scrollable-y order-list-scroll'>
+                                    <table class='quotation-list'>
+                                        <thead>
+                                            <tr>
+                                                <th>Quotation Number</th>
+                                                <th>Quotation Date</th>
+                                                <th>Customer</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class='quotation-list-contents'>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </t>
+    <t t-name="Quotations">
+        <tr class='quotation-line' t-att-data-id='quotation.id'>
+            <td><t t-esc='quotation.name' /></td>
+            <td><t t-esc="moment(quotation.date_order).format('DD/MM/Y')"/></td>
+            <td><t t-esc="quotation.partner_id[0,1]"/></td>
+            <td><t t-esc='widget.format_currency(quotation.amount_total) or ""' /></td>
+        </tr>
+    </t>
+</templates>

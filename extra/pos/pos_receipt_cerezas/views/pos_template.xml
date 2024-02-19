@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <template id="assets" name="pos_invoice assets" inherit_id="point_of_sale.assets">
+        <xpath expr="." position="inside">
+        	<script type="text/javascript" src="/pos_receipt_cerezas/static/lib/js/JsBarcode.all.js"/>
+            <script type="text/javascript" src="/pos_receipt_cerezas/static/src/js/screens.js"/>
+            <script type="text/javascript" src="/pos_receipt_cerezas/static/src/js/models.js"/>
+            <link rel="stylesheet" href="/pos_receipt_cerezas/static/src/css/pos.css"/>
+        </xpath>
+    </template>
+</incore>

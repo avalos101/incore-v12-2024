@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <data noupdate="1">
+        <record id="pos_sale_journal_please_unpay" model="account.journal">
+            <field name="name">Payment on delivery</field>
+            <field name="code">PoD</field>
+            <field name="type">bank</field>
+            <field name="journal_user" eval="True"/>
+            <field name="upon_delivery" eval="True"/>
+            <field name="sequence">20</field>
+        </record>
+    </data>
+</incore>

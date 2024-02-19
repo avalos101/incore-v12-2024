@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -e
+
+INCORE_LIB_DIR=/var/lib/incore
+INCORE_USER="incore"
+INCORE_GROUP="incore"
+
+case "${1}" in
+    remove)
+        deluser --quiet --system $INCORE_USER || true
+        delgroup --quiet --system --only-if-empty $INCORE_GROUP || true
+        ;;
+
+    purge)
+        if [ -d "$INCORE_LIB_DIR" ]; then
+            rm -rf $INCORE_LIB_DIR
+        fi
+        ;;
+
+    upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+        ;;
+
+esac
+
+#DEBHELPER#
+
+exit 0

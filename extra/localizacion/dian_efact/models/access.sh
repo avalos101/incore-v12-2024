@@ -1,0 +1,1 @@
+sudo chmod -R 0777 /incoreCOLOMBIA19/custom/addons/dian_efact/models/xml

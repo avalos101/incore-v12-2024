@@ -1,0 +1,8 @@
+<incore>
+    <data>
+      <template id="PO_5_document" name="inCore Template">
+       <t t-call="purchase.report_purchaseorder_document" t-lang="o.partner_id.lang"/>
+     </template>
+
+    </data>
+</incore>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+	<data>
+		<record id="sale_order_inherit_tree_view" model="ir.ui.view">
+			<field name="name">sale.order.inherit.tree.view</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_quotation_tree"/>
+			<field name="arch" type="xml">
+				<field name="state" position="after">
+					<field name="pos_sync"/>
+				</field>
+			</field>
+		</record>
+		<record id="sale_order_inherit_form_view" model="ir.ui.view">
+			<field name="name">sale.order.inherit.form.view</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form"/>
+			<field name="arch" type="xml">
+				<field name="client_order_ref" position="after">
+					<field name="pos_order_ref" readonly="1"/>
+					<field name="pos_sync" readonly="1"/>					
+				</field>
+			</field>
+		</record>	
+		<record id="sale_order_inherit_search_view" model="ir.ui.view">
+			<field name="name">sale.order.inherit.search.view</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.sale_order_view_search_inherit_quotation"/>
+			<field name="arch" type="xml">
+				<xpath expr="//filter" position="after">
+					<filter string="Pos Sync" name="possync" domain="[('pos_sync','=',True)]"/>
+					<filter string="Not Pos Sync" name="notpossync" domain="[('pos_sync','=',False)]"/>					
+				</xpath>
+			</field>
+		</record>			
+			
+	</data>
+</incore>

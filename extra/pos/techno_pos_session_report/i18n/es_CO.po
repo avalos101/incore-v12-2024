@@ -1,0 +1,196 @@
+# Translation of incore Server.
+# This file contains the translation of the following modules:
+#	* techno_pos_session_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: incore Server 12.0+e-20190515\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-30 21:02+0000\n"
+"PO-Revision-Date: 2019-09-30 21:02+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "----------------------------------------------------<br/>\n"
+"                            Sales Detail"
+msgstr "----------------------------------------------------<br/>\n"
+"                            Detalles de Ventas"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "<strong>Session Report</strong>"
+msgstr "<strong>COMPROBANTE DE INFORME DIARIO</strong>"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.view_pos_config_session_report_form_inherit
+msgid "Allow to print Session details from POS screen Directly."
+msgstr "Permite imprimir el reporte directamente desde la interface del POS"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Category"
+msgstr "Categoría"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Consecutivo Final:"
+msgstr "Consecutivo Final"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Consecutivo Inicial:"
+msgstr "Consecutivo Inicial"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Discount Amount"
+msgstr "Descuento"
+
+#. module: techno_pos_session_report
+#: model:ir.model.fields,field_description:techno_pos_session_report.field_report_techno_pos_session_report_report_pos_session_pdf__display_name
+msgid "Display Name"
+msgstr "Nombre Público"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Email:"
+msgstr "Correo electrónico:"
+
+#. module: techno_pos_session_report
+#: model:ir.model.fields,field_description:techno_pos_session_report.field_report_techno_pos_session_report_report_pos_session_pdf__id
+msgid "ID"
+msgstr ""
+
+#. module: techno_pos_session_report
+#: model:ir.model.fields,field_description:techno_pos_session_report.field_report_techno_pos_session_report_report_pos_session_pdf____last_update
+msgid "Last Modified on"
+msgstr "Última Modificación el"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Nro de Facturas:"
+msgstr ""
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Opening Total"
+msgstr "Total Apertura"
+
+#. module: techno_pos_session_report
+#: model:ir.model,name:techno_pos_session_report.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Configuración del Punto de Venta"
+
+#. module: techno_pos_session_report
+#: model:ir.model,name:techno_pos_session_report.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Órdenes del Punto de Venta"
+
+#. module: techno_pos_session_report
+#: model:ir.model,name:techno_pos_session_report.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Sesión del Punto de Venta"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Qty"
+msgstr "Ctdad"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Report on"
+msgstr "Fecha:"
+
+#. module: techno_pos_session_report
+#: model:ir.model.fields,field_description:techno_pos_session_report.field_pos_order__is_return_order
+msgid "Return Order"
+msgstr "Orden Devolucion"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Returns"
+msgstr "Devoluciones"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Sales"
+msgstr "Ventas"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Salesman"
+msgstr "Cajero"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Session"
+msgstr "Sesión."
+
+#. module: techno_pos_session_report
+#. incore-web
+#: code:addons/techno_pos_session_report/static/src/xml/session_report.xml:6
+#: model:ir.actions.report,name:techno_pos_session_report.action_report_session
+#, python-format
+msgid "Session Report"
+msgstr "Reporte de Sesión"
+
+#. module: techno_pos_session_report
+#: model:ir.model.fields,field_description:techno_pos_session_report.field_pos_config__iface_session_report
+msgid "Session Report "
+msgstr "Reporte de Sesión"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Session Status"
+msgstr "Estado de la Sesión"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Start Time"
+msgstr "Fecha inicio"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Tel:"
+msgstr "Tel:"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Total"
+msgstr ""
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Total Items"
+msgstr "Total items"
+
+#. module: techno_pos_session_report
+#: model_terms:ir.ui.view,arch_db:techno_pos_session_report.session_report_pdf_document
+msgid "Website:"
+msgstr "Website"
+
+#. module: techno_pos_session_report
+#: model:ir.model,name:techno_pos_session_report.model_report_techno_pos_session_report_report_pos_session_pdf
+msgid "report.techno_pos_session_report.report_pos_session_pdf"
+msgstr ""

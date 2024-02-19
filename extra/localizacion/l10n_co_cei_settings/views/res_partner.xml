@@ -1,0 +1,51 @@
+<incore>
+    <data>
+        <record id="l10n_co_cei_settings_res_partner_form_view" model="ir.ui.view">
+            <field name="name">Facturación electrónica</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='street']" position="attributes">
+                        <attribute name="attrs">{'required': [('fe_habilitada', '=', True)]}</attribute>
+                    </xpath>
+                    <xpath expr="//field[@name='city']" position="attributes">
+                        <attribute name="attrs">{'required': [('fe_habilitada', '=', True)]}</attribute>
+                    </xpath>
+                    <xpath expr="//field[@name='state_id']" position="attributes">
+                        <attribute name="attrs">{'required': [('fe_habilitada', '=', True)]}</attribute>
+                    </xpath>
+                    <xpath expr="//field[@name='email']" position="attributes">
+                        <attribute name="attrs">{'required': [('fe_habilitada', '=', True)]}</attribute>
+                    </xpath>
+                    <xpath expr="//field[@name='phone']" position="attributes">
+                        <attribute name="attrs">{'required': [('fe_habilitada', '=', True)]}</attribute>
+                    </xpath>
+                    <xpath expr="//field[@name='country_id']" position="attributes">
+                        <attribute name="attrs">{'required': [('fe_habilitada', '=', True)]}</attribute>
+                    </xpath>
+                    <xpath expr="//form/sheet/notebook/page" position="after">
+                        <page string="Facturación Electrónica">
+                            <group>
+                                <group>
+                                    <field name="fe_habilitada"/>
+                                    <field name="fe_primer_nombre" attrs="{'required': [('fe_habilitada', '=', True)]}"/>
+                                    <field name="fe_segundo_nombre"/>
+                                    <field name="fe_primer_apellido" attrs="{'required': [('fe_habilitada', '=', True)]}"/>
+                                    <field name="fe_es_compania" attrs="{'required': [('fe_habilitada', '=', True)]}"/>
+                                </group>
+                                <group>
+                                    <field name="fe_tipo_documento" attrs="{'required': [('fe_habilitada', '=', True)]}"/>
+                                    <field name="fe_nit" attrs="{'required': [('fe_habilitada', '=', True)]}"/>
+                                    <field name="fe_digito_verificacion" attrs="{'required': [('fe_habilitada', '=', True)]}"/>
+                                    <field name="fe_tipo_regimen" attrs="{'required': [('fe_habilitada', '=', True)]}"/>
+                                    <field name="fe_es_contribuyente" attrs="{'required': [('fe_habilitada', '=', True)]}"/>
+                                </group>
+                            </group>
+                        </page>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+    </data>
+</incore>

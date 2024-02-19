@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+	<!-- ======================= Header style option 1========================= -->
+	<template id="customize_header_style_1" inherit_id="portal.frontend_layout"
+		active="False" name="Header style 1">
+		<xpath expr="//header" position="before">
+			<div class="t_header_before_overlay">
+			<div class="container">
+				<section class="header_offer_top">
+					<p>
+					</p>
+					<div class="s_rating row s_header_offer_text">
+								<ul>
+									<li>Special Offer on First Purchase</li>
+									<li>
+										<section>|</section>
+									</li>
+									<li>Code : #ASDA44</li>
+									<li>
+										<section>|</section>
+									</li>
+									<li>Get 50% Off</li>
+								</ul>
+							</div>
+				</section>
+				<div class="row py-3 align-items-center header_style_1_main py-sm-2">
+					<div class="col-lg-4 t_header_1_left">
+						<div class="row">
+							<t t-set="website_sale_pricelists" t-value="website.get_pricelist_available(show_visible=True)" />
+							<div class="t_header_pricelist" t-if="website_sale_pricelists and len(website_sale_pricelists)&gt;1">
+								<t t-call="website_sale.pricelist_list" />
+							</div>
+							<div class="t_header_lang"
+								t-att-style="'text-align:right' if website_sale_pricelists and len(website_sale_pricelists)&gt;1 else 'text-align:left'">
+								<div class="px-2"
+									t-if="(request and request.is_frontend_multilang and len(languages) &gt; 1)">
+									<div class="dropdown t_header_language">
+										<a class="dropdown-toggle btn btn-link" type="button"
+											data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+											<span
+												t-esc="list(filter(lambda lg : lg[0] == lang, languages))[0][1].split('/').pop()" />
+											<span class="caret ml4" />
+										</a>
+										<div class="dropdown-menu dropdown-menu-right" role="menu">
+											<t t-foreach="languages" t-as="lg">
+												<a
+													t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang=lg[0])"
+													class="dropdown-item js_change_lang"
+													t-att-data-default-lang="(editable or translatable) and 'true' if website and lg[0] == website.default_lang_code else None"
+													t-att-data-lang="lg[0]">
+													<t t-esc="lg[1].split('/').pop()" />
+												</a>
+											</t>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<a href="/" class="t_header_before_logo logo ">
+							<span t-field="res_company.logo" t-options="{'widget': 'image'}"
+								t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name" />
+						</a>
+					</div>
+					<div class="col-lg-4 t_header_1_right">
+						<div class="t_header_search">
+							<div class="t_srch_icon_header">
+								<a href="#" class="">
+									<i class="fa fa-search t_srch_icon" />
+									<i class="fa fa-times t_srch_close" />
+								</a>
+							</div>
+							<div class="t_search_popover" tabindex="-1">
+								<form action="/shop" method="get" t-att-class="search_class">
+									<div class="input-group">
+										<input type="text" name="search"
+											class="search-query form-control oe_search_box" placeholder="Search..."
+											t-att-value="search" required="required" />
+										<button type="submit" class="btn btn-link oe_search_button">
+											<i class="fa fa-search" />
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="dropdown t_user_account" t-ignore="true"
+							t-if="not user_id._is_public()">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span class="user_account_name" t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name" />
+								<span class="user_account_icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right js_usermenu" role="menu">
+								<a href="/my/home" role="menuitem" class="dropdown-item"><i class="fa fa-user"/>My Account</a>
+								<a href="/shop/cart" role="menuitem" class="dropdown-item"><i class="fa fa-check-circle"/>Checkout</a>
+								<a href="/my/orders" role="menuitem" class="dropdown-item"><i class="fa fa-pie-chart"/>My orders</a>
+								<a href="/shop/wishlist" role="menuitem" class="dropdown-item"><i class="fa fa-heart"/>My Wishlist</a>
+								<a id="o_logout" class="dropdown-item" t-attf-href="/web/session/logout?redirect=/"
+									role="menuitem"><i class="fa fa-sign-out"/>Logout</a>
+							</div>
+						</div>
+						<div groups="base.group_public" class="t_signin">
+							<a t-attf-href="/web/login" class="user_account_name">
+								Sign in
+							</a>
+							<a t-attf-href="/web/login" class="user_account_icon">
+								<i class="fa fa-user" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</xpath>
+		<xpath expr="//nav[hasclass('navbar-expand-md')]" position="attributes">
+			<attribute name="class">navbar navbar-expand-md t_header_navbar navbar-light
+			</attribute>
+		</xpath>
+		<xpath expr="//ul[@id='top_menu']/li[hasclass('divider')][last()]"
+			position="replace">
+		</xpath>
+		<xpath expr="//ul[@id='top_menu']/li[hasclass('dropdown')]"
+			position="replace">
+		</xpath>
+	</template>
+	<!-- ======================= Header style option 2========================= -->
+	<template id="customize_header_style_2" inherit_id="portal.frontend_layout"
+		active="False" name="Header style 2">
+		<xpath expr="//header" position="before">
+			<div class="t_header_before_overlay">
+			<div class="header_style_2_main">
+				<div class="t_ftr_before_bg">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="t_offer_left col-lg-8">
+								<section>
+									<p></p>
+									<div class="s_rating row s_header_offer_text">
+										<ul>
+											<li>Special Offer on First Purchase</li>
+											<li>
+												<section>|</section>
+											</li>
+											<li>Code : #ASDA44</li>
+											<li>
+												<section>|</section>
+											</li>
+											<li>Get 50% Off</li>
+										</ul>
+									</div>
+								</section>
+							</div>
+							<div class="t_login_right col-lg-4">
+								<div class="text-right">
+									 <t t-set="website_sale_pricelists" t-value="website.get_pricelist_available(show_visible=True)" />
+									<div class="px-2" t-if="website_sale_pricelists and len(website_sale_pricelists)&gt;1">
+										<t t-call="website_sale.pricelist_list" />
+									</div>
+									<div class="px-2"
+										t-if="(request and request.is_frontend_multilang and len(languages) &gt; 1)">
+										<div class="dropdown t_header_language">
+											<a class="dropdown-toggle btn btn-link" type="button"
+												data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+												<span
+													t-esc="list(filter(lambda lg : lg[0] == lang, languages))[0][1].split('/').pop()" />
+												<span class="caret ml4" />
+											</a>
+											<div class="dropdown-menu dropdown-menu-right" role="menu">
+												<t t-foreach="languages" t-as="lg">
+													<a
+														t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang=lg[0])"
+														class="dropdown-item js_change_lang"
+														t-att-data-default-lang="(editable or translatable) and 'true' if website and lg[0] == website.default_lang_code else None"
+														t-att-data-lang="lg[0]">
+														<t t-esc="lg[1].split('/').pop()" />
+													</a>
+												</t>
+											</div>
+										</div>
+									</div>
+									<div class="px-2">
+										<div class="dropdown t_user_account" t-ignore="true"
+											t-if="not user_id._is_public()">
+											<a href="#" class="dropdown-toggle btn btn-link"
+												data-toggle="dropdown">
+												<span class="user_account_name" t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name" />
+												<span class="user_account_icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+											</a>
+											<div class="dropdown-menu dropdown-menu-right js_usermenu" role="menu">
+												<a href="/my/home" role="menuitem" class="dropdown-item"><i class="fa fa-user"/>My Account</a>
+												<a href="/shop/cart" role="menuitem" class="dropdown-item"><i class="fa fa-check-circle"/>Checkout</a>
+												<a href="/my/orders" role="menuitem" class="dropdown-item"><i class="fa fa-pie-chart"/>My orders</a>
+												<a href="/shop/wishlist" role="menuitem" class="dropdown-item"><i class="fa fa-heart"/>My Wishlist</a>
+												<a id="o_logout" class="dropdown-item" t-attf-href="/web/session/logout?redirect=/"
+													role="menuitem"><i class="fa fa-sign-out"/>Logout</a>
+											</div>
+										</div>
+										<div groups="base.group_public" class="t_signin">
+											<a t-attf-href="/web/login" class="btn btn-link">
+												Sign in
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container header_style_2_inner">
+					<div class="row py-3 align-items-center">
+						<div class="col-lg-6">
+							<a href="/" class="t_header_before_logo logo ">
+								<span t-field="res_company.logo" t-options="{'widget': 'image'}"
+									t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name" />
+							</a>
+						</div>
+						<div class="col-lg-6">
+							<div class="t_header_search">
+								<div class="t_srch_icon_header">
+									<a href="#" class="">
+										<i class="fa fa-search t_srch_icon" />
+										<i class="fa fa-times t_srch_close" />
+									</a>
+								</div>
+								<div class="t_search_popover" tabindex="-1">
+									<form action="/shop" method="get" t-att-class="search_class">
+										<div class="input-group">
+											<input type="text" name="search"
+												class="search-query form-control oe_search_box" placeholder="Search..."
+												t-att-value="search" required="required" />
+											<button type="submit" class="btn oe_search_button">
+												<i class="fa fa-search" />
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</xpath>
+		<xpath expr="//nav[hasclass('navbar-expand-md')]" position="attributes">
+			<attribute name="class">navbar navbar-expand-md t_header_navbar navbar-light
+			</attribute>
+		</xpath>
+		<xpath expr="//ul[@id='top_menu']/li[hasclass('divider')][last()]"
+			position="replace">
+		</xpath>
+		<xpath expr="//ul[@id='top_menu']/li[hasclass('dropdown')]"
+			position="replace">
+		</xpath>
+	</template>
+	<!-- ======================= Header style option 3========================= -->
+	<template id="customize_header_style_3" inherit_id="portal.frontend_layout"
+		active="False" name="Header style 3">
+		<xpath expr="//header" position="before">
+			<div class="t_header_before_overlay">
+			<div class="container header_style_3_main">
+				<div class="row align-items-center py-1">
+					<div class="header_3_offer">
+						<section>
+							<p></p>
+							<div class="s_rating row s_header_offer_text">
+								<ul>
+									<li>Special Offer on First Purchase</li>
+									<li>
+										<section>|</section>
+									</li>
+									<li>Code : #ASDA44</li>
+									<li>
+										<section>|</section>
+									</li>
+									<li>Get 50% Off</li>
+								</ul>
+							</div>
+						</section>
+					</div>
+				</div>
+				<div class="row align-items-center py-2 header_style_3_inner">
+					<div class="col-lg-4 header_3_search">
+						<div class="t_header_search">
+							<div class="t_srch_icon_header">
+								<a href="#" class="">
+									<i class="fa fa-search t_srch_icon" />
+									<i class="fa fa-times t_srch_close" />
+								</a>
+							</div>
+							<div class="t_search_popover" tabindex="-1">
+								<form action="/shop" method="get" t-att-class="search_class">
+									<div class="input-group">
+										<button type="submit" class="btn btn-primary oe_search_button">
+											<i class="fa fa-search" />
+										</button>
+										<input type="text" name="search"
+											class="search-query form-control oe_search_box" placeholder="Search our store..."
+											t-att-value="search" required="required" />
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<a href="/" class="t_header_before_logo logo">
+							<span t-field="res_company.logo" t-options="{'widget': 'image'}"
+								t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name" />
+						</a>
+					</div>
+					<div class="col-lg-4 t_login_right">
+							<div class="px-2">
+							<t t-call="website_sale.pricelist_list" />
+						</div>
+						<div class="px-2"
+							t-if="(request and request.is_frontend_multilang and len(languages) &gt; 1)">
+							<div class="dropdown t_header_language">
+								<a class="dropdown-toggle btn btn-link" type="button"
+									data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+									<span
+										t-esc="list(filter(lambda lg : lg[0] == lang, languages))[0][1].split('/').pop()" />
+									<span class="caret ml4" />
+								</a>
+								<div class="dropdown-menu dropdown-menu-right" role="menu">
+									<t t-foreach="languages" t-as="lg">
+										<a
+											t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang=lg[0])"
+											class="dropdown-item js_change_lang"
+											t-att-data-default-lang="(editable or translatable) and 'true' if website and lg[0] == website.default_lang_code else None"
+											t-att-data-lang="lg[0]">
+											<t t-esc="lg[1].split('/').pop()" />
+										</a>
+									</t>
+								</div>
+							</div>
+						</div>
+						<div class="px-2">
+							<div class="dropdown t_user_account" t-ignore="true"
+								t-if="not user_id._is_public()">
+								<a href="#" class="dropdown-toggle btn" data-toggle="dropdown">
+									<span class="user_account_name" t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name" />
+									<span class="user_account_icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right js_usermenu" role="menu">
+									<a href="/my/home" role="menuitem" class="dropdown-item"><i class="fa fa-user"/>My Account</a>
+									<a href="/shop/cart" role="menuitem" class="dropdown-item"><i class="fa fa-check-circle"/>Checkout</a>
+									<a href="/my/orders" role="menuitem" class="dropdown-item"><i class="fa fa-pie-chart"/>My orders</a>
+									<a href="/shop/wishlist" role="menuitem" class="dropdown-item"><i class="fa fa-heart"/>My Wishlist</a>
+									<a id="o_logout" class="dropdown-item" t-attf-href="/web/session/logout?redirect=/"
+										role="menuitem"><i class="fa fa-sign-out"/>Logout</a>
+								</div>
+							</div>
+							<div groups="base.group_public" class="t_signin">
+								<a t-attf-href="/web/login" class="btn-link">
+									Sign in
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</xpath>
+		<xpath expr="//nav[hasclass('navbar-expand-md')]" position="attributes">
+			<attribute name="class">navbar navbar-expand-md t_header_navbar navbar-light
+			</attribute>
+		</xpath>
+		<xpath expr="//ul[@id='top_menu']/li[hasclass('divider')][last()]"
+			position="replace">
+		</xpath>
+		<xpath expr="//ul[@id='top_menu']/li[hasclass('dropdown')]"
+			position="replace">
+		</xpath>
+	</template>
+	<!-- ======================= Header style option 4========================= -->
+	<template id="customize_header_style_4" inherit_id="portal.frontend_layout"
+		active="False" name="Header style 4">
+		<xpath expr="//header" position="before">
+			<div class="t_header_before_overlay">
+			<div class="container header_style_4_main">
+				<div class="row align-items-center mt16 header_style_4_inner_first">
+					<div class="col-lg-8 header_4_offer">
+						<section>
+							<p></p>
+							<div class="s_rating row s_header_offer_text">
+								<ul>
+									<li>Special Offer on First Purchase</li>
+									<li>
+										<section>|</section>
+									</li>
+									<li>Code : #ASDA44</li>
+									<li>
+										<section>|</section>
+									</li>
+									<li>Get 50% Off</li>
+								</ul>
+							</div>
+						</section>
+					</div>
+					<div class="col-lg-4 header_4_search">
+						<div class="t_header_search">
+							<div class="t_srch_icon_header">
+								<a href="#" class="">
+									<i class="fa fa-search t_srch_icon" />
+									<i class="fa fa-times t_srch_close" />
+								</a>
+							</div>
+							<div class="t_search_popover" tabindex="-1">
+								<form action="/shop" method="get" t-att-class="search_class">
+									<div class="input-group">
+										<input type="text" name="search"
+											class="search-query form-control oe_search_box" placeholder="Search our store..."
+											t-att-value="search" required="required" />
+										<button type="submit" class="btn btn-link oe_search_button">
+											<i class="fa fa-search" />
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row align-items-center py-2 header_style_4_inner">
+					<div class="col-lg-4">
+						<a href="/" class="t_header_before_logo logo">
+							<span t-field="res_company.logo" t-options="{'widget': 'image'}"
+								t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name" />
+						</a>
+					</div>
+					<div class="col-lg-8 t_login_right">
+						<div class="px-1">
+							<t t-call="website_sale.pricelist_list" />
+						</div>
+						<div class="px-1"
+							t-if="(request and request.is_frontend_multilang and len(languages) &gt; 1)">
+							<div class="dropdown t_header_language">
+								<a class="dropdown-toggle btn btn-link" type="button"
+									data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+									<span
+										t-esc="list(filter(lambda lg : lg[0] == lang, languages))[0][1].split('/').pop()" />
+									<span class="caret ml4" />
+								</a>
+								<div class="dropdown-menu dropdown-menu-right" role="menu">
+									<t t-foreach="languages" t-as="lg">
+										<a
+											t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang=lg[0])"
+											class="dropdown-item js_change_lang"
+											t-att-data-default-lang="(editable or translatable) and 'true' if website and lg[0] == website.default_lang_code else None"
+											t-att-data-lang="lg[0]">
+											<t t-esc="lg[1].split('/').pop()" />
+										</a>
+									</t>
+								</div>
+							</div>
+						</div>
+						<div class="px-1">
+							<div class="dropdown t_user_account" t-ignore="true"
+								t-if="not user_id._is_public()">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<span class="user_account_name" t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name" />
+									<span class="user_account_icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right js_usermenu" role="menu">
+									<a href="/my/home" role="menuitem" class="dropdown-item"><i class="fa fa-user"/>My Account</a>
+									<a href="/shop/cart" role="menuitem" class="dropdown-item"><i class="fa fa-check-circle"/>Checkout</a>
+									<a href="/my/orders" role="menuitem" class="dropdown-item"><i class="fa fa-pie-chart"/>My orders</a>
+									<a href="/shop/wishlist" role="menuitem" class="dropdown-item"><i class="fa fa-heart"/>My Wishlist</a>
+									<a id="o_logout" class="dropdown-item" t-attf-href="/web/session/logout?redirect=/"
+										role="menuitem"><i class="fa fa-sign-out"/>Logout</a>
+								</div>
+							</div>
+							<div groups="base.group_public" class="t_signin">
+								<a t-attf-href="/web/login" class="btn-link">
+									<span class="user_account_name">Sign in</span>
+									<span class="user_account_icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</xpath>
+		<xpath expr="//nav[hasclass('navbar-expand-md')]" position="attributes">
+			<attribute name="class">navbar navbar-expand-md t_header_navbar navbar-light
+			</attribute>
+		</xpath>
+		<xpath expr="//ul[@id='top_menu']/li[hasclass('divider')][last()]"
+			position="replace">
+		</xpath>
+		<xpath expr="//ul[@id='top_menu']/li[hasclass('dropdown')]"
+			position="replace">
+		</xpath>
+	</template>
+	<!-- ======================= Header style option 5========================= -->
+	<template id="customize_header_style_5" inherit_id="portal.frontend_layout"
+		active="False" name="Header style 5">
+		<xpath expr="//header" position="before">
+			<div class="t_header_before_overlay">
+			<div class="container header_style_5_main">
+				<div class="row align-items-center py-3">
+					<div class="col-lg-7 t_header_before_left">
+						<div class="t_header_social">
+								<div>
+									<p></p>
+									<div t-attf-class="s_share t_header_w_share #{_classes or ''}">
+										<a t-if="website.social_facebook" t-att-href="website.social_facebook"
+											class="btn btn-link">
+											<i class="fa fa-facebook" />
+										</a>
+										<a t-if="website.social_twitter" t-att-href="website.social_twitter"
+											class="btn btn-link">
+											<i class="fa fa-twitter" />
+										</a>
+										<a t-if="website.social_linkedin" t-att-href="website.social_linkedin"
+											class="btn btn-link">
+											<i class="fa fa-linkedin" />
+										</a>
+										<a t-if="website.social_youtube" t-att-href="website.social_youtube"
+											class="btn btn-link">
+											<i class="fa fa-youtube-play" />
+										</a>
+										<a t-if="website.social_googleplus" t-att-href="website.social_googleplus"
+											rel="publisher" class="btn btn-link">
+											<i class="fa fa-google" />
+										</a>
+										<a t-if="website.social_github" t-att-href="website.social_github"
+											class="btn btn-link">
+											<i class="fa fa-github" />
+										</a>
+									</div>						
+								</div>
+							</div>
+						<div class="px-1">
+							<t t-call="website_sale.pricelist_list" />
+						</div>
+						<div class="px-1"
+							t-if="(request and request.is_frontend_multilang and len(languages) &gt; 1)">
+							<div class="dropdown t_header_language">
+								<a class="dropdown-toggle btn btn-link" type="button"
+									data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+									<span
+										t-esc="list(filter(lambda lg : lg[0] == lang, languages))[0][1].split('/').pop()" />
+									<span class="caret ml4" />
+								</a>
+								<div class="dropdown-menu dropdown-menu-right" role="menu">
+									<t t-foreach="languages" t-as="lg">
+										<a
+											t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang=lg[0])"
+											class="dropdown-item js_change_lang"
+											t-att-data-default-lang="(editable or translatable) and 'true' if website and lg[0] == website.default_lang_code else None"
+											t-att-data-lang="lg[0]">
+											<t t-esc="lg[1].split('/').pop()" />
+										</a>
+									</t>
+								</div>
+							</div>
+						</div>
+						<div class="px-1 t_header_account">
+							<div class="dropdown t_user_account" t-ignore="true"
+								t-if="not user_id._is_public()">
+								<a href="#" class="dropdown-toggle btn-link" data-toggle="dropdown">
+									<span class="user_account_name" t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name" />
+									<span class="user_account_icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right js_usermenu" role="menu">
+									<a href="/my/home" role="menuitem" class="dropdown-item"><i class="fa fa-user"/>My Account</a>
+									<a href="/shop/cart" role="menuitem" class="dropdown-item"><i class="fa fa-check-circle"/>Checkout</a>
+									<a href="/my/orders" role="menuitem" class="dropdown-item"><i class="fa fa-pie-chart"/>My orders</a>
+									<a href="/shop/wishlist" role="menuitem" class="dropdown-item"><i class="fa fa-heart"/>My Wishlist</a>
+									<a id="o_logout" class="dropdown-item" t-attf-href="/web/session/logout?redirect=/"
+										role="menuitem"><i class="fa fa-sign-out"/>Logout</a>
+								</div>
+							</div>
+							<div groups="base.group_public" class="px-2 t_signin">
+								<a t-attf-href="/web/login" class="btn-link">
+									<span class="user_account_name">Sign in</span>
+									<span class="user_account_icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-5 t_header_before_right">
+						<div class="header_5_search">
+							<div class="t_header_search">
+								<div class="t_srch_icon_header">
+									<a href="#" class="">
+										<i class="fa fa-search t_srch_icon" />
+										<i class="fa fa-times t_srch_close" />
+									</a>
+								</div>
+								<div class="t_search_popover" tabindex="-1">
+									<form action="/shop" method="get" t-att-class="search_class">
+										<div class="input-group">
+											<input type="text" name="search"
+												class="search-query form-control oe_search_box" placeholder="Search our store..."
+												t-att-value="search" required="required" />
+											<button type="submit" class="btn btn-link oe_search_button">
+												<i class="fa fa-search" />
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</xpath>
+		<xpath expr="//nav[hasclass('navbar-expand-md')]" position="attributes">
+			<attribute name="class">navbar navbar-expand-md t_header_navbar navbar-light
+				py-1 px-0
+			</attribute>
+		</xpath>
+		<xpath expr="//ul[@id='top_menu']/li[hasclass('divider')][last()]"
+			position="replace">
+		</xpath>
+		<xpath expr="//ul[@id='top_menu']/li[hasclass('dropdown')]"
+			position="replace">
+		</xpath>
+	</template>
+	<!-- ======================= Header style option 6========================= -->
+	<template id="customize_header_style_6" inherit_id="portal.frontend_layout"
+		active="False" name="Header style 6">
+		<xpath expr="//header" position="before">
+			<div class="t_header_before_overlay">
+			<div class="header_before_bg header_style_6_main">
+				<div class="container">
+					<div class="row align-items-center py-2">
+						<div class="col-lg-5 t_header_before_left">
+							<div class="t_header_social">
+								<section>
+									<p></p>
+									<section t-attf-class="s_share t_header_w_share #{_classes or ''}">
+										<a t-if="website.social_facebook" t-att-href="website.social_facebook"
+											class="btn btn-link">
+											<i class="fa fa-facebook" />
+										</a>
+										<a t-if="website.social_twitter" t-att-href="website.social_twitter"
+											class="btn btn-link">
+											<i class="fa fa-twitter" />
+										</a>
+										<a t-if="website.social_linkedin" t-att-href="website.social_linkedin"
+											class="btn btn-link">
+											<i class="fa fa-linkedin" />
+										</a>
+										<a t-if="website.social_youtube" t-att-href="website.social_youtube"
+											class="btn btn-link">
+											<i class="fa fa-youtube-play" />
+										</a>
+										<a t-if="website.social_googleplus" t-att-href="website.social_googleplus"
+											rel="publisher" class="btn btn-link">
+											<i class="fa fa-google" />
+										</a>
+										<a t-if="website.social_github" t-att-href="website.social_github"
+											class="btn btn-link">
+											<i class="fa fa-github" />
+										</a>
+									</section>
+								</section>
+							</div>
+							<div class="px-1">
+								<t t-call="website_sale.pricelist_list" />
+							</div>
+							<div class="px-1"
+								t-if="(request and request.is_frontend_multilang and len(languages) &gt; 1)">
+								<div class="dropdown t_header_language">
+									<a class="dropdown-toggle btn btn-link" type="button"
+										data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+										<span
+											t-esc="list(filter(lambda lg : lg[0] == lang, languages))[0][1].split('/').pop()" />
+										<span class="caret ml4" />
+									</a>
+									<div class="dropdown-menu dropdown-menu-right" role="menu">
+										<t t-foreach="languages" t-as="lg">
+											<a
+												t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang=lg[0])"
+												class="dropdown-item js_change_lang"
+												t-att-data-default-lang="(editable or translatable) and 'true' if website and lg[0] == website.default_lang_code else None"
+												t-att-data-lang="lg[0]">
+												<t t-esc="lg[1].split('/').pop()" />
+											</a>
+										</t>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-7 t_header_before_right">
+							<div class="t_header_static_menu">
+								<ul>
+									<li>
+										<a href="#">Custom menu</a>
+									</li>
+									<li>
+										<a href="#">Information</a>
+									</li>
+									<li>
+										<a href="#">About us</a>
+									</li>
+									<li>
+										<a href="#">Our story</a>
+									</li>
+								</ul>
+							</div>
+							<div class="px-3 header_6_srch_icon">
+								<a>
+									<i class="fa fa-search"></i>
+								</a>
+							</div>
+							<div class="px-1 t_header_account">
+								<div class="dropdown t_user_account" t-ignore="true"
+									t-if="not user_id._is_public()">
+									<a href="#" class="dropdown-toggle btn-link" data-toggle="dropdown">
+										<span class="user_account_name" t-esc="user_id.name[:23] + '...' if user_id.name and len(user_id.name) &gt; 25 else user_id.name" />
+										<span class="user_account_icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right js_usermenu" role="menu">
+										<a href="/my/home" role="menuitem" class="dropdown-item"><i class="fa fa-user"/>My Account</a>
+										<a href="/shop/cart" role="menuitem" class="dropdown-item"><i class="fa fa-check-circle"/>Checkout</a>
+										<a href="/my/orders" role="menuitem" class="dropdown-item"><i class="fa fa-pie-chart"/>My orders</a>
+										<a href="/shop/wishlist" role="menuitem" class="dropdown-item"><i class="fa fa-heart"/>My Wishlist</a>
+										<a id="o_logout" class="dropdown-item" t-attf-href="/web/session/logout?redirect=/"
+											role="menuitem"><i class="fa fa-sign-out"/>Logout</a>
+									</div>
+								</div>
+								<div groups="base.group_public" class="t_signin">
+									<a t-attf-href="/web/login" class="btn-link">
+										<span class="user_account_name">Sign in</span>
+										<span class="user_account_icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7 t_header_search">
+							<div class="t_sub_search">
+								<span class="t_header_search_close">x</span>
+								<form action="/shop" method="get" t-att-class="search_class">
+									<div class="input-group">
+										<button type="submit"
+											class="btn btn-link oe_search_button t_search_icon">
+											<i class="fa fa-search" />
+										</button>
+										<input type="text" name="search"
+											class="search-query form-control oe_search_box t_srch_box"
+											placeholder="Search..." t-att-value="search" required="required" />
+
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</xpath>
+		<xpath expr="//nav[hasclass('navbar-expand-md')]" position="attributes">
+			<attribute name="class">navbar navbar-expand-md t_header_navbar navbar-light
+				px-0 py-2
+			</attribute>
+		</xpath>
+		<xpath expr="//ul[@id='top_menu']/li[hasclass('divider')][last()]"
+			position="replace">
+		</xpath>
+		<xpath expr="//ul[@id='top_menu']/li[hasclass('dropdown')]"
+			position="replace">
+		</xpath>
+	</template>
+	<!-- Replaced signin from header -->
+	<template id="portal_show_sign_in_ept" inherit_id="portal.portal_show_sign_in"
+		name="Show Sign In">
+		<xpath expr="//li[@groups='base.group_public']" position="replace">
+		</xpath>
+		<xpath expr="//li[@groups='base.group_public']" position="replace">
+		</xpath>
+	</template>
+	<template id="pricelist_list_ept" inherit_id="website_sale.pricelist_list">
+		<xpath expr="//a[hasclass('dropdown-toggle')]" position="replace">
+			<a role="button" href="#" class="dropdown-toggle btn btn-link t_currency_name" data-toggle="dropdown">
+                <t t-esc="curr_pl and curr_pl.name or ' - '" />
+            </a>
+            <a role="button" href="#" class="dropdown-toggle btn btn-link t_currency_symbol" data-toggle="dropdown">
+                <t t-esc="curr_pl.currency_id.symbol"></t>
+            </a>
+		</xpath>
+	</template>
+	<template id="theme_submenu" inherit_id="website.submenu">
+		<xpath expr="//li[@t-if='submenu.is_visible and not has_visible_submenu']" position="replace">
+			<li t-if="submenu.is_visible and not has_visible_submenu" t-attf-class="#{item_class or ''} #{'dropdown' if submenu.html_menu else ''}">
+		        <a t-att-href="submenu.clean_url()"
+		            t-attf-class="#{link_class or ''} #{'active' if submenu.clean_url() and unslug_url(request.httprequest.path) == unslug_url(submenu.clean_url()) else ''}"
+		            role="menuitem"
+		            t-ignore="true"
+		            t-att-target="'_blank' if submenu.new_window else None">
+		            <span t-field="submenu.name"/>
+		        </a>
+		    </li>
+		</xpath>
+	</template>
+</incore>

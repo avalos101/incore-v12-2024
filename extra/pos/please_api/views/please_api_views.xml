@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+	<record id="simpli_order_form" model="ir.ui.view">
+		<field name="name">please.order.form</field>
+		<field name="model">please.order</field>
+		<field name="arch" type="xml">
+			<form edit="false" create="false">
+				<header>
+					<button name="action_send" calss="oe_highlight" states="draft" type="object" string="Send" icon='fa-paper-plane'/>
+					<button name="action_get_tracking" states="sent" type="object" string="Get tracking" icon='fa-info'/>
+                    <field name="state" widget="statusbar" nolabel="1" statusbar_visible="draft,sent"/>
+				</header>
+				<header>
+					<field name="state_tracking" widget="statusbar" nolabel="1" statusbar_visible="A_PENDING,B_INTRANSPORT,C_DELIVERED,F_CANCELED"/>
+				</header>
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+                    </div>
+					<h1 class="mt0">
+						<div>
+							<label for="order_number" string="Number"/>
+							<field name="order_number" readonly="1" class="oe_inline"/>
+						</div>
+					</h1>
+					<group>
+						<group>
+							<field name="partner_id"/>
+							<field name="cust_email"/>
+							<field name="cust_phone"/>
+							<field name="cust_note"/>
+							<field name="company_id"/>
+							<field name="currency_id"/>
+							<field name="total_price"/>
+						</group>
+						<group>
+							<field name="sticker"/>
+							<field name="container_number"/>
+							<field name="please_id"/>
+							<field name="storeId" invisible="True"/>
+							<field name="shipping_address"/>
+							<field name="city_id"/>
+							<field name="cash_in_delivery"/>
+							<field name="tracking"/>
+						</group>
+					</group>
+					<notebook>
+						<page string="Detail">
+							<field name="order_lines">
+								<tree>
+									<field name="name"/>
+									<field name="quantity"/>
+									<field name="price"/>
+								</tree>
+							</field>
+						</page>
+						<page string="Status tracking">
+							<field name="order_status">
+								<tree>
+									<field name="id_ref"/>
+									<field name="date"/>
+									<field name="created_by" invisible="True"/>
+									<field name="event_type"/>
+									<field name="event_name"/>
+									<field name="notes"/>
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="simpli_order_tree" model="ir.ui.view">
+		<field name="name">please.order.tree</field>
+		<field name="model">please.order</field>
+		<field name="arch" type="xml">
+			<tree edit="false" create="false">
+				<field name="order_number"/>
+				<field name="container_number"/>
+				<field name="partner_id"/>
+				<field name="cust_phone"/>
+				<field name="cust_note"/>
+				<field name="total_price"/>
+				<field name="please_id"/>
+				<field name="state_tracking"/>
+				<field name="state"/>
+				<field name="tracking"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="simpli_order_line_tree" model="ir.ui.view">
+		<field name="name">please.order.tree</field>
+		<field name="model">please.order.line</field>
+		<field name="arch" type="xml">
+			<tree edit="false" create="false">
+				<field name="order_id"/>
+				<field name="name"/>
+				<field name="quantity"/>
+				<field name="price"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="simpli_order_state_tree" model="ir.ui.view">
+		<field name="name">please.order.tree</field>
+		<field name="model">please.order.state</field>
+		<field name="arch" type="xml">
+			<tree edit="false" create="false">
+				<field name="order_id"/>
+				<field name="id_ref"/>
+				<field name="date"/>
+				<field name="created_by" invisible="True"/>
+				<field name="event_type"/>
+				<field name="event_name"/>
+				<field name="notes"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="action_please_order_api" model="ir.actions.act_window">
+		<field name="name">Please Orders</field>
+		<field name="res_model">please.order</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<record id="action_please_order_detail" model="ir.actions.act_window">
+		<field name="name">Please Detail</field>
+		<field name="res_model">please.order.line</field>
+		<field name="view_mode">tree</field>
+	</record>
+
+	<record id="action_please_order_status" model="ir.actions.act_window">
+		<field name="name">Please Status</field>
+		<field name="res_model">please.order.state</field>
+		<field name="view_mode">tree</field>
+	</record>	
+</incore>

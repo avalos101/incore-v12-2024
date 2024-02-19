@@ -1,0 +1,13 @@
+./incore-bin -d pruebas-damilo -u l10n_co_edi_jorels --config=/etc/incore/incore.conf --stop-after-init &&
+./incore-bin -d dacri -u l10n_co_edi_jorels --config=/etc/incore/incore.conf --stop-after-init &&
+./incore-bin -d puntodeencuentro.s4.incore.app -u l10n_co_edi_jorels --config=/etc/incore/incore.conf --stop-after-init &&
+./incore-bin -d burbuja.s4.incore.app -u l10n_co_edi_jorels --config=/etc/incore/incore.conf --stop-after-init &&
+./incore-bin -d losnaranjos.s4.incore.app -u l10n_co_edi_jorels --config=/etc/incore/incore.conf --stop-after-init &&
+./incore-bin -d murren.s4.incora.app -u l10n_co_edi_jorels --config=/etc/incore/incore.conf --stop-after-init &&
+./incore-bin -d platiniumcompany.s12.incore.app -u l10n_co_edi_jorels --config=/etc/incore/incore.conf --stop-after-init &&
+./incore-bin -d inversiones-eleste.s12.incore.app -u l10n_co_edi_jorels --config=/etc/incore/incore.conf --stop-after-init &&
+./incore-bin -d losnaranjos.s4.incore.app -u l10n_co_edi_jorels --config=/etc/incore/incore.conf --stop-after-init &&
+./incore-bin -d sistematizar.v12.incore.app -u l10n_co_edi_jorels --config=/etc/incore/incore.conf --stop-after-init &&
+./incore-bin -d plantilla_basica -u l10n_co_edi_jorels --config=/etc/incore/incore.conf --stop-after-init &&
+./incore-bin -d megadistribuidoresferreteros.s4.incore.app -u l10n_co_edi_jorels --config=/etc/incore/incore.conf --stop-after-init &&
+./incore-bin -d distridelicias.s4.incore.app -u l10n_co_edi_jorels --config=/etc/incore/incore.conf --stop-after-init

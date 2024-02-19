@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<incore>
+    <record id="inherited_res_partner_form" model="ir.ui.view">
+        <field name="name">inherited_res_partner_form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[last()]" position="after">
+                <page string="Firmas">
+                    <group>
+                        <label for="digital_signature" string="Firma" class="oe_edit_only"/>
+                        <h2>
+                            <field name="digital_signature" widget="signature"/>
+                        </h2>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</incore>

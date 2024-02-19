@@ -1,0 +1,14 @@
+[Unit]
+Description=inCore Open Source ERP and CRM
+After=network.target
+
+[Service]
+Type=simple
+User=incore
+Group=incore
+ExecStart=/usr/bin/incore --config /etc/incore/incore.conf --logfile /var/log/incore/incore-server.log
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,274 @@
+# Translation of inCore Server.
+# This file contains the translation of the following modules:
+# 	* cost_pos_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: inCore Server 12.0+e-20190515\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13 21:31+0000\n"
+"PO-Revision-Date: 2020-02-13 16:42-0500\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3\n"
+"Last-Translator: Cristiam Carreño <cristiamcarreno@gmail.com>\n"
+"Language: es_CO\n"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__rec
+msgid "# Records"
+msgstr "# Registros"
+
+#. module: cost_pos_sale
+#: selection:pos.sale.report,state:0
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__categ_id
+msgid "Category"
+msgstr "Categoría"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__commercial_partner_id
+msgid "Commercial partner"
+msgstr "Socio comercial"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__company_id
+#: model_terms:ir.ui.view,arch_db:cost_pos_sale.view_pos_sale_report_search
+msgid "Company"
+msgstr "Compañía"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_order_line__purchase_price_cost
+msgid "Costo"
+msgstr "Costo"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_order__costo_venta
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_order_line__costo_venta
+msgid "Costo Venta"
+msgstr "Costo Venta"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__costo_venta
+msgid "Costo venta"
+msgstr "Costo venta"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__country_id
+msgid "Country"
+msgstr "País"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_order__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: cost_pos_sale
+#: model_terms:ir.ui.view,arch_db:cost_pos_sale.view_pos_sale_report_search
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: cost_pos_sale
+#: model_terms:ir.ui.view,arch_db:cost_pos_sale.view_pos_sale_report_search
+msgid "Customer Country"
+msgstr "País del cliente"
+
+#. module: cost_pos_sale
+#: model_terms:ir.ui.view,arch_db:cost_pos_sale.view_pos_sale_report_search
+msgid "Date"
+msgstr "Fecha"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__discount
+msgid "Discount"
+msgstr "Descuento"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__discount_amount
+msgid "Discount amount"
+msgstr "Valor del descuento"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: cost_pos_sale
+#: selection:pos.sale.report,state:0
+msgid "Done"
+msgstr "Publicado"
+
+#. module: cost_pos_sale
+#: selection:pos.sale.report,state:0
+msgid "Draft"
+msgstr "Nueva"
+
+#. module: cost_pos_sale
+#: model_terms:ir.ui.view,arch_db:cost_pos_sale.view_pos_sale_report_search
+msgid "Filters"
+msgstr "Filtros"
+
+#. module: cost_pos_sale
+#: model_terms:ir.ui.view,arch_db:cost_pos_sale.view_pos_sale_report_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__id
+msgid "ID"
+msgstr "ID"
+
+#. module: cost_pos_sale
+#: model_terms:ir.ui.view,arch_db:cost_pos_sale.pos_sale_report_tree
+msgid "IPOS Sale Report"
+msgstr "Reporte ventas POS"
+
+#. module: cost_pos_sale
+#: selection:pos.sale.report,state:0
+msgid "Invoiced"
+msgstr "Facturado"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report____last_update
+msgid "Last Modified on"
+msgstr "última modificación en"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__date
+msgid "Order Date"
+msgstr "Fecha de la orden"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__order_id
+msgid "Order ID"
+msgstr "ID de la orden"
+
+#. module: cost_pos_sale
+#: model_terms:ir.ui.view,arch_db:cost_pos_sale.view_pos_sale_report_graph
+#: model_terms:ir.ui.view,arch_db:cost_pos_sale.view_pos_sale_report_search
+msgid "POS Sale Report"
+msgstr "Reporte ventas POS"
+
+#. module: cost_pos_sale
+#: model:ir.ui.menu,name:cost_pos_sale.menu_pos_sale_report
+#: model_terms:ir.ui.view,arch_db:cost_pos_sale.view_pos_sale_report_search
+msgid "POS Sales"
+msgstr "Ventas POS"
+
+#. module: cost_pos_sale
+#: selection:pos.sale.report,state:0
+msgid "Paid"
+msgstr "Pagado"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__partner_id
+msgid "Partner"
+msgstr "Tercero"
+
+#. module: cost_pos_sale
+#: model:ir.model,name:cost_pos_sale.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Línea de venta POS"
+
+#. module: cost_pos_sale
+#: model:ir.model,name:cost_pos_sale.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Ventas POS"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__name
+msgid "Pos Order"
+msgstr "Venta POS"
+
+#. module: cost_pos_sale
+#: model:ir.actions.act_window,name:cost_pos_sale.action_pos_sale_report
+msgid "Pos sale report"
+msgstr "Reporte ventas POS"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__price_subtotal
+msgid "Price subtotal"
+msgstr "Subtotal"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__price_subtotal_incl
+msgid "Price subtotal Incl"
+msgstr "Subtotal Incl"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__price_total
+msgid "Price total"
+msgstr "Total"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__pricelist_id
+msgid "Pricelist"
+msgstr "Lista de precios"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__product_id
+#: model_terms:ir.ui.view,arch_db:cost_pos_sale.view_pos_sale_report_search
+msgid "Product"
+msgstr "Variante Producto"
+
+#. module: cost_pos_sale
+#: model_terms:ir.ui.view,arch_db:cost_pos_sale.view_pos_sale_report_search
+msgid "Product Category"
+msgstr "Categoría de producto"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__product_tmpl_id
+msgid "Product template"
+msgstr "Producto"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__qty
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: cost_pos_sale
+#: model:ir.model,name:cost_pos_sale.model_pos_sale_report
+msgid "Report POS Sale"
+msgstr "Reporte ventas POS"
+
+#. module: cost_pos_sale
+#: model_terms:ir.ui.view,arch_db:cost_pos_sale.view_pos_sale_report_search
+msgid "Salesperson"
+msgstr "Vendedor"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__state
+#: model_terms:ir.ui.view,arch_db:cost_pos_sale.view_pos_sale_report_search
+msgid "Status"
+msgstr "Estado"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__product_uom
+msgid "Uom"
+msgstr "Unidad de medida"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__user_id
+msgid "User"
+msgstr "Usuario"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__volume
+msgid "Volume"
+msgstr "Volumen"
+
+#. module: cost_pos_sale
+#: model:ir.model.fields,field_description:cost_pos_sale.field_pos_sale_report__weight
+msgid "Weight"
+msgstr "Peso"
+
+#. module: cost_pos_sale
+#: model_terms:ir.ui.view,arch_db:cost_pos_sale.view_pos_sale_report_search
+msgid "by Date"
+msgstr "por Fecha"

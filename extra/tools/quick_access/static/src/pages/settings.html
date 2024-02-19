@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html style="overflow: hidden;">
+<head>
+
+    <link rel="stylesheet" href="/quick_access/static/src/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="/quick_access/static/src/css/fontawesome_all.css"/>
+
+    <link rel="stylesheet" href="/quick_access/static/src/css/bootstrap-iconpicker.min.css"/>
+
+    <!--Customize style-->
+    <link rel="stylesheet" href="/quick_access/static/src/css/quick_access_settings.css"/>
+    <link rel="stylesheet" href="/quick_access/static/src/css/quick_access.css"/>
+</head>
+<body style="background-color: #fdfafa00;">
+<div class="q_setting_container" id="q_setting_container" style="padding-left: 3%;padding-right: 3%;">
+    <div class="q_setting_close">
+        <i class="far fa-times-circle" id="q_setting_close"></i>
+    </div>
+    <div class="q_item_setting">
+        <button class="btn btn-default" data-rows="4" data-cols="6" role="iconpicker" id="q_button_0"></button>
+        <input type="text" class="form-control q_input" id="url0" placeholder="Enter The URL ..."/>
+        <div class="form-group">
+            <select class="form-control" id="selectTargetType0">
+                <option> Open in Current Window</option>
+                <option> Open in New Tab</option>
+            </select>
+        </div>
+    </div>
+    <div class="q_item_setting">
+        <button class="btn btn-default" data-rows="4" data-cols="6" role="iconpicker" id="q_button_1"></button>
+        <input type="text" class="form-control q_input" id="url1" placeholder="Enter The URL ..."/>
+        <div class="form-group">
+            <select class="form-control" id="selectTargetType1">
+                <option> Open in Current Window</option>
+                <option> Open in New Tab</option>
+            </select>
+        </div>
+    </div>
+    <div class="q_item_setting">
+        <button class="btn btn-default" data-rows="4" data-cols="6" role="iconpicker" id="q_button_2"></button>
+        <input type="text" class="form-control q_input" id="url2" placeholder="Enter The URL ..."/>
+        <div class="form-group">
+            <select class="form-control" id="selectTargetType2">
+                <option> Open in Current Window</option>
+                <option> Open in New Tab</option>
+            </select>
+        </div>
+    </div>
+    <div class="q_item_setting">
+        <button class="btn btn-default" data-rows="4" data-cols="6" role="iconpicker" id="q_button_3"></button>
+        <input type="text" class="form-control q_input" id="url3" placeholder="Enter The URL ..."/>
+        <div class="form-group">
+            <select class="form-control" id="selectTargetType3">
+                <option> Open in Current Window</option>
+                <option> Open in New Tab</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="q_item_setting">
+        <button class="btn btn-default" data-rows="4" data-cols="6" role="iconpicker" id="q_button_4"></button>
+        <input type="text" class="form-control q_input" id="url4" placeholder="Enter The URL ..."/>
+        <div class="form-group">
+            <select class="form-control" id="selectTargetType4">
+                <option> Open in Current Window</option>
+                <option> Open in New Tab</option>
+            </select>
+        </div>
+    </div>
+    <div class="q_setting_save">
+        <button class="btn btn-primary" id="q_save">Save <i class="fas fa-save"></i></button>
+    </div>
+</div>
+
+<div class="q_container" style="filter: url('#name');-webkit-filter: url('#name');">
+    <div class="q_settings" id="q_settings">
+        <i class="fa fa-cog"></i>
+    </div>
+    <div class="q_item q_item_0" id="q_item_0">
+        <i class=""></i>
+    </div>
+    <div class="q_item q_item_1" id="q_item_1">
+        <i class=""></i>
+    </div>
+    <div class="q_item q_item_2" id="q_item_2">
+        <i class=""></i>
+    </div>
+    <div class="q_item q_item_3" id="q_item_3">
+        <i class=""></i>
+    </div>
+    <div class="q_item q_item_4" id="q_item_4">
+        <i class=""></i>
+    </div>
+    <div class="q_item_5" id="q_main">
+        <i class="fa fa-bolt"></i>
+    </div>
+</div>
+<svg style="height:0">
+    <defs>
+        <filter id="name">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+            <feColorMatrix in="blur" type="matrix"
+                           values="1 0 0 0 0
+                                       0 1 0 0 0
+                                       0 0 1 0 0
+                                       0 0 0 11 -5" result="gooey"/>
+            <feBlend in="SourceGraphic" in2="gooey"/>
+        </filter>
+    </defs>
+</svg>
+<!-- jQuery  -->
+<script type="text/javascript" src="/quick_access/static/src/js/jquery.min.js"></script>
+<!-- Bootstrap  -->
+<script type="text/javascript" src="/quick_access/static/src/js/bootstrap.min.js"></script>
+<!-- Bootstrap-Iconpicker Bundle -->
+<script type="text/javascript" src="/quick_access/static/src/js/bootstrap-iconpicker.bundle.min.js"></script>
+<!--Custom-->
+<script type="text/javascript" src="/quick_access/static/src/js/quick_access.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <record id="payment_icon_cc_addi" model="payment.icon">
+        <field name="name">ADDI</field>
+        <field name="image" type="base64" file="payment_addi/static/img/addi.png"/>
+    </record>
+</incore>

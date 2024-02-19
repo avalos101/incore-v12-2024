@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <record id="res_config_settings_view_form_invoice" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.account</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="40"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]/div[hasclass('app_settings_block')]/div[@id='invoicing_settings']" position="inside">
+                <div class="col-12 col-lg-6 o_setting_box">
+                    <div class="o_setting_left_pane">
+                        <field name="auto_merge_invoice_line"/>
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="auto_merge_invoice_line"/>
+                        <div class="text-muted">
+                            Auto Merge Customer Invoice lines when create or edit Customer invoices.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 o_setting_box">
+                    <div class="o_setting_left_pane">
+                        <field name="auto_merge_bill_line"/>
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="auto_merge_bill_line"/>
+                        <div class="text-muted">
+                            Auto Merge Vendor Bill lines when create or edit Vendor bills.
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</incore>

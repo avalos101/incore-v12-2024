@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <data>
+        <record id="base.partner_root" model="res.partner">
+            <field name="name">inCoreBot</field>
+            <field name="email">incorebot@example.com</field>
+            <field name="image" type="base64" file="mail/static/src/img/incorebot.png"/>
+        </record>
+    </data>
+</incore>

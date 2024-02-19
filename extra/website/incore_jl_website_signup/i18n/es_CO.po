@@ -1,0 +1,162 @@
+# Translation of inCore Server.
+# This file contains the translation of the following modules:
+# 	* incore_jl_website_signup
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: inCore Server 12.0-20190515\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-12 08:16+0000\n"
+"PO-Revision-Date: 2020-02-12 04:18-0400\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_CO\n"
+"X-Generator: Poedit 2.2\n"
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "<strong>Sr.</strong>"
+msgstr "Señor"
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "<strong>Sra.</strong>"
+msgstr "Señora"
+
+#. module: incore_jl_website_signup
+#: model:ir.model.fields,field_description:incore_jl_website_signup.field_res_partner__auth_data_processing
+#: model:ir.model.fields,field_description:incore_jl_website_signup.field_res_users__auth_data_processing
+msgid "Accepted Data Processing"
+msgstr ""
+
+#. module: incore_jl_website_signup
+#: code:addons/incore_jl_website_signup/controllers/main.py:74
+#, python-format
+msgid "Authentication Failed."
+msgstr ""
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid ""
+"Autorizo el correcto tratamiento de mis datos\n"
+"\t\t    <span style=\"color:red;\">*</span>"
+msgstr ""
+
+#. module: incore_jl_website_signup
+#: model:ir.model,name:incore_jl_website_signup.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "Data Protection"
+msgstr ""
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "Document Identification<span style=\"color:red;\">*</span>"
+msgstr "Documento<span style=\"color:red;\">*</span>"
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "Document Type<span style=\"color:red;\">*</span>"
+msgstr "Tipo de Documento<span style=\"color:red;\">*</span>"
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "Document..."
+msgstr "Documento..."
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "First Name<span style=\"color:red;\">*</span>"
+msgstr "Primer Nombre<span style=\"color:red;\">*</span>"
+
+#. module: incore_jl_website_signup
+#: model:ir.model.fields,help:incore_jl_website_signup.field_res_partner__auth_data_processing
+#: model:ir.model.fields,help:incore_jl_website_signup.field_res_users__auth_data_processing
+msgid "Indicates the user accepted the data processing in the signup."
+msgstr ""
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid ""
+"La protección de sus datos es fundamental para nosotros\n"
+"\t\tConforme a la Ley 1581 de 2012 y al Decreto 1377 de 2013, JOYERÍA LONDRES S.A.S., considerada como Responsable y/o Encargada del tratamiento de datos personales que almacena y recolecta de sus clientes en desarrollo de sus actividades comerciales, de ventas de sus productos en su red de almacenes o en los canales en línea, o en eventos promocionáles, entre otros, requiere obtener su autorización para continuar con el tratamiento de sus datos personales conforme a la política de privacidad para el tratamiento de sus datos personales las cuales están disponibles en nuestra"
+msgstr ""
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "NIT"
+msgstr ""
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "Pagina de Política de Uso y Privacidad"
+msgstr ""
+
+#. module: incore_jl_website_signup
+#: code:addons/incore_jl_website_signup/controllers/main.py:22
+#, python-format
+msgid "Passwords do not match; please retype them."
+msgstr ""
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "Second Name"
+msgstr "Segundo nombre"
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "Second Surname"
+msgstr "Segundo apellido"
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "Social Title:"
+msgstr "Titulo social:"
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "Sr."
+msgstr ""
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "Sra."
+msgstr ""
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "Surname<span style=\"color:red;\">*</span>"
+msgstr "Primer Apellido<span style=\"color:red;\">*</span>"
+
+#. module: incore_jl_website_signup
+#: code:addons/incore_jl_website_signup/controllers/main.py:20
+#, python-format
+msgid "The form was not properly filled in."
+msgstr ""
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "e.g. Doe"
+msgstr ""
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "e.g. Fonseca"
+msgstr ""
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "e.g. John"
+msgstr ""
+
+#. module: incore_jl_website_signup
+#: model_terms:ir.ui.view,arch_db:incore_jl_website_signup.signup_fields
+msgid "e.g. Perez"
+msgstr ""

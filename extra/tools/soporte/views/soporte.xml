@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <data>
+        <template id="assets_backend" name="soporte assests" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+               <script type="text/javascript" src="/soporte/static/src/js/soporte.js"></script>
+            </xpath>
+        </template>
+    </data>
+</incore>

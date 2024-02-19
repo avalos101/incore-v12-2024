@@ -1,0 +1,266 @@
+# Translation of inCore Server.
+# This file contains the translation of the following modules:
+#	* l10n_co
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: inCore Server 12.0+e-20190515\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 21:52+0000\n"
+"PO-Revision-Date: 2020-10-05 21:52+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_ar_ren_0
+msgid "AR REN 0%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_cree_16
+msgid "CREE 16%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_cree_4
+msgid "CREE 4%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_cree_8
+msgid "CREE 8%"
+msgstr ""
+
+#. module: l10n_co
+#: selection:res.partner,l10n_co_document_type:0
+msgid "Carné Diplomatico"
+msgstr ""
+
+#. module: l10n_co
+#: model:ir.ui.menu,name:l10n_co.account_reports_co_statements_menu
+msgid "Colombia"
+msgstr ""
+
+#. module: l10n_co
+#: model:ir.model,name:l10n_co.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: l10n_co
+#: selection:res.partner,l10n_co_document_type:0
+msgid "Cédula"
+msgstr ""
+
+#. module: l10n_co
+#: selection:res.partner,l10n_co_document_type:0
+msgid "Cédula Extranjera"
+msgstr ""
+
+#. module: l10n_co
+#: selection:res.partner,l10n_co_document_type:0
+msgid "Cédula de ciudadanía"
+msgstr ""
+
+#. module: l10n_co
+#: model:ir.model.fields,field_description:l10n_co.field_res_partner__l10n_co_document_type
+#: model:ir.model.fields,field_description:l10n_co.field_res_users__l10n_co_document_type
+msgid "Document Type"
+msgstr "Tipo de documento"
+
+#. module: l10n_co
+#: selection:res.partner,l10n_co_document_type:0
+msgid "ID del Exterior"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_inc_16
+msgid "INC 16%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_inc_4
+msgid "INC 4%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_inc_8
+msgid "INC 8%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_iva_0
+msgid "IVA 0%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_iva_075
+msgid "IVA 0.75%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_iva_16
+msgid "IVA 16%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_iva_2
+msgid "IVA 2%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_iva_204
+msgid "IVA 2.4%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_iva_4
+msgid "IVA 4%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_iva_5
+msgid "IVA 5%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_iva_8
+msgid "IVA 8%"
+msgstr ""
+
+#. module: l10n_co
+#: model:ir.model.fields,help:l10n_co.field_res_partner__l10n_co_document_type
+#: model:ir.model.fields,help:l10n_co.field_res_users__l10n_co_document_type
+msgid "Indicates to what document the information in here belongs to."
+msgstr "Indica a qué documento pertenece la información aquí contenida."
+
+#. module: l10n_co
+#: selection:res.partner,l10n_co_document_type:0
+msgid "Pasaporte"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_iva_075
+msgid "R IVA 0.75%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_iva_16
+msgid "R IVA 16%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_iva_24
+msgid "R IVA 2.4%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_ren_0
+msgid "R REN 0%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_ren_01
+msgid "R REN 0.1%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_ren_05
+msgid "R REN 0.5%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_ren_1
+msgid "R REN 1%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_ren_15
+msgid "R REN 1.5%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_ren_10
+msgid "R REN 10%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_ren_11
+msgid "R REN 11%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_ren_2
+msgid "R REN 2%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_ren_25
+msgid "R REN 2.5%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_ren_20
+msgid "R REN 20%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_ren_3
+msgid "R REN 3%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_ren_35
+msgid "R REN 3.5%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_ren_33
+msgid "R REN 33%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_ren_4
+msgid "R REN 4%"
+msgstr ""
+
+#. module: l10n_co
+#: model:account.tax.group,name:l10n_co.tax_group_r_ren_6
+msgid "R REN 6%"
+msgstr ""
+
+#. module: l10n_co
+#: selection:res.partner,l10n_co_document_type:0
+msgid "RUT"
+msgstr "NIT"
+
+#. module: l10n_co
+#: model:ir.model.fields,help:l10n_co.field_res_partner__l10n_co_verification_code
+#: model:ir.model.fields,help:l10n_co.field_res_users__l10n_co_verification_code
+msgid "Redundancy check to verify the vat number has been typed in correctly."
+msgstr "Verificación de redundancia para verificar que el número de tina se haya ingresado correctamente."
+
+#. module: l10n_co
+#: selection:res.partner,l10n_co_document_type:0
+msgid "Registro Civil"
+msgstr ""
+
+#. module: l10n_co
+#: selection:res.partner,l10n_co_document_type:0
+msgid "Salvoconducto de Permanencia"
+msgstr ""
+
+#. module: l10n_co
+#: selection:res.partner,l10n_co_document_type:0
+msgid "Tarjeta de Identidad"
+msgstr ""
+
+#. module: l10n_co
+#: model:ir.model.fields,field_description:l10n_co.field_res_partner__l10n_co_verification_code
+#: model:ir.model.fields,field_description:l10n_co.field_res_users__l10n_co_verification_code
+msgid "VC"
+msgstr "DV"
+

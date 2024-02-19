@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <data noupdate="1">
+        <!-- 更新序号规则 合作伙伴. -->
+        <!-- 客户自动编号. -->
+        <record id="seq_res_partner_customer" model="ir.sequence">
+            <field name="name">Default Sequence for Customer Partner</field>
+            <field name="code">res.partner.customer</field>
+            <field name="prefix">C</field>
+            <field name="padding">5</field>
+            <field name="number_next_actual">10001</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <!-- 供应商自动编号. -->
+        <record id="seq_res_partner_supplier" model="ir.sequence">
+            <field name="name">Default Sequence for Supplier Partner</field>
+            <field name="code">res.partner.supplier</field>
+            <field name="prefix">V</field>
+            <field name="padding">5</field>
+            <field name="number_next_actual">20001</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <!-- 员工自动编号. -->
+        <record id="seq_res_partner_employee" model="ir.sequence">
+            <field name="name">Default Sequence for Employee</field>
+            <field name="code">res.partner.employee</field>
+            <field name="prefix">E</field>
+            <field name="padding">5</field>
+            <field name="number_next_actual">30001</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <!-- 其它类型自动编号. -->
+        <record id="seq_res_partner_default" model="ir.sequence">
+            <field name="name">Default Sequence for Normal Partner</field>
+            <field name="code">res.partner.default</field>
+            <field name="prefix">P</field>
+            <field name="padding">5</field>
+            <field name="number_next_actual">50001</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</incore>

@@ -1,0 +1,22 @@
+<incore>
+    <!-- Form -->
+    <record id="view_form_server" model="ir.ui.view">
+        <field name="name">Servers Form</field>
+        <field name="model">partner_extra_technical_data.server</field>
+        <field name="arch" type="xml">
+            <form string="Servidores">
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="name"/>
+                            <field name="server_ip"/>
+                            <field name="email_account"/>
+                            <field name="type_login"/>
+                            <field name="project_name"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</incore>

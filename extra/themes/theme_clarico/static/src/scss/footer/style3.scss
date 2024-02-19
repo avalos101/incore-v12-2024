@@ -1,0 +1,160 @@
+.footer_logo_title_socialicon
+{
+	background: darken(color('footer'), 5%);
+	
+}
+	.footer_logo
+	{
+		padding:0;
+
+		img
+		{
+			max-height: 60px;
+		}
+	}
+	.footer_info_text 
+	{
+		margin: 0;
+		padding: 0;
+	
+		.footer_title_text
+		{
+			@include style(2,3,inherit,null,uppercase);
+			list-style-type: none;
+			margin-top:25px;
+		}
+		.ftr_add_info
+		{
+			list-style-type: none;	
+			padding-top: 12px;	
+		}
+		.ftr_text_style
+		{
+			@include style(3,22,inherit);
+			@include spacing(null,0.125rem);	
+		}
+		.footer_add_tel_email_text_ept
+		{
+			@include style(2,16,inherit,null,uppercase);
+			display: inline-block;
+			vertical-align: top;
+			padding-right: 5px;
+		}	
+	}
+.footer_language
+{
+	margin:25px 0;
+	span
+	{
+		ul
+		{
+			li				
+			{
+				.btn-secondary 
+				{
+					    background-color: transparent;
+					    @include style(2,16,null,null,capitalize);	
+					
+										
+				}		
+			a
+			{
+			  @include style(2,16,inherit);							
+			}
+			}	
+		}
+	}
+	@media (max-width: 800px) {
+		margin:15px 0;
+	}
+	
+ }
+
+.footer_social_icon
+{
+	>a
+	{
+		@include style(2,5,null,1.75rem);
+		background-color: #535353;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		border-radius: 50%;
+		margin-right: 8px;
+		
+		&:hover
+		{
+			background-color: #535353;
+		}
+		
+	}
+}
+.footer_info_ept 
+{
+		margin: 0;
+		padding: 0;
+	
+		> li
+		  {
+			@include style(3,22,inherit,null,capitalize);
+			padding: 10px 0;
+			list-style-type: none;
+			transition: padding .5s ease 0s;
+			cursor: pointer;
+				
+			&:hover
+			{
+				color: nth($f_color,19);
+				padding-left: 10px;
+			}
+		
+	   }	
+}
+
+.footer_menu_info
+{
+		@include style(2,3,inherit,null,uppercase);
+		list-style-type: none;
+}
+.footer_copyright_text
+{
+	padding: 30px 0px;
+	
+	.copyright_add_language
+	{
+		display: inline-block;
+		color: nth($f_color,15);
+		font-family: inherit;
+	}
+	.footer_payment_img
+	{
+		display: block;
+		float: right;	
+	}
+}
+
+.copyright_add_language
+{
+    width: 49%;
+    text-align: left;
+	display: inline-block;
+	color: nth($f_color,15);
+	font-family: inherit;
+}
+
+.footer_payment_img
+	{
+	    width: 49%;
+    	text-align: right;
+		display: inline-block;
+	}
+
+@media (max-width: 800px) {
+	.copyright_add_language {
+		margin:3% 0;
+	}
+	.copyright_add_language,.footer_payment_img {
+		width:100%;
+		text-align:left;
+	}
+}

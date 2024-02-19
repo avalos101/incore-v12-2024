@@ -1,0 +1,2 @@
+debian/incore.conf /etc/incore
+README.md /usr/share/doc/incore

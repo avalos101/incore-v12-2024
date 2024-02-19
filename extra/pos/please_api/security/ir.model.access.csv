@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+please_all,Please,model_please,,1,1,1,1
+please_order_all,Please Order,model_please_order,,1,1,1,1
+please_order_line_all,Please Order Line,model_please_order_line,,1,1,1,1
+please_order_state_all,Please Order Status,model_please_order_state,,1,1,1,1

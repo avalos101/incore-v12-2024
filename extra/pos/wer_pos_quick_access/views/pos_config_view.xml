@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <data>
+
+    	<record model="ir.ui.view" id="wer_pos_quick_access">
+    		<field name="name">wer_pos_quick_access.form</field>
+    		<field name="model">pos.config</field>
+    		<field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+    		<field name="arch" type="xml">
+                    <xpath expr="//sheet" position="inside">
+                        <center><h1><ul>Quick Access</ul></h1></center>
+                        <group col="4">
+                            <field name="change_product_view"/>
+            				<field name="quick_partner"/>
+                            <field name="quick_product"/>
+                            <field name="clear_cart"/>
+                        </group>
+    			</xpath>
+    		</field>
+    	</record>
+
+    </data>
+</incore>

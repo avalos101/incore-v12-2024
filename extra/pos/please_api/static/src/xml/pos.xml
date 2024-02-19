@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="PaymentScreenWidget">
+        <t t-jquery='.payment-buttons' t-operation='append'>
+            <t t-if="widget.pos.config.please_id">
+                <div t-attf-class='button js_please #{ widget.pos.get_order().is_to_please() ? "highlight" : ""} '>
+                    <i class='fa fa-motorcycle' /> Please
+                </div>
+            </t>
+        </t>
+        <t t-jquery='.payment-buttons' t-operation='after'>
+        	<div class='payment-note'>
+	        	<textarea placeholder="Nota..." name="note" class="pay-note"></textarea>
+	        </div>
+        </t>
+     </t>
+    <t t-extend="ClientDetailsEdit">
+        <t t-jquery="div.client-details-right" t-operation="prepend">
+            <div class="client-detail">
+                <span class="label">City's</span>
+                <select class="detail client-address-country needsclick" name="city_id" id="province">
+                    <option value=''>None</option>
+                    <t t-foreach="widget.pos.province" t-as="city_id">
+                        <option t-att-value="city_id.id" 
+                                t-att-selected="partner.city_id ? ((city_id.id === partner.city_id[0]) ? true : undefined) : undefined">
+                            <t t-esc="city_id.name"/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+        </t>
+    </t>
+</templates>
+

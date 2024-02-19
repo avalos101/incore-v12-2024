@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <data>
+
+        <template id="assets_backend" inherit_id="web.assets_backend">
+            <xpath expr="//script[last()]" position="after">
+                <script type="text/javascript" src="/quick_access/static/src/js/quick_access_open_close.js"></script>
+            </xpath>
+        </template>
+
+        <template id="webclient_bootstrap" inherit_id="web.webclient_bootstrap" name="Quick Access Elements">
+            <xpath expr="//div[hasclass('o_main')]" position="after">
+
+                <div class="setting_window" style="margin:auto">
+                    <iframe id="iFrame_navigation"
+                            style="position: absolute;right: 0; bottom: 30px; z-index: 99999;background: transparent;border: none;"
+                            name="myIframe" src="/quick_access/static/src/pages/settings.html"
+                            height="60" width="65"></iframe>
+                </div>
+
+
+            </xpath>
+        </template>
+
+    </data>
+</incore>

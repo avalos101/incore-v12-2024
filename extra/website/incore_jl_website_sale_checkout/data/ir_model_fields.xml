@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+
+    <function model="ir.model.fields" name="formbuilder_whitelist">
+	<value>res.partner</value>
+	<value eval="['doctype', 'xidentification', 'xbirthday', 'xcity', 'x_name1', 'x_lastname1', 'x_name2', 'x_lastname2']"/>
+    </function>
+
+</incore>

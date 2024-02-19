@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <data>
+        <template id="addi_acquirer_button" name="ADDI Payment Method">
+          <div>
+              <input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
+              <input type="hidden" name="orderId" t-att-value="orderId"/>
+              <input type="hidden" name="totalAmount" t-att-value="totalAmount"/>
+              <input type="hidden" name="shippingAmount" t-att-value="shippingAmount"/>
+              <input type="hidden" name="totalTaxesAmount" t-att-value="totalTaxesAmount"/>
+              <input type="hidden" name="currency" t-att-value="currency.name"/>
+              <input type="hidden" name="items" t-att-value="items"/>
+              <input type="hidden" name="client" t-att-value="client"/>
+              <input type="hidden" name="allyUrlRedirection" t-att-value="allyUrlRedirection"/>
+
+              <!-- after payment parameters -->
+              <input type="hidden" name="acquirer_id" t-att-value="acquirer_id"/>
+          </div>
+        </template>
+
+        <template id="redirect_addi" name="redirect_addi">
+          <t t-raw="redirect_addi" />
+        </template>
+
+    </data>
+</incore>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <data>
+
+        <record id="pos_sale_report_tree" model="ir.ui.view">
+            <field name="name">pos.sale.report.tree</field>
+            <field name="model">pos.sale.report</field>
+            <field name="arch" type="xml">
+                <tree string="POS Sale Report">
+                    <field name="product_id"/>
+                    <field name="categ_id"/>
+                    <field name="order_id"/>
+                    <field name="costo_venta"/>
+                    <field name="price_subtotal"/>
+                    <field name="price_total"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_pos_sale_report_pivot" model="ir.ui.view">
+            <field name="name">pos.sale.report.pivot</field>
+            <field name="model">pos.sale.report</field>
+            <field name="arch" type="xml">
+                <pivot string="POS Sale Report" disable_linking="True" display_quantity="True">
+                    <field name="product_id" type="row"/>
+                    <field name="order_id" type="measure"/>
+                    <field name="price_subtotal" type="measure"/>
+                    <field name="price_total" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="view_pos_sale_report_graph" model="ir.ui.view">
+             <field name="name">pos.sale.report.graph</field>
+             <field name="model">pos.sale.report</field>
+             <field name="arch" type="xml">
+                 <graph string="POS Sale Report" type="line">
+                     <field name="date" type="row" interval="day"/>
+                     <field name="price_subtotal" type="measure"/>
+                 </graph>
+             </field>
+        </record>
+
+        <record id="view_pos_sale_report_search" model="ir.ui.view">
+            <field name="name">pos.sale.report.search</field>
+            <field name="model">pos.sale.report</field>
+            <field name="arch" type="xml">
+                <search string="POS Sale Report">
+                    <field name="date"/>
+                    <filter string="Date" name="year" invisible="1" date="date" default_period="this_year"/>
+                    <filter name="pos_sale" string="POS Sales" domain="[('state','in',('done', 'paid', 'invoiced'))]"/>
+                    <separator/>
+                    <field name="user_id"/>
+                    <field name="product_id"/>
+                    <field name="categ_id"/>
+                    <field name="partner_id"/>
+                    <field name="country_id"/>
+                    <group expand="0" string="Filters">
+                        <field name="categ_id" filter_domain="[('categ_id', 'child_of', self)]"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                    </group>
+                    <group expand="1" string="Group By">
+                        <filter string="Salesperson" name="User" context="{'group_by':'user_id'}"/>
+                        <filter string="Customer" name="Customer" context="{'group_by':'partner_id'}"/>
+                        <filter string="Customer Country" name="country_id" context="{'group_by':'country_id'}"/>
+                        <filter string="Product" name="Product" context="{'group_by':'product_id'}"/>
+                        <filter string="Product Category" name="Category" context="{'group_by':'categ_id'}"/>
+                        <filter name="status" string="Status" context="{'group_by':'state'}"/>
+                        <filter string="Company" name="company" groups="base.group_multi_company" context="{'group_by':'company_id'}"/>
+                        <separator/>
+                        <filter string="Date" name="date" context="{'group_by':'date'}"/>
+                        <filter string="by Date" name="date_month" context="{'group_by':'date:month'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_pos_sale_report" model="ir.actions.act_window">
+            <field name="name">Pos sale report</field>
+            <field name="res_model">pos.sale.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,graph,pivot</field>
+            <field name="view_id" ref="pos_sale_report_tree"/>
+            <field name="search_view_id" ref="view_pos_sale_report_search"/>
+            <field name="context">
+            {
+                'group_by' : 'product_id',
+                'pivot_measures' : ['costo_venta','price_subtotal', 'price_total']
+            }
+            </field>
+        </record>
+
+
+        <menuitem id="menu_pos_sale_report"
+            name="POS Sales"
+            action="action_pos_sale_report"
+            parent="point_of_sale.menu_point_rep"
+            sequence="10"
+            groups="point_of_sale.group_pos_user,point_of_sale.group_pos_manager"/>
+
+    </data>
+</incore>

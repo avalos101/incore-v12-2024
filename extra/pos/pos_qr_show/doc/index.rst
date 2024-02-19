@@ -1,0 +1,5 @@
+=======================
+ POS QR Showing in POS
+=======================
+
+The module cannot be used alone. Try to install, for example, `pos_wechat <https://apps.incore.co/apps/modules/12.0/pos_wechat/>`__.

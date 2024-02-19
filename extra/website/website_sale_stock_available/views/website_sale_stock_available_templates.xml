@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+
+  <template id="assets_frontend" inherit_id="website.assets_frontend" name="Website Sale Stock">
+    <xpath expr="." position="inside">
+      <script type="text/javascript" src="/website_sale_stock_available/static/src/js/product_configurator_mixin.js" />
+    </xpath>
+  </template>  
+
+  <template id="variants" inherit_id="sale.variants">
+
+    <xpath expr="//t[@t-as='value_id']/option" position="attributes">
+      <attribute name="t-if">value_id._is_variant_available()</attribute>
+    </xpath>
+
+    <xpath expr="//t[@t-as='value_id']/li" position="attributes">
+      <attribute name="t-if">value_id._is_variant_available()</attribute>
+    </xpath>
+
+    <xpath expr="//li[@t-as='value_id']/label" position="attributes">
+      <attribute name="t-if">value_id._is_variant_available()</attribute>
+    </xpath>
+
+    <xpath expr="//ul[contains(@t-attf-class, 'js_add_cart_variants')]" position="after">
+      <p t-if="product.inventory_availability == 'never' and product.sudo().virtual_available &lt; 1" class="alert alert-warning" style="width:50%;">
+	<t t-esc="product.custom_message"/>
+      </p>      
+    </xpath>
+
+  </template>
+
+  <template id="product" inherit_id="website_sale.product" name="Msg for variants not available">
+    <xpath expr="//p[contains(@class, 'css_not_available_msg')]" position="before">
+      <p style="display:none;" class="not_available_custom_msg alert alert-warning"></p>
+    </xpath>
+  </template>
+
+</incore>

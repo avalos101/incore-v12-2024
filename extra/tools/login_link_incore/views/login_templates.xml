@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+	<template id="login_layout_link_incore" inherit_id="web.login_layout">
+        <xpath expr='//div[@t-if="not disable_footer"]' position="inside">
+            <br/>
+						<div class="links-incore">
+								<a href="http://www.mipos.app/page/homepage" target="_blank">Software POS</a> <br/>
+								<a href="http://www.mipos.app/page/homepage" target="_blank">Software POS Medellín</a> <br/>
+								<a href="https://medellin.mipos.app/page/homepage" target="_blank">Sistema POS Medellín</a> <br/>
+								<a href="https://sistematizar.me/pos" target="_blank">Software POS y facturación electrónica Medellín Colombia</a> <br/>
+								<a href="https://sistematizar.me/pos#bogota" target="_blank">Software POS y facturación electrónica Bogotá Colombia</a>
+						</div>
+        </xpath>
+    </template>
+</incore>

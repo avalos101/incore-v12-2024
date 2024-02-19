@@ -1,0 +1,162 @@
+# Translation of inCore Server.
+# This file contains the translation of the following modules:
+#	* em_pos_multi_uom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: inCore Server 12.0+e-20190515\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-25 21:55+0000\n"
+"PO-Revision-Date: 2022-09-25 21:55+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: em_pos_multi_uom
+#: code:addons/em_pos_multi_uom/models/pos.py:51
+#: code:addons/em_pos_multi_uom/models/pos.py:60
+#: code:addons/em_pos_multi_uom/models/pos.py:75
+#: code:addons/em_pos_multi_uom/models/pos.py:83
+#, python-format
+msgid "A barcode can only be assigned to one product !"
+msgstr "¡Un código de barras solo se puede asignar a un producto!"
+
+#. module: em_pos_multi_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_multi_uom__barcode
+msgid "Barcode"
+msgstr "Código de barras"
+
+#. module: em_pos_multi_uom
+#. incore-web
+#: code:addons/em_pos_multi_uom/static/src/xml/pos.xml:17
+#, python-format
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: em_pos_multi_uom
+#. incore-web
+#: code:addons/em_pos_multi_uom/static/src/xml/pos.xml:26
+#, python-format
+msgid "Change UOM"
+msgstr "Cambiar unidad de medida"
+
+#. module: em_pos_multi_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_multi_uom__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: em_pos_multi_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_multi_uom__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: em_pos_multi_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_multi_uom__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: em_pos_multi_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_product__has_multi_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_template__has_multi_uom
+msgid "Has multi UOM"
+msgstr "Tiene múltiples UOM"
+
+#. module: em_pos_multi_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_multi_uom__id
+msgid "ID"
+msgstr "ID"
+
+#. module: em_pos_multi_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_multi_uom____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: em_pos_multi_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_multi_uom__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: em_pos_multi_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_multi_uom__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: em_pos_multi_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_product__multi_uom_ids
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_template__multi_uom_ids
+msgid "Multi Uom"
+msgstr ""
+
+#. module: em_pos_multi_uom
+#. incore-web
+#: code:addons/em_pos_multi_uom/static/src/xml/pos.xml:6
+#, python-format
+msgid "POS Multi UOM"
+msgstr "Multi Unidad de Medida"
+
+#. module: em_pos_multi_uom
+#: model_terms:ir.ui.view,arch_db:em_pos_multi_uom.product_template_only_form_view
+msgid "POS UOM"
+msgstr ""
+
+#. module: em_pos_multi_uom
+#: model:ir.model,name:em_pos_multi_uom.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Configuración del TPV"
+
+#. module: em_pos_multi_uom
+#: model:ir.model,name:em_pos_multi_uom.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Líneas de Orden de Punto de Venta"
+
+#. module: em_pos_multi_uom
+#: model:ir.model,name:em_pos_multi_uom.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Pedidos del TPV"
+
+#. module: em_pos_multi_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_multi_uom__product_id
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_multi_uom__product_tmp_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: em_pos_multi_uom
+#: model:ir.model,name:em_pos_multi_uom.model_product_template
+msgid "Product Template"
+msgstr "Plantilla del Producto"
+
+#. module: em_pos_multi_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_pos_config__allow_multi_uom
+msgid "Product multi uom"
+msgstr "Multiple Unidad de Media por Producto"
+
+#. module: em_pos_multi_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_multi_uom__price
+msgid "Sale Price"
+msgstr "Precio de venta"
+
+#. module: em_pos_multi_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_multi_uom__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: em_pos_multi_uom
+#: code:addons/em_pos_multi_uom/models/pos.py:117
+#, python-format
+msgid "This transfer has been created from the point of sale session: <a href=# data-oe-model=pos.order data-oe-id=%d>%s</a>"
+msgstr "Esta transferencia se ha creado desde la sesión del punto de venta:: <a href=# data-oe-model=pos.order data-oe-id=%d>%s</a>"
+
+#. module: em_pos_multi_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_pos_order_line__product_uom
+#: model:ir.model.fields,field_description:em_pos_multi_uom.field_product_multi_uom__multi_uom_id
+msgid "Unit of measure"
+msgstr "Unidad de medida"
+
+#. module: em_pos_multi_uom
+#: model:ir.model,name:em_pos_multi_uom.model_product_multi_uom
+msgid "product.multi.uom"
+msgstr ""
+

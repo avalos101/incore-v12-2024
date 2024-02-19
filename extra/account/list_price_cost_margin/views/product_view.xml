@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+	<record id="product_template_margen_form_view" model="ir.ui.view">
+        <field name="name">product.template.common.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+        	<!-- attrs="{'readonly': ['|',('payment_term_id','!=',False), ('state', 'in', ['open', 'in_payment', 'paid'])]}" force_save="1" -->
+        	<field name="company_id" position="before">
+                <field name="margen"/>
+        	</field>
+        	<field name="list_price" position="attributes">
+        		<attribute name="attrs">{'readonly':[('margen','!=',0)]}</attribute>
+        		<attribute name="force_save">1</attribute>
+        	</field>
+        </field>
+    </record>
+</incore>

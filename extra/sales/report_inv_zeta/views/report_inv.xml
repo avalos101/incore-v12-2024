@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <template id="external_layout_inv">
+            <div class="header"/>
+            <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
+              <t t-raw="0"/>
+            </div>
+            <div class="footer"/>
+        </template>
+
+        <template id="external_layout_inv_r">
+            <t t-call="report_inv_zeta.external_layout_inv"><t t-raw="0"/></t>
+        </template>
+<template id="report_inv_detail">
+    <t t-call="web.html_container">
+          <t t-call="report_inv_zeta.external_layout_inv_r">
+                <div class="page">
+
+
+            <div class="text-center">
+                <h2>COMPROBANTE DE INFORME DIARO</h2>
+                <t t-if="company.name">
+                    <t t-esc="company.name"/>
+                </t>
+                    <t t-if="company.vat"><br/>
+                </t>
+                <t t-if="company.street">
+                    <t t-esc="company.street"/><br/>
+                </t>
+                <t t-if="company.street2">
+                    <t t-esc="company.street2"/>
+                </t>
+                <t t-if="company.city">
+                    <t t-esc="company.city"/>
+                </t>
+                <t t-if="company.state_id.name">
+                    <t t-esc="company.state_id.name"/>
+                </t>
+                <t t-if="company.country_id.name">
+                    <t t-esc="company.country_id.name"/>
+                </t><br/>
+                <t t-if="company.phone">
+                    Tel: <t t-esc="company.phone"/><br/>
+                </t>
+                <t t-if="company.email">
+                    Email: <t t-esc="company.email"/><br/>
+                </t>
+                <t t-if="company.website">
+                    Website: <t t-esc="company.website"/><br/>
+                </t>
+                <strong> DEL <t t-esc="date_start" t-options="{'widget': 'date'}"/> - <t t-esc="date_stop" t-options="{'widget': 'date'}"/></strong>
+                <br/><strong> GENERADO EL <t t-esc="datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')" t-options="{'widget': 'datetime'}"/></strong>
+                <br/>
+
+            </div>
+            <div>
+                <strong> CAJERO(S): </strong>
+                <t t-foreach='user_ventas' t-as='u'>
+                    <strong><t t-esc="u.partner_id.name"/>,</strong>
+                </t>
+            </div>
+            <br/>
+            <t t-set="t_base_amount" t-value="0"/>
+            <t t-set="t_tax_amount" t-value="0"/>
+            <table  class="table table-sm">
+                <tbody>
+                    <tr>
+                        <td colspan="3"><b>FACTURACION VENTAS A CREDITO</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Valor mercancia vendida</td>
+                        <td class="text-right"><t t-esc="total_i" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Pagos iniciales</td>
+                        <td class="text-right"><t t-esc="p_iniciales" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Descuento</td>
+                        <td class="text-right"><t t-esc="disc_inv" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr style="border-bottom:2px solid black">
+                        <td>TARIFA IVA</td>
+                        <td class="text-right">BASE</td>
+                        <td class="text-right">VALOR</td>
+                    </tr>
+                    <tr t-foreach='taxes_inv' t-as='t'>
+                        <td><t t-esc="t['name']"/></td>
+                        <td class="text-right">
+                            <t t-esc="t['base_amount']" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/>
+                            <t t-set="t_base_amount" t-value="t_base_amount + t['base_amount']"/>
+                        </td>
+                        <td class="text-right">
+                            <t t-esc="t['tax_amount']" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/>
+                            <t t-set="t_tax_amount" t-value="t_tax_amount + t['tax_amount']"/>
+                        </td>
+                    </tr>
+                    <tr style="border-top:1.6px solid black !important;">
+                        <td>Total</td>
+                        <td class="text-right"><t t-esc="t_base_amount" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                        <td class="text-right"><t t-esc="t_tax_amount" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">TOTAL BASE + IVA - DESC</td>
+                        <td class="text-right"><t t-esc="t_base_amount + t_tax_amount" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Nro de Facturas</td>
+                        <td class="text-right"><t t-esc="count_inv"/></td>
+                    </tr>
+                    <tr t-foreach='consecutivos' t-as='c'>
+                        <td colspan="2"><t t-esc="c[0]"/></td>
+                        <td class="text-right"><t t-esc="c[1]"/></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <t t-set="tt_pay" t-value="0"/>
+            <table  class="table table-sm">
+                <tbody>
+                    <tr>
+                        <td colspan="3"><b>PAGOS VENTAS A CREDITO</b></td>
+                    </tr>
+                    <tr t-foreach='journals_pay' t-as='j'>
+                        <t t-set="tt_pay" t-value="tt_pay + j[1]"/>
+                        <td colspan="2"><t t-esc="j[0]"/></td>
+                        <td class="text-right"><t t-esc="j[1]" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr style="border-top:1.6px solid black !important;">
+                        <td >Total</td>
+                        <td colspan="2" class="text-right"><t t-esc="tt_pay" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <!-- <tr>
+                        <td colspan="3"><b>Inventario de computadores</b><br/>
+                          <span>Joyeria Londres Centro</span><br/>
+                          <span>Seriales</span><br/>
+                          <span>ZZ8QH4LF904097B</span><br/>
+                          <span>93700210085</span><br/>
+                          <span>95100516940</span><br/>
+                          <span>95102548685</span><br/>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <br/>
+        </div>
+    </t>
+    </t>
+</template>
+</incore>

@@ -1,0 +1,7 @@
+<incore>
+    <data>
+      <template id="PICK_5_document" name="inCore Template">
+       <t t-call="stock.report_picking" t-lang="o.partner_id.lang"/>
+     </template>
+    </data>
+</incore>

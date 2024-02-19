@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<t name="Web layout" t-name="web.layout">&lt;!DOCTYPE html&gt;
+        <html t-att="html_data or {}">
+            <head>
+                <meta charset="utf-8"/>
+                <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+                <title t-esc="title or 'inCore'"/>
+                <link type="image/x-icon" rel="shortcut icon" t-att-href="x_icon or '/web/static/src/img/favicon.png'"/>
+
+                <!--HOJA DE ESTILOS INCORE EXTERNA-->
+                <link rel="stylesheet" type="text/css" href="https://codepen.io/inCore/pen/VOxRKd.css"/>
+                <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+                <link  rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"/>
+                <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+                  <!--This will position the FAB in the bottom-right corner. Modify to fit your design's requirements.-->
+                <style>
+                .app-fab--absolute {
+                  position: fixed;
+                  bottom: 1rem;
+                  right: 1rem;
+                }
+
+                @media(min-width: 1024px) {
+                   .app-fab--absolute {
+                    bottom: 1.5rem;
+                    right: 1.5rem;
+                  }
+                }
+
+                button#soporte {
+                  background: linear-gradient(to bottom right, #2689cc, #eb2d5d, #eb2d5d) !important;
+                  z-index: 9999999 !important; }
+                </style>
+                <script>
+                  import {MDCRipple} from '@material/ripple';
+                  const fabRipple = new MDCRipple(document.querySelector('.mdc-fab'));
+                </script>
+
+
+                <script type="text/javascript">
+                    var incore = {
+                        csrf_token: "<t t-esc="request.csrf_token(None)"/>",
+                    };
+                </script>
+
+                <t t-raw="head or ''"/>
+            </head>
+            <body t-att-class="body_classname">
+
+                <t t-raw="0"/>
+            </body>
+        </html>
+    </t>
+
+    

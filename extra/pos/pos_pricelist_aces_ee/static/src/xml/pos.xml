@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="Product">
+        <t t-jquery="[t-if='!product.to_weight'] .price-tag" t-operation="append">
+            <t t-if="widget.pos.config.use_pricelist and pricelist.id != widget.pos.default_pricelist.id 
+                and product.get_price(widget.pos.default_pricelist, 1) != product.get_price(pricelist, 1)">
+		        <br/>
+		        <span style="text-decoration: line-through;color: red;"><t t-esc="widget.format_currency(product.get_price(widget.pos.default_pricelist, 1),'Product Price')"/></span>
+	        </t>
+        </t>
+        <t t-jquery="[t-if='product.to_weight'] .price-tag" t-operation="append">
+            <t t-if="widget.pos.config.use_pricelist and pricelist.id != widget.pos.default_pricelist.id 
+                and product.get_price(widget.pos.default_pricelist, 1) != product.get_price(pricelist, 1)">
+	            <br/>
+	            <span style="text-decoration: line-through;color: red;"><t t-esc="widget.format_currency(product.get_price(widget.pos.default_pricelist, 1),'Product Price')+'/'+widget.pos.units_by_id[product.uom_id[0]].name"/></span>
+            </t>
+        </t>
+    </t>
+
+    <t t-extend="Orderline">
+        <t t-jquery="span.price" t-operation="append">
+            <t t-if="widget.pos.config.use_pricelist and line.order.pricelist != widget.pos.default_pricelist and line.get_display_price() != line.get_original_price()">
+                <br />
+                <span style="text-decoration: line-through;color: red;"><t t-esc="widget.format_currency(line.get_original_price())" /></span>
+            </t>
+        </t>
+    </t>
+
+    <t t-extend="PosTicket">
+        <t t-jquery="[t-if='orderline.get_discount() > 0']" t-operation="after">
+            <t t-if="widget.pos.config.use_pricelist and order.pricelist != widget.pos.default_pricelist
+                    and orderline.get_display_price() != orderline.get_original_price()">
+	            <div class="pos-disc-font">
+		            Original Price <t t-esc="widget.format_currency(orderline.get_original_price())"/>
+		        </div>
+	        </t>
+        </t>
+        <t t-jquery="div.receipt-user" t-operation="after">
+            <t t-if="widget.pos.config.use_pricelist">
+                <div class="receipt-pricelist">
+	                Pricelist: <t t-esc="order.pricelist.name"/><br />
+	            </div>
+            </t>
+        </t>
+    </t>
+    <t t-extend="XmlReceipt">
+        <t t-jquery="[t-if='line.discount !== 0']" t-operation="after">
+            <t t-if="order.pricelist != widget.pos.default_pricelist and widget.pos.config.use_pricelist
+                    and line.price_display != line.original_price()">
+	            <t t-if="line.original_price">
+	                <line indent='1'><left>Orignal Price: <value t-att-value-decimals='pos.currency.decimals'><t t-esc='line.original_price' /></value></left></line>
+	            </t>
+            </t>
+        </t>
+        <t t-jquery="[t-if='simple']" t-operation="append">
+            <t t-if="order.pricelist != widget.pos.default_pricelist and widget.pos.config.use_pricelist
+                    and line.price_display != line.original_price()">
+	            <t t-if="line.original_price">
+	                <line indent='1'><left>Orignal Price: <value t-att-value-decimals='pos.currency.decimals'><t t-esc='line.original_price' /></value></left></line>
+	            </t>
+            </t>
+        </t>
+        <t t-jquery="[t-esc='receipt.cashier']" t-operation="after">
+            <div>Pricelist: <t t-esc='order.pricelist.name' /></div>
+        </t>
+    </t>
+</templates>

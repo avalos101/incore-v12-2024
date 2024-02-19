@@ -1,0 +1,35 @@
+/*-------------- Promotion ---------------*/
+#order_total_discount
+{
+	.text-center
+	{
+		text-align:right !important;
+		border:0;
+	}
+	
+}
+@media (min-width:1200px)
+{
+	.t_cart_summary_card .toggle_summary_div
+	{
+	max-width: 500px;
+	}
+}
+
+@media (max-width:767.98px)
+{
+
+	.oe_website_sale .t_confirm_products .td-discount
+	{
+		    display: inline-block;
+		    width: auto;
+		    padding-top: 0;
+		    
+		    &:before
+				{
+					content:'Discount:';
+					font-size:nth($f_sizes,18);
+					display: inline-block;
+				}
+	}
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <data>
+        <record id="transaction_form_addi" model="ir.ui.view">
+            <field name="name">transaction.form.addi</field>
+            <field name="model">payment.transaction</field>
+            <field name="inherit_id" ref="payment.transaction_form"/>
+            <field name="arch" type="xml">
+              <header>
+                <button name="addi_getTransactionfromCommerceId" type="object" string="Obtener Datos usando CommerceID"
+                  attrs="{'invisible': ['|', ('provider', '!=', 'addi'), ('state', 'not in', ['draft'])]}"/>
+              </header>
+              <xpath expr="//field[@name='acquirer_reference']" position="after">
+                  <field name="addi_token" attrs="{'invisible': [('provider', '!=', 'addi')]}"/>
+                <!--<field name="addi_txn_type" />-->
+              </xpath>
+            </field>
+        </record>
+    </data>
+</incore>

@@ -1,0 +1,114 @@
+/*______ Start general style ___________*/
+html{
+    padding: 10px;
+}
+div.q_item_setting{
+    margin-top: 20px;
+}
+div.q_setting_container{
+    opacity: 0;
+    background: white;
+    width: 65%;
+    margin-left: 12%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 6px 4px #9393cc;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+/*_______ End general style ____________*/
+
+
+/*_______ Start close button __________*/
+div.q_setting_close{
+    text-align: right;
+}
+div.q_setting_close i{
+    font-size: 20px;
+    color: #e83939;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50%;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+div.q_setting_close i:hover {
+    box-shadow: 0 0 4px 0.5px #e83939;
+}
+/*_________ End close button __________*/
+
+
+/*_______ Start icon picker ____________*/
+button.iconpicker{
+    position: relative;
+    outline: none !important;
+    min-width: 40px;
+    height: 40px;
+    background: linear-gradient(to bottom right, #ea2b5e, #238aca);
+    border-radius: 50%;
+    border: 3px solid #ea2b5e;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+button.iconpicker:hover{
+    box-shadow: 0 0 0 2px #888;
+    background: linear-gradient(to bottom right, #ea2b5e, #238aca);
+    border: 3px solid #fff;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+button.iconpicker:onclick , button.iconpicker:focus{
+    background: linear-gradient(to bottom right, #ea2b5e, #238aca);
+}
+button span.caret{
+    display: none;
+}
+button.iconpicker i {
+    color: white;
+    position: absolute;
+    font-size: 19px;
+    display: inline-block;
+    top: 16%;
+    left: 20%;
+}
+/*________ End icon picker _____________*/
+
+
+/*_________ Start target url _________*/
+input.q_input{
+    display: inline-block;
+    width: 63%;
+    border-radius: 17px 5px 5px 15px;
+    margin-left: 2%;
+}
+/*_________ End target url ___________*/
+
+
+
+/*___ Start type of open target url ___*/
+div.q_item_setting div.form-group {
+    margin-bottom: 15px;
+    display: inline-block;
+    width: 25%;
+}
+/*___ End type of open target url _____*/
+
+/*_________ Start save Button _____________*/
+div.q_setting_save{
+    margin-top: 20px;
+}
+div.q_setting_save button{
+    font-size: 17px;
+    font-weight: bold;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+div.q_setting_save button:hover{
+    text-shadow: 0px 0px 3px #ffffff;
+}
+/*__________ End Save Button _____________*/

@@ -1,0 +1,48 @@
+include requirements.txt
+include LICENSE
+include README.md
+recursive-include incore *.css
+recursive-include incore *.csv
+recursive-include incore *.doc
+recursive-include incore *.docx
+recursive-include incore *.eml
+recursive-include incore *.eot
+recursive-include incore *.gif
+recursive-include incore *.html
+recursive-include incore *.ico
+recursive-include incore *.jpeg
+recursive-include incore *.jpg
+recursive-include incore *.js
+recursive-include incore *.md
+recursive-include incore *.mp3
+recursive-include incore *.ogg
+recursive-include incore *.ods
+recursive-include incore *.odt
+recursive-include incore *.otf
+recursive-include incore *.pdf
+recursive-include incore *.png
+recursive-include incore *.po
+recursive-include incore *.pot
+recursive-include incore *.rml
+recursive-include incore *.rng
+recursive-include incore *.rst
+recursive-include incore *.scss
+recursive-include incore *.sql
+recursive-include incore *.svg
+recursive-include incore *.template
+recursive-include incore *.txt
+recursive-include incore *.ttf
+recursive-include incore *.woff
+recursive-include incore *.woff2
+recursive-include incore *.wsdl
+recursive-include incore *.xls
+recursive-include incore *.xsd
+recursive-include incore *.xsl
+recursive-include incore *.xlsx
+recursive-include incore *.xml
+recursive-include incore *.yml
+recursive-include incore *.zip
+recursive-include incore/addons/l10n_mx_edi *.xslt *.key *.cer *.txt
+recursive-include incore/addons/l10n_mx_reports *.xslt
+recursive-exclude * *.py[co]
+recursive-exclude * *.hg*

@@ -1,0 +1,148 @@
+
+/* _______ Start Global style __________ */
+.q_container{
+    position: fixed;
+    z-index: 9999;
+    right: 60px;
+    bottom: 45px;
+}
+.q_item , .q_item_5{
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to bottom right, #ea2b5e, #238aca);
+    border-radius: 50%;
+    position:absolute;
+    text-align: center;
+}
+.q_item{
+    border: 3px solid #ea2b5e;
+    line-height: 2.6;
+}
+.q_item:hover{
+    box-shadow: 0 0 0 2px #888;
+    border: 3px solid #fff;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.q_item i {
+    color: white;
+    opacity: 0;
+    font-size: 19px;
+    transition: all .7s;
+}
+.q_items_open{
+}
+/* _______ End Global style ___________ */
+
+
+/*________ Start Main navigation _______*/
+.q_item_5 i {
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+    transition: all .3s;
+}
+div#q_main:hover i {
+    cursor: pointer;
+    text-shadow: 0px 0px 7px #ffffff;
+}
+/*________ End Main navigation _________*/
+
+
+/*_________ Start Items style __________*/
+.q_item_0{
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.q_item_1{
+    -moz-transition: all .35s ease-in-out;
+    -o-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
+}
+.q_item_2{
+    -moz-transition: all .45s ease-in-out;
+    -o-transition: all .45s ease-in-out;
+    transition: all .45s ease-in-out;
+}
+.q_item_3{
+    -moz-transition: all .6s ease-in-out;
+    -o-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
+}
+.q_item_4{
+    -moz-transition: all .75s ease-in-out;
+    -o-transition: all .75s ease-in-out;
+    transition: all .75s ease-in-out;
+}
+/*_________ End Items style ____________*/
+
+
+/*______ Start settings  icon __________*/
+.q_settings{
+    left: 3px;
+    top: 2px;
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 2.4;
+    background: #e0e0e0;
+    border-radius: 50%;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.q_settings i{
+    color: white;
+    opacity: 0;
+    font-size: 20px;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.q_settings:hover i{
+    cursor: pointer;
+    text-shadow: 0px 0px 6px #ffffff;
+}
+/*______ End settings icon _____________*/
+
+
+/*_______ Start settings window ________*/
+.setting_window{
+    background: #fff;
+    position: fixed;
+    z-index: 9999;
+    left: 25%;
+    top: 20%;
+    box-shadow: 0 0 15px 4px #9e9a9a;
+}
+.setting_window iframe{
+    border: none;
+}
+/*_______ End settings window __________*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

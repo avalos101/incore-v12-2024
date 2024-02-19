@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="MulitUOMWidget">
+        <div class="modal-dialog">
+            <div class="popup">
+                <p class="title">
+                     POS Multi UOM       
+                </p>
+                <div class="content-container ">
+                    <t t-if="widget.options.em_uom_list">
+                        <t t-foreach="widget.options.em_uom_list" t-as="em_uom">
+                            <div class="button multi_uom_button" t-att-data-uom_id="em_uom.multi_uom_id[0]" t-att-data-price="em_uom.price"><t t-esc="widget.format_currency(em_uom.price)"/>/<t t-esc="em_uom.multi_uom_id[1]"/></div>
+                        </t>
+                    </t>
+                </div>
+                <div class="footer">
+                    <div class="button cancel">
+                        Cancel 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="ChangeUOMButton">
+        <div class='control-button'>
+            <i class='fa fa-tag' /> Change UOM
+        </div>
+    </t>
+</templates>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+	<record id="product_slider_form_view" model="ir.ui.view">
+		<field name="name">product.slider.form</field>
+		<field name="model">product.slider</field>
+		<field name="arch" type="xml">
+			<form string="product slider">
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+						<button name="toggle_active" type="object" class="oe_stat_button"
+							icon="fa-archive">
+							<field name="active" widget="boolean_button"
+								options="{&quot;terminology&quot;: &quot;archive&quot;}" />
+						</button>
+					</div>
+					<group>
+						<field name="name" />
+						<field name="website_id" />
+						<field name="theme_id" domain="[('model_id','=','product.template')]" invisible="1" />
+						<field name="is_filter_product" />
+						<field name="product_ids" nolabel="0" attrs="{'invisible': [('is_filter_product','!=',False)]}" />
+						<field name="filter_ids"
+							attrs="{'invisible': [('is_filter_product','=',False)]}" />
+					</group>
+					<group>
+                		<field name="product_slider_style_id" domain="[('theme_id','=',theme_id)]" ></field>
+	                </group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="product_slider_tree_view" model="ir.ui.view">
+		<field name="name">product.slider.tree.view</field>
+		<field name="model">product.slider</field>
+		<field name="arch" type="xml">
+			<tree string="product slider">
+				<field name="name" />
+				<field name="website_id" />
+			</tree>
+		</field>
+	</record>
+
+	<record id="action_product_slider" model="ir.actions.act_window">
+		<field name="name">Product Slider</field>
+		<field name="res_model">product.slider</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	
+	<record id="filter_product_form_view" model="ir.ui.view">
+		<field name="name">filter.product.form</field>
+		<field name="model">filter.product</field>
+		<field name="arch" type="xml">
+			<form string="filter_product">
+				<div class="oe_button_box" name="button_box">
+					<button class="oe_stat_button" name="website_publish_button"
+						type="object" icon="fa-globe">
+						<field name="website_published" widget="website_button" />
+					</button>
+				</div>
+				<sheet>
+					<group>
+						<field name="name" />
+						<field name="sequence" />
+						<field name="filter_id" domain="[('model_id','=','product.template')]" options="{'no_quick_create': True, 'no_create_edit' : True}" />
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	
+	<record id="product_slider_style_form_view" model="ir.ui.view">
+		<field name="name">product.slider.style.form.view</field>
+		<field name="model">product.slider.styles</field>
+		<field name="arch" type="xml">
+			<form string="product_slider">
+				<sheet>
+					<group>
+						<field name="image" widget="image"/>
+                         <field name="name"/>
+                         <field name="theme_id"/>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	
+	<record id="product_slider_style_tree_view" model="ir.ui.view">
+		<field name="name">product.slider.style.tree.view</field>
+		<field name="model">product.slider.styles</field>
+		<field name="arch" type="xml">
+			<tree string="Product Slider Style">
+				<field name="name" />
+			    <field name="theme_id"/>
+			</tree>
+		</field>
+	</record>
+	
+	<record id="action_product_slider_style" model="ir.actions.act_window">
+		<field name="name">Product Slider Style</field>
+		<field name="res_model">product.slider.styles</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	
+	<menuitem id="menu_product_settings" name="Product Slider" sequence="80"
+        parent="website.menu_website_global_configuration"/>
+        
+	<menuitem name="Product Slider Styles"
+            id="product_slider_style"
+            action="action_product_slider_style"
+            parent="emipro_theme_base.menu_product_settings"
+            sequence="2"
+            />
+    <menuitem id="menu_product" name="Product Slider" action="action_product_slider"
+		parent="emipro_theme_base.menu_product_settings" sequence="1" />
+</incore>

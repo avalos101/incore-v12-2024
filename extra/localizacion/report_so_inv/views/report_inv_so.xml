@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <template id="external_layout_rollo">
+            <div class="header"/>
+            <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
+              <t t-raw="0"/>
+            </div>
+            <div class="footer"/>
+        </template>
+
+        <template id="external_layout_inf_rollo">
+            <t t-call="report_so_inv.external_layout_rollo"><t t-raw="0"/></t>
+        </template>
+<template id="report_inv_so_detail">
+    <t t-call="web.html_container">
+          <t t-call="report_so_inv.external_layout_inf_rollo">
+                <div class="page">
+
+
+            <div class="text-center">
+                <h2>CUADRE DE CAJA</h2>
+
+                <strong> DEL <t t-esc="date_start" t-options="{'widget': 'date'}"/> - <t t-esc="date_stop" t-options="{'widget': 'date'}"/></strong>
+                <br/><strong> GENERADO EL <t t-esc="datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')" t-options="{'widget': 'datetime'}"/></strong>
+                <br/>
+
+            </div>
+            <div>
+                <strong> CAJERO(S): </strong>
+                <t t-foreach='user_ventas' t-as='u'>
+                    <strong><t t-esc="u.partner_id.name"/>,</strong>
+                </t>
+            </div>
+            <br/>
+            <t t-set="t_base_amount" t-value="0"/>
+            <t t-set="t_tax_amount" t-value="0"/>
+            <table  class="table table-sm">
+                <tbody>
+                    <tr>
+                        <td colspan="3"><b>PUNTO DE VENTA</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Valor mercancia vendida</td>
+                        <td class="text-right"><t t-esc="total_p" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Descuento</td>
+                        <td class="text-right"><t t-esc="disc_pos" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr t-foreach='journals_pos' t-as='j'>
+                        <td colspan="2"><t t-esc="j[0]"/></td>
+                        <td class="text-right"><t t-esc="j[1]" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr style="border-bottom:2px solid black">
+                        <td>IMPUESTO</td>
+                        <td class="text-right">BASE</td>
+                        <td class="text-right">VALOR</td>
+                    </tr>
+                    <tr t-foreach='taxes_pos' t-as='t'>
+                        <td><t t-esc="t['name']"/></td>
+                        <td class="text-right">
+                            <t t-esc="t['base_amount']" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/>
+                            <t t-set="t_base_amount" t-value="t_base_amount + t['base_amount']"/>
+                        </td>
+                        <td class="text-right">
+                            <t t-esc="t['tax_amount']" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/>
+                            <t t-set="t_tax_amount" t-value="t_tax_amount + t['tax_amount']"/>
+                        </td>
+                    </tr>
+                    <tr style="border-top:1.6px solid black !important;">
+                        <td>Total</td>
+                        <td class="text-right"><t t-esc="t_base_amount" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                        <td class="text-right"><t t-esc="t_tax_amount" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">TOTAL BASE + IVA - DESC</td>
+                        <td class="text-right"><t t-esc="t_base_amount + t_tax_amount" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Nro de Pedidos</td>
+                        <td class="text-right"><t t-esc="count_pos"/></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <t t-set="t_base_amount" t-value="0"/>
+            <t t-set="t_tax_amount" t-value="0"/>
+            <table  class="table table-sm">
+                <tbody>
+                    <tr>
+                        <td colspan="3"><b>FACTURACION VENTAS A CREDITO</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Valor mercancia vendida</td>
+                        <td class="text-right"><t t-esc="total_i" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Pagos iniciales</td>
+                        <td class="text-right"><t t-esc="p_iniciales" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Descuento</td>
+                        <td class="text-right"><t t-esc="disc_inv" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr style="border-bottom:2px solid black">
+                        <td>IMPUESTO</td>
+                        <td class="text-right">BASE</td>
+                        <td class="text-right">VALOR</td>
+                    </tr>
+                    <tr t-foreach='taxes_inv' t-as='t'>
+                        <td><t t-esc="t['name']"/></td>
+                        <td class="text-right">
+                            <t t-esc="t['base_amount']" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/>
+                            <t t-set="t_base_amount" t-value="t_base_amount + t['base_amount']"/>
+                        </td>
+                        <td class="text-right">
+                            <t t-esc="t['tax_amount']" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/>
+                            <t t-set="t_tax_amount" t-value="t_tax_amount + t['tax_amount']"/>
+                        </td>
+                    </tr>
+                    <tr style="border-top:1.6px solid black !important;">
+                        <td>Total</td>
+                        <td class="text-right"><t t-esc="t_base_amount" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                        <td class="text-right"><t t-esc="t_tax_amount" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">TOTAL BASE + IVA - DESC</td>
+                        <td class="text-right"><t t-esc="t_base_amount + t_tax_amount" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Nro de Facturas</td>
+                        <td class="text-right"><t t-esc="count_inv"/></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+
+            <br/>
+            <t t-set="tt_base_amount" t-value="0"/>
+            <t t-set="tt_tax_amount" t-value="0"/>
+            <table  class="table table-sm">
+                <tbody>
+                    <tr>
+                        <td colspan="3"><b>TOTALES</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Valor mercancia vendida</td>
+                        <td class="text-right"><t t-esc="total_i + total_p" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Descuento</td>
+                        <td class="text-right"><t t-esc="disc_inv + disc_pos" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+
+                    <tr style="border-bottom:2px solid black">
+                        <td>IMPUESTO</td>
+                        <td class="text-right">BASE</td>
+                        <td class="text-right">VALOR</td>
+                    </tr>
+                    <tr t-foreach='totales_tax' t-as='tt'>
+                        <td><t t-esc="tt['name']"/></td>
+                        <td class="text-right">
+                            <t t-esc="tt['base_amount']" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/>
+                            <t t-set="tt_base_amount" t-value="tt_base_amount + tt['base_amount']"/>
+                        </td>
+                        <td class="text-right">
+                            <t t-esc="tt['tax_amount']" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/>
+                            <t t-set="tt_tax_amount" t-value="tt_tax_amount + tt['tax_amount']"/>
+                        </td>
+                    </tr>
+                    <tr style="border-top:1.6px solid black !important;">
+                        <td>Total</td>
+                        <td class="text-right"><t t-esc="tt_base_amount" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                        <td class="text-right"><t t-esc="tt_tax_amount" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">TOTAL BASE + IVA - DESC</td>
+                        <td class="text-right"><t t-esc="tt_base_amount + tt_tax_amount" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+
+            <br/>
+
+            <table  class="table table-sm">
+                <tbody>
+                    <tr>
+                        <td class="text-center" colspan="3"><h3>RECAUDOS</h3></td>
+                        <span></span>
+                    </tr>
+                    <tr>
+                        <td class="text-center" colspan="3"><b>RECAUDOS VENTAS A CREDITO</b></td>
+                    </tr>
+                    <t t-foreach='journals_pay_inc' t-as='jj'>
+                        <tr style="border-bottom:2px solid black !important;">
+                            <td colspan="3"><t t-esc="jj[3]"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Iniciales</td>
+                            <td class="text-right"><t t-esc="jj[0]" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Anticipos</td>
+                            <td class="text-right"><t t-esc="jj[1]" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Abono</td>
+                            <td class="text-right"><t t-esc="jj[2]" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                        </tr>
+                    </t>
+                    <!-- <tr t-foreach='journals_pay' t-as='j'>
+                        <td colspan="2"><t t-esc="j[0]"/></td>
+                        <td class="text-right"><t t-esc="j[1]" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <br/>
+
+            <br/>
+
+            <table  class="table table-sm">
+                <tbody>
+                    <tr>
+                        <td class="text-center" colspan="3"><b>RECAUDOS VENTAS POS</b></td>
+                    </tr>
+                    <tr t-foreach='journals_pos' t-as='j'>
+                        <td colspan="2"><t t-esc="j[0]"/></td>
+                        <td class="text-right"><t t-esc="j[1]" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+
+            <br/>
+            <t t-set="total_re" t-value="0"/>
+            <table  class="table table-sm">
+                <tbody>
+                    <tr>
+                        <td class="text-center" colspan="3"><b>RECAUDO TOTAL</b></td>
+                    </tr>
+                    <tr t-foreach='totales_pay' t-as='tp'>
+                        <t t-set="total_re" t-value="total_re + tp[1]"/>
+                        <td colspan="2"><t t-esc="tp[0]"/></td>
+                        <td class="text-right"><t t-esc="tp[1]" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                    <tr style="border-top:1.6px solid black !important;">
+                        <td>Total</td>
+                        <td colspan="2" class="text-right"><t t-esc="total_re" t-options="{'widget': 'monetary', 'display_currency': currency_id}"/></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+    </t>
+    </t>
+</template>
+</incore>

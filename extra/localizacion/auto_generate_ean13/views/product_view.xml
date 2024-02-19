@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <data>
+
+        <record model="ir.ui.view" id="product_template_form_ean">
+            <field name="name">product.template.ean.barcode</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <field name="barcode" position="attributes">
+                    <attribute name="attrs">{'invisible': [('active', '=', False)]}</attribute>
+                </field>
+                <field name="barcode" position="after">
+                	<button name="generate_barcode" string="(Generate Barcode)" type="object" class="oe_link"
+                            colspan="2" attrs="{'invisible': [('barcode','!=', False),('ean13_image','!=', False)]}"/>
+                	<field name="ean13_image" widget="image" attrs="{'invisible': [('barcode','=', False)]}"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_barcode_product_template_tree" model="ir.ui.view">
+            <field name="name">product.template.barcode.tree</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="active" position="before">
+                    <field name="barcode"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</incore>

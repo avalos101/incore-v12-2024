@@ -1,0 +1,5 @@
+/var/log/incore/*.log {
+    copytruncate
+    missingok
+    notifempty
+}

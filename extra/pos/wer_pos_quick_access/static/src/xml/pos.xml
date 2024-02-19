@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="ProductScreenWidget">
+        <t t-jquery="table[class*='layout-table']" t-operation="before">
+            <t t-if="widget.pos.config.change_product_view">
+                <div class="quickly_buttons">
+                    <span class="breadcrumb product_list_toggle">
+                        <i class='fa fa-list-ol'></i>
+                    </span>
+
+                </div>
+                <div class="quickly_buttons">
+                    <span class="breadcrumb product_grid_view">
+                        <i class='fa fa-th-large'></i>
+                    </span>
+                </div>
+            </t>
+            <t t-if="widget.pos.config.quick_partner">
+                <div class="quickly_buttons">
+                    <span class="breadcrumb add_customer">
+                        <i class='fa fa-user-plus'></i>
+                    </span>
+                </div>
+            </t>
+            <t t-if="widget.pos.config.quick_product">
+                <div class="quickly_buttons">
+                    <span class="breadcrumb add_product">
+                        <i class="fa fa-product-hunt" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </t>
+            <t t-if="widget.pos.config.clear_cart">
+                <div class="quickly_buttons">
+                    <span class="breadcrumb clear_blank_order">
+                        <i class='fa fa-trash' />
+                    </span>
+                </div>
+            </t>
+        </t>
+    </t>
+
+    <t t-extend="ProductListWidget">
+        <t t-jquery="div.product-list" t-operation="append">
+            <span class="header" style="color: #fff;">
+                <div class="product-img-lable">Image</div>
+                <div class="product-header-name">Product Name</div>
+                <div class="product-price-tag">Sale Price</div>
+            </span>
+        </t>
+    </t>
+
+    <t t-name="popup_create_customer">
+        <div class="modal-dialog">
+            <div class="popup touch-scrollable scrollable-y" style="height: 450px">
+                <p class="title">Create Partner</p>
+                <section class="client-details edit">
+                    <div class='client-picture'>
+                        <i style="line-height: 64px;font-size: 32px;" aria-label="Picture" class="fa fa-camera" role="img" title="Picture"><div></div></i>
+                        <input type='file' class='image-uploader'></input>
+                    </div>
+                    <div class="client-detail-container">
+                        <div class="client-group-details">
+                            <div class="form-group label-floating">
+                                <input id="partner_name" style="width: 330px;" class="form-control partner_input" placeholder="Name" name="name" required="true" />
+                            </div>
+                            <div class="form-group label-floating">
+                                <input class="form-control partner_input" placeholder="Street" name="street" required="true" />
+                            </div>
+                        </div>
+                        <div class="client-group-details">
+                            <div class="form-group label-floating">
+                                <input class="form-control partner_input" placeholder="City" name="city" required="true" />
+                            </div>
+                            <div class="form-group label-floating">
+                                <input class="form-control partner_input" placeholder="Postcode" name="zip" required="true" />
+                            </div>
+                        </div>
+                        <div class="client-group-details">
+                            <div class="form-group label-floating">
+                                <select style="width: 195px;height: 44px;background: #FFF;" class='form-control voucher-select partner_input' name='country_id'>
+                                    <option value=''>Select Country</option>
+                                    <t t-foreach='widget.pos.countries' t-as='country'>
+                                        <option t-att-value='country.id'>
+                                            <t t-esc='country.name'/>
+                                        </option>
+                                    </t>
+                                </select>
+                            </div>
+                            <div class="form-group label-floating">
+                                <input class="form-control partner_input" name="phone" placeholder="Phone" required="true" />
+                            </div>
+                        </div>
+                        <div class="client-group-details">
+                            <div class="form-group label-floating">
+                                <input class="form-control partner_input" name="barcode" placeholder="Barcode" required="true" />
+                            </div>
+                            <div class="form-group label-floating">
+                                <input class="form-control partner_input" name="email" placeholder="Email" required="true" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="button confirm">Create</div>
+                        <div class="button cancel">Close</div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="popup_create_product">
+        <div class="modal-dialog">
+            <div class="popup touch-scrollable scrollable-y" style="height: 450px">
+                <p class="title">Create Product</p>
+                <section class="client-details edit" style="margin-top: 15px;">
+                    <div class='client-picture'>
+                        <i style="line-height: 64px;font-size: 32px;" aria-label="Picture" class="fa fa-camera" role="img" title="Picture"><div></div></i>
+                        <input type='file' class='image-uploader'></input>
+                    </div>
+                    <div class="client-group-details">
+                        <div class="form-group label-floating">
+                            <input id="product_name" style="width: 330px;" class="form-control product_input" placeholder="Name" name="name" required="true" />
+                        </div>
+                        <div class="form-group label-floating">
+                            <input class="form-control product_input" placeholder="Internal ref" name="default_code" required="true" />
+                        </div>
+                    </div>
+                    <div class="client-group-details">
+                        <div class="form-group label-floating">
+                            <input class="form-control product_input" placeholder="Barcode" name="barcode" required="true" />
+                        </div>
+                        <div class="form-group label-floating">
+                            <input class="form-control product_input" placeholder="Cost Price" name="standard_price" required="true" />
+                        </div>
+                    </div>
+                    <div class="client-group-details">
+                        <div class="form-group label-floating">
+                            <input class="form-control product_input" placeholder="List Price" name="list_price" required="true" />
+                        </div>
+                        <div class="form-group label-floating">
+                            <select style="width: 195px;height: 44px;background: #FFF;" class='form-control voucher-select product_input' name='type'>
+                                 <option value='consu'>Consumable</option>
+                                 <option value='service'>Service</option>
+                                 <option value='product'>Storable Product</option>
+                            </select>
+                        </div>    
+                    </div>
+                    <div class="footer">
+                        <div class="button confirm">Create</div>
+                        <div class="button cancel">Close</div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </t>
+
+</templates>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="combopack_items">
+        <div class="modal-dialog">
+            <t t-if="widget.combo_data">
+                <div class="popup popup-selection" style="width: 60%;">
+                    <p class="title"><t t-esc="widget.main_product_name"/> Items</p>
+                    <div class='scrollable-y touch-scrollable combo_product_id' t-att-data-product_id="widget.main_product" style="height: 275px;">
+                        <t t-foreach="widget.combo_data" t-as="fix_pro_data">
+                            <span class='product fix_product' t-att-data-product-id="fix_pro_data.product.id">
+                                <div class="product-img">
+                                    <img t-attf-src='/web/image?model=product.product&#38;field=image_medium&#38;id=#{fix_pro_data.product}'/> 
+                                    <span class="price-tag">
+                                        <t t-esc="fix_pro_data.qty"/>
+                                    </span>
+                                </div>
+                                <div class="product-name">
+                                    <t t-esc="fix_pro_data.display_name"/>
+                                </div>
+                            </span>
+                        </t>
+                    </div>
+                    <div class="footer">
+                        <div class="button confirm">
+                            Confirm 
+                        </div>
+                        <div class="button cancel">
+                            Cancel 
+                        </div>
+                    </div>
+                </div>
+                
+            </t>
+        </div>
+    </t>
+</templates>

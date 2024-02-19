@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<incore>
+    <record id="ir_cron_please_order_send" model="ir.cron">
+        <field name="name">API PLEASE; Send Orders</field>
+        <field name="type">please.order</field>
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="active" eval="True" />
+        <field name="model_id" ref="model_please_order"/>
+        <field name="code">model._cron_please_order()</field>
+        <field name="state">code</field>
+    </record>
+
+    <record id="ir_cron_please_tracking_status" model="ir.cron">
+        <field name="name">API PLEASE; Get tracking Orders Status</field>
+        <field name="type">please.order</field>
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="active" eval="True" />
+        <field name="model_id" ref="model_please_order"/>
+        <field name="code">model._cron_please_tracking()</field>
+        <field name="state">code</field>
+    </record>
+</incore>

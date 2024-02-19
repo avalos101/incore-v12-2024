@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<incore>
+	<data>
+		<template id="receipt_ext_js"  inherit_id="web.assets_backend">
+			<xpath expr="." position="inside">
+				<script type="text/javascript" src="/mai_pos_kitchen_receipt/static/src/js/models.js"></script>
+				<script type="text/javascript" src="/mai_pos_kitchen_receipt/static/src/js/kitchen.js"></script>
+				<!-- <script type="text/javascript" src="/mai_pos_kitchen_receipt/static/src/js/Screens/custom_receipt.js"></script>
+				<script type="text/javascript" src="/mai_pos_kitchen_receipt/static/src/js/Screens/print_button.js"></script>
+				<script type="text/javascript" src="/mai_pos_kitchen_receipt/static/src/js/Screens/KitchenReceipt.js"></script> -->
+			</xpath>
+		</template>
+	</data>
+</incore>

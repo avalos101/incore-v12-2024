@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" inherit_id="point_of_sale.template">
+
+        <t t-name="KitchenReceiptButton" >
+                <span class="control-button kitchen-print">
+                        <i class="fa fa-print"></i>
+                        <span> </span>
+                        <span>Print Kitchen Receipt</span>
+                </span>
+        </t>
+
+        <t t-name="CustomKitchenScreen">
+                <div class="receipt-screen screen">
+                        <div class="screen-content">
+                                <div class="top-content">
+                                        <span class="button back" t-on-click="confirm">
+                                                <i class="fa fa-angle-double-left"></i>
+                                                <span> </span>
+                                                <span>Back</span>
+                                        </span>
+                                        <div class="top-content-center">
+                                                <h1>Kitchen Receipt Printing</h1>
+                                        </div>
+                                        <span class="button next highlight" t-on-click="confirm">
+                                                <span>Ok</span>
+                                                <span> </span>
+                                                <i class="fa fa-angle-double-right"></i>
+                                        </span>
+                                </div>
+                                <div class="centered-content">
+                                        <div class="button print" t-on-click="printReceipt">
+                                                <i class="fa fa-print"></i>
+                                                <span> </span>
+                                                <span>Print</span>
+                                        </div>
+                                        <div class="pos-receipt-container">
+                                                <OrderKitchenReceipt order="currentOrder"/>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </t>
+
+        <t t-name="OrderKitchenReceipt" >
+                <div class="pos-receipt kitchen">
+                        <div style="font-size: 14px;">
+                                <span><t t-esc="currentDate" /></span>
+                                <span class="pos-receipt-right-align"><t t-esc="currentTime" /></span>
+                        </div>
+                        <h3 class="pos-receipt-center-align">
+                                <t t-esc="receipt.company.name" />
+                        </h3>
+                        <div>------------------------------------------------------</div>
+                        <table style="width:100%;font-size: 14px;">
+                                <tbody>
+                                        <tr>
+                                        <td>
+                                                Receipt#
+                                                <t t-esc="order.uid" />
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <td style="text-align:right;">
+                                                <t t-if="receipt.table">
+                                                        Table#
+                                                        <t t-esc="receipt.table" />
+                                                </t>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                                <td>Served by: <t t-esc="receipt.cashier" /> </td>
+                                                <!-- <td style="text-align:Left;"></td> -->
+                                                <!-- <td>Served by </td>
+                                                <td style="text-align:Left;"><t t-esc="receipt.cashier" /></td> -->
+                                        </tr>
+                                </tbody>
+                        </table>
+                        <br />
+                        <!-- Orderlines -->
+                        <table class='receipt-orderlines' style="width:100%;font-size: 14px;">
+                                <colgroup>
+                                        <col width='10%' />
+                                        <col width='40%' />
+                                </colgroup>
+                                <tbody>
+                                        <tr style="font-size: 16px; border-bottom:2pt solid black;">
+                                                <th>Qty</th>
+                                               <th class="text-center">Description</th>
+                                        </tr>
+
+                                        <tr t-foreach="orderlines" t-as="line">
+                                                <td style="text-align: center;">
+                                                        <t t-esc="line.get_quantity()" />
+                                                </td>
+                                                <td class="pos-left-align">
+                                                        <t t-esc="line.get_product().display_name" />
+                                                        <t t-if="line.get_discount() > 0">
+                                                                <div class="pos-disc-font">
+                                                                        With a
+                                                                        <t t-esc="line.get_discount()" />
+                                                                        % discount
+                                                                </div>
+                                                        </t>
+                                                        <br/>
+                                                        <i class="fa fa-tags">
+                                                                <t t-esc="line.note"/>
+                                                        </i>
+                                                        <br/>
+                                                </td>
+                                        </tr>
+                                </tbody>
+                        </table>
+                        <br />
+                        <div>------------------------------------------------------</div>
+                        <div class="before-footer" />
+                        <!-- Footer -->
+                        <div t-if="receipt.footer_html"  class="pos-receipt-center-align">
+                                <t t-raw="receipt.footer_html" />
+                        </div>
+                        <div t-if="!receipt.footer_html and receipt.footer"  class="pos-receipt-center-align" style="white-space:pre-line">
+                                <br/>
+                                <t t-esc="receipt.footer" />
+                                <br/>
+                        </div>
+                </div>
+        </t>
+
+</templates>
